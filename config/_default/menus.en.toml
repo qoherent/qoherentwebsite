@@ -1,0 +1,106 @@
+############# English navigation ##############
+
+# main menu
+# [[main]]
+# name = "Home"
+# url = "/"
+# weight = 1
+
+# [[main]]
+# name = "About"
+# url = "about/"
+# weight = 2
+[[main]]
+name = " "
+url = "radiointelligence/"
+weight = 2
+[[main]]
+name = " "
+url = "radiointelligence/"
+weight = 3
+[[main]]
+name = "Radio Intelligence Apps"
+url = "radiointelligence/"
+weight = 4
+
+# [[main]]
+# name = "Elements"
+# url = "elements/"
+# weight = 4
+
+[[main]]
+name = " "
+weight = 5
+hasChildren = true
+
+
+# [[main]]
+# weight = 5
+# name = "Pages"
+# hasChildren = true
+
+# [[main]]
+# parent = "About"
+# name = "News & Articles"
+# url = "blog/"
+[[main]]
+parent = " "
+weight = 1
+name = "News & Articles"
+url = "categories/news-articles/"
+
+[[main]]
+parent = " "
+weight = 2
+name = "Tech Blog"
+url = "categories/tech-blog/"
+
+# [[main]]
+# parent = "Company"
+# name = "Contact"
+# url = "contact/"
+
+[[main]]
+parent = " "
+weight = 3
+name = "Team"
+url = "team/"
+
+[[main]]
+parent = " "
+name = "Technologies"
+weight = 4
+url = "technologies/"
+
+[[main]]
+parent = " "
+name = "Careers"
+weight = 5
+url = "careers/"
+
+# [[main]]
+# parent = "Company"
+# name = "Categories"
+# url = "categories/"
+
+# [[main]]
+# parent = "Company"
+# name = "404 Page"
+# url = "404/"
+
+
+# footer menu
+[[footer]]
+name = "About"
+url = "about/"
+weight = 1
+
+[[footer]]
+name = "Elements"
+url = "elements/"
+weight = 2
+
+# [[footer]]
+# name = "Privacy Policy"
+# url = "privacy-policy/"
+# weight = 3
