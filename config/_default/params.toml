@@ -6,7 +6,7 @@ logo = "images/logo.png"
 logo_darkmode = "images/logo-darkmode.png"
 # use `px` or `x` with logo_width, example: "100px".
 # Note: logo_width is not work with .svg file
-logo_width = "160px"
+logo_width = "150px"
 logo_height = "32px"
 # if logo_webp set false, will not generate WEBP version of logo | default is true
 logo_webp = true
@@ -26,8 +26,8 @@ google_tag_manager = "" # example: G-XXXXXXXXXX
 google_adsense = ""     # example: ca-pub-xxxxxxxxxxxxxxxx
 # custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>"
 custom_script = ""
-# copyright
-copyright = "© Qoherent Inc 2024"
+# copyright 
+copyright = "© Qoherent 2024. Lets build intelligent radios together."
 
 # Preloader
 # preloader module: https://github.com/gethugothemes/hugo-modules/tree/master/components/preloader
@@ -39,7 +39,7 @@ preloader = "" # use jpg, png, svg or gif format.
 [navigation_button]
 enable = true
 label = "Contact"
-link = "contact"
+link = "contact/"
 
 # search
 # search module: https://github.com/gethugothemes/hugo-modules/tree/master/search
@@ -49,8 +49,8 @@ primary_color = "#121212"
 include_sections = ["blog"]
 show_image = true
 show_description = true
-show_tags = true
-show_categories = true
+show_tags = false#true
+show_categories = false#true
 
 
 # seo meta data for OpenGraph / Twitter Card

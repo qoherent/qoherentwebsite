@@ -6,77 +6,190 @@
 # url = "/"
 # weight = 1
 
-# [[main]]
-# name = "About"
-# url = "about/"
-# weight = 2
+
 [[main]]
-name = " "
-url = "radiointelligence/"
+name = "  "
+url = "intelligentradio/"
+weight = 1
+
+[[main]]
+name = "   "
+url = "intelligentradio/"
 weight = 2
+
 [[main]]
-name = " "
-url = "radiointelligence/"
+name = "    "
+url = "intelligentradio/"
+weight = 2.5
+[[main]]
+name = "     "
+url = "intelligentradio/"
+weight = 2.6
+
+[[main]]
+name = "Intelligent Radio"
+url = "intelligentradio/"
 weight = 3
+
+#####################
+
 [[main]]
-name = "Radio Intelligence Apps"
-url = "radiointelligence/"
+name = "Company"
+url = "compamy/"
+hasChildren = true
 weight = 4
 
-# [[main]]
-# name = "Elements"
-# url = "elements/"
-# weight = 4
-
 [[main]]
-name = " "
-weight = 5
-hasChildren = true
-
-
-# [[main]]
-# weight = 5
-# name = "Pages"
-# hasChildren = true
-
-# [[main]]
-# parent = "About"
-# name = "News & Articles"
-# url = "blog/"
-[[main]]
-parent = " "
+parent = "Company"
 weight = 1
-name = "News & Articles"
-url = "categories/news-articles/"
+name = "About Qoherent"
+url = "company/"
 
 [[main]]
-parent = " "
+parent = "Company"
 weight = 2
+name = "News"
+url = "categories/news/"
+
+[[main]]
+parent = "Company"
+name = "Open Source"
+weight = 3
+url = "open-source/"
+
+[[main]]
+parent = "Company"
+name = "Careers"
+weight = 4
+url = "careers/"
+
+#####################
+[[main]]
+name = "Products"
+url = "radiointelligenceapps/"
+hasChildren = true
+weight = 5
+
+[[main]]
+parent = "Products"
+weight = 1
+name = "RIA Suite"
+url = "radiointelligenceapps-suite/"
+
+[[main]]
+parent = "Products"
+weight = 2
+name = "RIA Models"
+url = "radiointelligenceapps-models/"
+
+[[main]]
+parent = "Products"
+weight = 3
+name = "RIA Inference"
+url = "rie/"
+
+[[main]]
+parent = "Products"
+weight = 4
+name = "RIARAN"
+url = "radiointelligenceapps-RAN/"
+
+#####################
+[[main]]
+name = "Services"
+url = "prototyping/"
+hasChildren = true
+weight = 6
+
+[[main]]
+parent = "Services"
+weight = 1
+name = "ML Prototyping"
+url = "ml-prototypiing/"
+
+[[main]]
+parent = "Services"
+weight = 2
+name = "Testbeds"
+url = "testbeds/"
+
+[[main]]
+parent = "Services"
+weight = 3
+name = "Custom Datasets"
+url = "datasets/"
+
+#####################
+[[main]]
+name = "Resources"
+url = "resources/"
+hasChildren = true
+weight = 7
+
+[[main]]
+parent = "Resources"
+weight = 1
 name = "Tech Blog"
 url = "categories/tech-blog/"
 
-# [[main]]
-# parent = "Company"
-# name = "Contact"
-# url = "contact/"
+[[main]]
+parent = "Resources"
+weight = 2
+name = "Articles"
+url = "categories/articles/"
 
 [[main]]
-parent = " "
+parent = "Resources"
 weight = 3
-name = "Team"
-url = "team/"
+name = "Downloads"
+url = "downloads/"
 
 [[main]]
-parent = " "
-name = "Technologies"
+parent = "Resources"
 weight = 4
-url = "technologies/"
+name = "Docs"
+url = "docs/"
 
 [[main]]
-parent = " "
-name = "Careers"
+parent = "Resources"
+name = "Elements"
+url = "elements/"
 weight = 5
-url = "careers/"
+
+
+#####################################
+# # footer menu
+# [[footer]]
+# name = "Company"
+# url = "company/"
+# weight = 1
+
+# [[footer]]
+# name = "Elements"
+# url = "elements/"
+# weight = 2
+
+# [[footer]]
+# name = "Careers"
+# weight = 5
+# url = "careers/"
+
+# [[footer]]
+# name = "Resources"
+# url = "resources/"
+# hasChildren = true
+# weight = 7
+
+################################################
+# [[footer]]
+# name = "Privacy Policy"
+# url = "privacy-policy/"
+# weight = 3
+
+# [[main]]
+# name = " "
+# weight = 5
+# hasChildren = true
 
 # [[main]]
 # parent = "Company"
@@ -88,19 +201,24 @@ url = "careers/"
 # name = "404 Page"
 # url = "404/"
 
+# [[main]]
+# name = "Radio Intelligence Apps"
+# url = "radiointelligence/"
+# weight = 4
 
-# footer menu
-[[footer]]
-name = "About"
-url = "about/"
-weight = 1
+# [[main]]
+# name = "Elements"
+# url = "elements/"
+# weight = 4
 
-[[footer]]
-name = "Elements"
-url = "elements/"
-weight = 2
 
-# [[footer]]
-# name = "Privacy Policy"
-# url = "privacy-policy/"
-# weight = 3
+
+# [[main]]
+# weight = 5
+# name = "Pages"
+# hasChildren = true
+
+# [[main]]
+# parent = "About"
+# name = "News & Articles"
+# url = "blog/"

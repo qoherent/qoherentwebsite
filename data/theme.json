@@ -31,14 +31,14 @@
   },
   "fonts": {
     "font_family": {
-      "primary": "sans-serif",
+      "primary": "Open+Sans:wght@400;700",
       "primary_type": "sans-serif",
-      "secondary": "sans-serif",
+      "secondary": "Open+Sans:wght@300", 
       "secondary_type": "sans-serif"
     },
     "font_size": {
       "base": "16",
       "scale": "1.250"
     }
-  }
+  }  
 }
