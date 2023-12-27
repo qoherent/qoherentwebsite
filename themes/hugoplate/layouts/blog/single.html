@@ -13,13 +13,13 @@
             {{ .Title }}
           </h1>
           <ul class="mb-4">
-            <li class="mr-4 inline-block">
+            {{/*  <li class="mr-4 inline-block">
               <a
                 href="{{ `authors/` | relLangURL }}{{ .Params.Author | urlize }}/">
                 <i class="fa-regular fa-circle-user mr-2"></i
                 >{{ .Params.author }}
               </a>
-            </li>
+            </li>  */}}
             <li class="mr-4 inline-block">
               <i class="fa-regular fa-folder mr-2"></i>
               {{ $categories:= .Params.categories }}
@@ -57,21 +57,21 @@
                 {{ end }}
               </ul>
             </div>
-            <div class="lg:col-4 flex items-center">
+            {{/*  <div class="lg:col-4 flex items-center">
               {{ partial "social-share" (dict "Context" . "Class" "share-icons" "Title" (i18n "share") "Whatsapp" false "Telegram" false) }}
-            </div>
+            </div>  */}}
           </div>
           <!-- comments -->
           {{ if site.DisqusShortname }}
-            <div class="mt-20">
+            {{/*  <div class="mt-20">
               {{ template "_internal/disqus.html" . }}
-            </div>
+            </div>  */}}
           {{ end }}
         </article>
       </div>
 
       <!-- Related posts -->
-      {{ $related := (where site.RegularPages "Section" "in" site.Params.mainSections) | intersect (where site.RegularPages ".Title" "!=" .Title) | union (site.RegularPages.Related . ) }}
+      {{/*  {{ $related := (where site.RegularPages "Section" "in" site.Params.mainSections) | intersect (where site.RegularPages ".Title" "!=" .Title) | union (site.RegularPages.Related . ) }}
       {{ $related = $related | shuffle | first 3 }}
       {{ with $related }}
         <div class="section pb-0">
@@ -84,7 +84,7 @@
             {{ end }}
           </div>
         </div>
-      {{ end }}
+      {{ end }}  */}}
     </div>
   </section>
 {{ end }}

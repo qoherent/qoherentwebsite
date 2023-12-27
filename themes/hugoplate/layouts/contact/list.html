@@ -1,10 +1,12 @@
 {{ define "main" }}
+
   {{ partial "page-header" . }}
 
 
   <section class="section-sm">
     <div class="container">
       <div class="row">
+        <div class="content" style="text-align: center;">{{ .Content }}</div>
         <div class="md:col-10 lg:col-6 mx-auto">
           <form action="{{ site.Params.contact_form_action }}" method="POST">
             <div class="mb-6">
@@ -15,23 +17,23 @@
                 id="name"
                 name="name"
                 class="form-input"
-                placeholder="John Doe"
+                placeholder="your name"
                 type="text" />
             </div>
             <div class="mb-6">
               <label for="email" class="form-label">
-                Working Mail <span class="text-red-500">*</span>
+                Email address <span class="text-red-500">*</span>
               </label>
               <input
                 id="email"
                 name="email"
                 class="form-input"
-                placeholder="john.doe@email.com"
+                placeholder=". . ."
                 type="email" />
             </div>
             <div class="mb-6">
               <label for="message" class="form-label">
-                Anything else? <span class="text-red-500">*</span>
+                Message <span class="text-red-500">*</span>
               </label>
               <textarea
                 id="message"
@@ -41,6 +43,8 @@
                 rows="8"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
+            <p>By using this form you agree with the storage and handling of your data by Qoherent.</p>
+
           </form>
         </div>
       </div>

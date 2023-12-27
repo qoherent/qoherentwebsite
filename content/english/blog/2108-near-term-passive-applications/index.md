@@ -11,8 +11,6 @@ categories: ['articles']
 
 ---
 
-\[vc\_row\]\[vc\_column width="1/2"\]\[ultimate\_icons\]\[single\_icon icon="icomoon-the7-font-the7-mail-011" icon\_size="32" icon\_margin="5"\]\[single\_icon icon="icomoon-the7-font-the7-phone-01" icon\_size="32" icon\_margin="5"\]\[single\_icon icon="icomoon-the7-font-the7-more-01" icon\_size="32" icon\_margin="5"\]\[/ultimate\_icons\]\[/vc\_column\]\[vc\_column width="1/2"\]\[vc\_column\_text\]
-
 There are numerous real-world applications that stand to benefit from intelligent radio technology. Here are a few real-world examples:
 
 **Spectrum Monitoring**
@@ -27,4 +25,3 @@ Passive intelligent radios can dynamically sense conditions, identify gaps and a
 
 Passive intelligent radios can be an input into priority-assigned incumbent-controlled spectrum sharing technologies such as CBRS, where an incumbent shares access to spectrum they control to licensees or authorized users. Intelligent radios can sense conditions, detect incumbent usage needs, and assign prioritization or access to transmitters that are operating on the shared spectrum.
 
-\[/vc\_column\_text\]\[/vc\_column\]\[/vc\_row\]

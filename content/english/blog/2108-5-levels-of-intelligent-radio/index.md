@@ -12,7 +12,6 @@ categories: ['articles']
 
 ---
 
-\[vc\_row\]\[vc\_column\]\[vc\_column\_text\]
 
 The creation of general intelligent radio technologies is an engineering challenge, requiring the development of a full stack of appropriate software, hardware, IP, machine learning techniques, and standards.
 
@@ -22,7 +21,7 @@ This challenge is significant, and not unlike the challenge of autonomous vehicl
 
 In autonomous vehicles, these levels are used to describe how involved a human is with the operation of the vehicle. In intelligent radio, these 5 levels describe both the design process and the implementation of intelligent radio technology.
 
-\[/vc\_column\_text\]\[vc\_single\_image image="15169" img\_size="full"\]\[/vc\_column\]\[/vc\_row\]\[vc\_row\]\[vc\_column\]\[vc\_column\_text\]
+![](images/ir-intelligent-radio-1024x493.png)
 
 A level 5 autonomous vehicle is fully autonomous, there is no human involvement. The passenger enters the vehicle, and without prompting, the vehicle knows where they want to go, and the best route to take given key objectives such as fuel usage, distance, and time. The vehicle then transports the passenger safely, adapting to road conditions it did not prepare for in its planning.
 
@@ -30,4 +29,4 @@ A level 5 intelligent radio is similar, it has objectives it needs to achieve (t
 
 There is research in support of all layers of intelligent radio technology, but the current state of machine learning applied to physical layer radio that is ready for widespread adoption is level two. That is, machine learning applied to software-defined radios provides the infrastructure to power passive intelligent radios (e.g. for spectrum sensing applications) across many industries. Ongoing work within academia and industry has begun on higher levels, where radios are taught to adapt their transmit behaviors based on training.
 
-\[/vc\_column\_text\]\[vc\_single\_image image="15168" img\_size="full"\]\[/vc\_column\]\[/vc\_row\]
+![](images/ir-intelligent-radio-1024x493.png)
