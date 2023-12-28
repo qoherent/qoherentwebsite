@@ -51,11 +51,12 @@ weight = 2
 name = "News"
 url = "categories/news/"
 
-[[main]]
-parent = "Company"
-name = "Open Source"
-weight = 3
-url = "open-source/"
+## for later
+# [[main]]
+# parent = "Company"
+# name = "Open Source"
+# weight = 3
+# url = "open-source/"
 
 [[main]]
 parent = "Company"
@@ -76,17 +77,19 @@ weight = 1
 name = "RIA Suite"
 url = "radiointelligenceapps-suite/"
 
-[[main]]
-parent = "Products"
-weight = 2
-name = "RIA Models"
-url = "radiointelligenceapps-models/"
+# ## for later
+# [[main]]
+# parent = "Products"
+# weight = 2
+# name = "RIA Models"
+# url = "radiointelligenceapps-models/"
 
-[[main]]
-parent = "Products"
-weight = 3
-name = "RIA Inference"
-url = "rie/"
+# ## for later
+# [[main]]
+# parent = "Products"
+# weight = 3
+# name = "RIA Inference"
+# url = "rie/"
 
 [[main]]
 parent = "Products"
@@ -104,14 +107,15 @@ weight = 6
 [[main]]
 parent = "Services"
 weight = 1
-name = "ML Prototyping"
-url = "ml-prototypiing/"
+name = "ML Prototyping & Testbeds"
+url = "prototyping/"
 
-[[main]]
-parent = "Services"
-weight = 2
-name = "Testbeds"
-url = "testbeds/"
+# ##for later
+# [[main]]
+# parent = "Services"
+# weight = 2
+# name = "Testbeds"
+# url = "testbeds/"
 
 [[main]]
 parent = "Services"
@@ -144,11 +148,12 @@ weight = 3
 name = "Downloads"
 url = "downloads/"
 
-[[main]]
-parent = "Resources"
-weight = 4
-name = "Docs"
-url = "docs/"
+# ## For larer
+# [[main]]
+# parent = "Resources"
+# weight = 4
+# name = "Docs"
+# url = "docs/"
 
 [[main]]
 parent = "Resources"

@@ -6,13 +6,8 @@ draft: false
 
 
 ---
-
-
 ## Open Invitation. Lets build intelligent radios together.
-
- 
-
-![](images/team.jpg)
+<!-- ![](images/team.jpg) -->
 
 
 Qoherent provides its staff with the opportunity to build something great as part of a team. We offer a flexible work environment, continued learning opportunities, and potential for career growth.

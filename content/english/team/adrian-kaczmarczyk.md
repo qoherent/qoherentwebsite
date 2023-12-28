@@ -1,12 +1,11 @@
 ---
-title: Sam Wilson
-email: samwilson@email.com
-image: "/images/avatar.png"
-description: this is meta description
+title: Adrian Kaczmarczyk
+image: "images/Adrian.jpg"
+description: Radio R&D Manager
 social:
-  - name: github
-    icon: fa-brands fa-github
-    link: https://github.com
+  # - name: github
+  #   icon: fa-brands fa-github
+  #   link: https://github.com
 
   - name: twitter
     icon: fa-brands fa-twitter

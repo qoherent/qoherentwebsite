@@ -1,8 +1,7 @@
 ---
-title: William Jacob
-email: williamjacob@email.com
-image: "/images/avatar.png"
-description: this is meta description
+title: Lorne Swersky
+image: "images/Lorne.png"
+description: ML R&D Manager
 social:
   - name: github
     icon: fa-brands fa-github
