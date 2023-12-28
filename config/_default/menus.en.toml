@@ -95,7 +95,7 @@ url = "radiointelligenceapps-suite/"
 parent = "Products"
 weight = 4
 name = "RIARAN"
-url = "radiointelligenceapps-RAN/"
+url = "radiointelligenceapps-ran/"
 
 #####################
 [[main]]
@@ -121,7 +121,7 @@ url = "prototyping/"
 parent = "Services"
 weight = 3
 name = "Custom Datasets"
-url = "datasets/"
+url = "custom-datasets/"
 
 #####################
 [[main]]
