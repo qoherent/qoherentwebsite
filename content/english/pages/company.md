@@ -9,7 +9,7 @@ draft: false
 ---
 
 
-> _Our mission is to drive the creation intelligent radio technology._
+> **Our mission**:  _Drive the creation intelligent radio._
 
 Qoherent ™ is a technology company that specializes in AI development for software-defined radios, focusing on streamlining the workflow for radio signal processing engineers and researchers in wireless technologies with software and IP products. Intelligent radios integrate machine learning-based signal processing to build more robust, aware, and adaptive radiofrequency (RF) communications and sensing systems that generally out perform traditional radio systems.
 

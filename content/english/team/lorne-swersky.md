@@ -5,15 +5,15 @@ description: ML R&D Manager
 social:
   - name: github
     icon: fa-brands fa-github
-    link: https://github.com
+    link: https://github.com/lswersk
 
-  - name: twitter
-    icon: fa-brands fa-twitter
-    link: https://twitter.com
+  # - name: twitter
+  #   icon: fa-brands fa-twitter
+  #   link: https://twitter.com
 
   - name: linkedin
     icon: fa-brands fa-linkedin
-    link: https://linkedin.com
+    link: https://www.linkedin.com/in/lorne-swersky-31a729183/?originalSubdomain=ca
 ---
 
-lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr navigation et dolore magna aliqua.
+ ML R&D Manager

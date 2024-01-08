@@ -1,7 +1,7 @@
 ---
 title: "Downloads"
-meta_title: "Custom RF Dataset Development"
-description: "Custom RF Dataset Development"
+meta_title: "Sample RF Datasets and Recordings."
+description: "Sample RF Datasets and Recordings."
 image: "/images/5g.png"
 draft: false
 
@@ -9,18 +9,18 @@ draft: false
 ---
 
 <!-- ## Custom RF Datasets for Model Training -->
-Short description
 
 
 {{< notice "note" >}}
 **License**
 
-The following downloads are made availible under GPLv3. Qoherent can make an alternative license license availible for variants of the dataset (propietary or open), for more information please contact us.
+The following downloads are made available under GPLv3. Qoherent can make an alternative license available for variants of the dataset (proprietary or open), for more information please contact us.
+
 {{< /notice >}}
 
 ### Utility for inspection and review:
 - IQ Engine Link
-- {}
+- RIA Dataset and Recording inspector (coming soon!)
 
 
 ### Synthetic Recordings (sigMF)
