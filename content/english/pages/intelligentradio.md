@@ -14,15 +14,19 @@ Radiofrequency technologies such as wireless communications, GPS, and radar are 
 
 Radios will also power the future, by being the foundational infrastructure of disruptive technologies such as self-driving cars, smart cities, and industrial IoT, allowing a high-throughput, low latency transfer of vast amounts of information.
 
+{{< image src="images/city-2048x1358.png" caption="" alt="alter-text" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="image title"  webp="false" >}}
+
 Radio technologies rely on wireless spectrum to operate. Spectrum is a finite and fixed resource, which is regulated by governments and international agreements. Every radio application technology operates on a section of spectrum that is assigned to it based on legislation, ownership of rights to the spectrum, and suitability.
 
 As the demand for radio technologies increases, spectrum is increasingly congested, and the usage of it requires complex techniques (such as beamforming or MIMO) to ensure adequate performance.
+
+{{< image src="images/us-spectrum.png" caption="" alt="alter-text" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="image title"  webp="false" >}}
 
 Today, we design our radio technology in a slow iterative manner. New concepts are explored in academic research, investigated by industry bodies, and written into the roadmaps of standards by bodies such as 3GPP and IEEE. Industries pick up these technologies as they become available, enabling new performance and new applications. Widespread radio technologies such as 802.11 (Wi-Fi) and LTE were developed in this manner. These radios are fixed-function and are designed to perform a single task, in a consistent environment, with a pre-defined level of performance
 
 But with new technologies comes increasing demand, and fixed-function radios are insufficient. Radios that can serve multiple purposes and adapt are critical to ensure the operations of technologies that rely on radio. Software-defined radios were created to solve this problem, but software-defined radios are subject to the same challenges of slow human-driven radio systems development.
 
-## "What are Intelligent Radios?
+## What are Intelligent Radios?
 
 Intelligent radios, which are fully autonomous AI-enabled radiofrequency systems, will be the future of wireless communications. They are able able to recognize spectral conditions, and autonomously learn how to achieve their objectives in a complex spectral environment, transmitting and receiving, and adapting on demand.
 
@@ -43,7 +47,7 @@ Like other AI-based and autonomous technologies, the development of intelligent 
 
 Today, machine learning technology is used to build "passive" intelligent radios, devices that can passively sense activity on spectrum. In the near-term, as technical challenges are overcome, intelligent radios will gain the skill of autonomously manipulating some of their transmit behaviours. In the future, technology will advance to the point of general radio intelligence, where devices will be fully interoperable, communicating without any human involvement.
 
-**_[The advancement of "radio intelligence" can be likened to the "levels of autonomy" that is used to describe autonomous vehicles.](https://www.qoherent.ai/2021/08/27/the-race-to-intelligent-radio/)_**
+**_[The advancement of "radio intelligence" can be likened to the "levels of autonomy" that is used to describe autonomous vehicles.](/blog/2108-5-levels-of-intelligent-radio/)_**
 
 # Qoherent's Radio Intelligence Apps
 
