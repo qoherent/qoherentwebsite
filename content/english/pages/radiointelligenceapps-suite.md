@@ -15,14 +15,22 @@ draft: false
 
 
 
-### Utility for inspection and review:
+### Dataset Synthesis & Curation
 - IQ Engine Link
 - {}
 
+### Model design and training
+
+
+### Model testing and testbed control
+
+
+
+### Model Integration
 
 
 
 ### Open Core Tools
 Build on a core open source project called the "RIA Project"...
 
-### Open Source AI
+### Open Source AI Library
