@@ -18,7 +18,7 @@
   // ----------------------------------------
   new Swiper(".testimonial-slider", {
     spaceBetween: 24,
-    loop: true,
+    loop: false,
     pagination: {
       el: ".testimonial-slider-pagination",
       type: "bullets",
@@ -28,9 +28,12 @@
       768: {
         slidesPerView: 2,
       },
-      992: {
-        slidesPerView: 3,
+      900: {
+        slidesPerView:3
       },
+      1100: {
+        slidesPerView: 5,
+      }
     },
   });
 })();
