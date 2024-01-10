@@ -36,7 +36,7 @@
         {{ $pageURL:= $currentPage.Permalink | absLangURL }}
         {{ $active := eq $menuURL $pageURL }}
         {{ if .HasChildren }}
-          <li class="nav-item nav-dropdown group relative ">
+          <li class="nav-item nav-dropdown group relative">
             <span
               style="font-family: 'Open Sans', sans-serif; font-weight: 500;"
               class="nav-link {{ range .Children }}
@@ -51,7 +51,7 @@
               </svg>
             </span>
             <ul
-              class="nav-dropdown-list lg:group-hover:visible lg:group-hover:opacity-100 hover:bg-dark gray-500">
+              class="nav-dropdown-list lg:group-hover:visible lg:group-hover:opacity-100">
               {{ range .Children }}
                 {{ $childURL := .URL | absLangURL }}
                 {{ $active := eq $childURL $pageURL }}
@@ -82,7 +82,7 @@
           <li class="nav-item ">
             <a
               style="font-family: 'Open Sans', sans-serif; font-weight: 400"
-              class="nav-link {{ if $active }}active{{- end -}}"
+              class="nav-link  {{ if $active }}active{{- end -}}"
               {{ if findRE `^http` .URL }}
                 target="_blank" rel="noopener"
               {{ end }}

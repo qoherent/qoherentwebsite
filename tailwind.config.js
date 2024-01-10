@@ -48,6 +48,8 @@ module.exports = {
         text: theme.colors.default.text_color.default,
         light: theme.colors.default.text_color.light,
         dark: theme.colors.default.text_color.dark,
+        qoherentgray: theme.colors.default.text_color.qoherentgray,
+        qoherentblack: theme.colors.default.text_color.qoherentblack,
         primary: theme.colors.default.theme_color.primary,
         secondary: theme.colors.default.theme_color.secondary,
         body: theme.colors.default.theme_color.body,

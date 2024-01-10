@@ -36,13 +36,13 @@ input#nav-toggle:checked ~ #nav-menu {
 // }
 
 .nav-link {
-  @apply text-dark hover:text-primary dark:text-darkmode-dark dark:hover:text-darkmode-primary block p-3 font-semibold transition lg:px-2 lg:py-3;
+  @apply dark:text-white block hover:dark:text-qoherentgray p-3 font-semibold transition lg:px-2 lg:py-3;
 }
 
 .nav-dropdown {
   @apply mr-0;
   & > svg {
-    @apply pointer-events-none;
+    @apply pointer-events-none ;
   }
   &.active {
     .nav-dropdown-list {
@@ -52,7 +52,7 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 .nav-dropdown-list {
-  @apply bg-body dark:bg-darkmode-body z-10 min-w-[180px] rounded p-4 shadow hidden lg:invisible lg:absolute lg:block lg:opacity-0;
+  @apply bg-body dark:bg-qoherentblack z-10 min-w-[180px] rounded p-4 shadow hidden lg:invisible lg:absolute lg:block lg:opacity-0;
 }
 
 .nav-dropdown-item {
