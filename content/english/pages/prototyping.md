@@ -5,14 +5,6 @@ date: "2021-07-19"
 
 <!-- ## Machine learning for passive RF signal processing -->
 
----
-title: "General Prototyping Services"
-meta_title: "General Prototyping Services"
-description: "General Prototyping Services"
-image: "/images/prototyping.jpg"
-draft: false
----
-
 At Qoherent, we are committed to pushing the boundaries of radio signal processing solutions through cutting-edge research, machine learning, and quantum computing. We collaborate with a diverse range of partners, including government labs, corporate researchers, and universities, to lead and contribute to active projects that shape the future of RF technology.
 
 ## Research Activities
