@@ -1,5 +1,6 @@
 {{ define "main" }}
-  {{ partial "page-header" . }}
+  {{ partial "page-header" (dict "Title" .Title) }}
+
 
 
   <section class="section">
