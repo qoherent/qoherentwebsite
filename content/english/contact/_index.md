@@ -6,12 +6,24 @@ draft: false
 ---
 
 
+<style>
+  .icon{
+    font-size: 50px;
+  }
 
-|   |   📶       |       Contact Us      |
+  th {
+    font-size: 23px;
+  }
+
+  td {
+    font-size: 20px;
+  }
+</style>
+
+|   | <span class="icon">🏤</span>  | 111 Queen St. East - Suite 210, Toronto, ON, Canada, Canada M5G 1S1 | 
 |:-:| -------------: | :-----------: |
-|   | 🏤      | 111 Queen St. East - Suite 210, Toronto, ON, Canada, Canada M5G 1S1 | 
-|   | 📬      |   Qoherent @ YSpace - 169 Enterprise Blvd. Suite 300 Markham, ON, Canada L6G 0E7    |   
-|   | ✉️ |   info at qoherent dot ai    |   
+|   | <span class="icon">📬</span>  | Qoherent @ YSpace - 169 Enterprise Blvd. Suite 300 Markham, ON, Canada L6G 0E7 |   
+|   | <span class="icon">✉️</span> | info at qoherent dot ai |
 
 
 

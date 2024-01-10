@@ -10,13 +10,21 @@ draft: false
 
 ## Radio and Spectrum
 
-Radiofrequency technologies such as wireless communications, GPS, and radar are critical to the modern way of life. These technologies enable us to connect with each other, understand our environment, and share information across vast distances.
+<div style="display:flex;">
 
+<p style="width:45%;">
+<br/>
+Radiofrequency technologies such as wireless communications, GPS, and radar are critical to the modern way of life. These technologies enable us to connect with each other, understand our environment, and share information across vast distances. <br/><br/>
 Radios will also power the future, by being the foundational infrastructure of disruptive technologies such as self-driving cars, smart cities, and industrial IoT, allowing a high-throughput, low latency transfer of vast amounts of information.
-
-{{< image src="images/city-2048x1358.png" caption="" alt="alter-text" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="image title"  webp="false" >}}
-
+<br/><br/>
 Radio technologies rely on wireless spectrum to operate. Spectrum is a finite and fixed resource, which is regulated by governments and international agreements. Every radio application technology operates on a section of spectrum that is assigned to it based on legislation, ownership of rights to the spectrum, and suitability.
+</p>
+
+
+<div style="display:flex; width:50%; float: right;">
+{{< image src="images/city-2048x1358.png" caption="" alt="alter-text" position="right" command="fill" option="q100" class="img-fluid" title="image title"  webp="false" >}}
+</div>
+</div>
 
 As the demand for radio technologies increases, spectrum is increasingly congested, and the usage of it requires complex techniques (such as beamforming or MIMO) to ensure adequate performance.
 
