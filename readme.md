@@ -240,3 +240,6 @@ You can change the colors and fonts from the `data/theme.json` file. This includ
 
 You can change the social links from the `data/social.json` file. Add your social links here, and they will automatically be displayed on the site.
 
+## Notes for contributors 
+
+Localhost will only run when baseURL is set to "/", once done making changes and pushing to main/opening a PR revert baseURL to "https://qoherent.github.io/qoherentwebsite/"
