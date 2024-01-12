@@ -3,7 +3,7 @@
 banner:
   title: "Identifying things in wireless spectrum with AI"
   content: "Lets build intelligent radios together."
-  image: "/images/banner.png"
+  image: "/images/placeholder_banner.jpg"
   button:
     enable: true
     label: "Radio Intelligence Apps"
