@@ -1,6 +1,6 @@
 ######################## default configuration ####################
 # The base URL of your site (required). This will be prepended to all relative URLs.
-baseURL = "/"
+baseURL = "https://qoherent.github.io/qoherentwebsite/"
 # Title of your website (required).
 title = "Qoherent - drive the creation of intelligent radios."
 # Your theme name
