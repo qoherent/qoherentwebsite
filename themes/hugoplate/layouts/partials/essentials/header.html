@@ -82,7 +82,7 @@
           <li class="nav-item ">
             <a
               style="font-family: 'Open Sans', sans-serif; font-weight: 400"
-              class="nav-link  {{ if $active }}active{{- end -}}"
+              class="nav-link {{ if $active }}active{{- end -}}"
               {{ if findRE `^http` .URL }}
                 target="_blank" rel="noopener"
               {{ end }}

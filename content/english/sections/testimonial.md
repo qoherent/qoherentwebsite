@@ -9,7 +9,7 @@ testimonials:
     # name: "ESA"
   - avatar: "/images/yspace.png"
     # name: "YSpace @ York University"
-  - avatar: "/images/csa.png"
+  # - avatar: "/images/csa.png"
     # name: "CSA"
   - avatar: "/images/esa.png"
     # name: "ESA"

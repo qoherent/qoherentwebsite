@@ -1,6 +1,8 @@
 {{ define "main" }}
 
   {{ partial "page-header" (dict "Title" .Params.title) }}
+  {{ partial "progress_indicator" }}
+  
   <section class="section-sm">
     <div class="container">
       <div class="row">
@@ -11,7 +13,7 @@
           </div>
         </div>
         <div class="md:col-10 lg:col-6 mx-auto">
-          <form action="https://formspree.io/f/mgegvovr" onsubmit=submitForm(event) method="POST">
+          <form action="https://formspree.io/f/xayrneza" onsubmit=submitForm(event) method="POST">
             <div class="mb-6">
               <label for="name" class="form-label">
                 Full Name <span class="text-red-500">*</span>

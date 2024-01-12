@@ -32,10 +32,10 @@ features:
       - "Interoperable with a selection of DSP and deep learning technologies."
       - "Enables deployment with leading SDR hardware solutions."
       - "Includes a library of functions, pre-trained models, model implementations, workflows, and datasets to accelerate prototyping."
-    button:
-      enable: true
-      label: "Get Started Now"
-      link: "https://github.com/zeon-studio/hugoplate"
+    # button:
+      # enable: true
+      # label: "Get Started Now"
+      # link: "https://github.com/zeon-studio/hugoplate"
 
   - title: "Intelligent Radio Research"
     image: "/images/service-3.png"

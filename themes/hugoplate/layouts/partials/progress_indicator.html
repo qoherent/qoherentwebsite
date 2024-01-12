@@ -1,0 +1,85 @@
+<div id="progress">
+    <span id="progress-value">&#8593;</span>
+</div>
+
+<style>
+    #progress {
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        height: 65px;
+        width: 65px;
+        display: none;
+        z-index: 1;
+        place-items: center;
+        box-shadow: 0 0 8.5px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+      }
+      #progress-value {
+        display: block;
+        height: calc(100% - 15px);
+        width: calc(100% - 15px);
+        background-color: #ffffff;
+        z-index: 1;
+        display: grid;
+        place-items: center;
+        font-size: 35px;
+        color: #001a2e;
+      }
+      
+      @media screen and (max-width: 1250px) {
+        #progress {
+            right: 30px;
+            bottom: 30px;
+            height: 50px;
+            width: 50px;
+        }
+      
+        #progress-value {
+            font-size: 25px;
+        }
+      }
+      
+      @media screen and (max-width: 400px) {
+        #progress {
+            right: 25px;
+            bottom: 25px;
+            height: 40px;
+            width: 40px;
+        }
+      
+        #progress-value {
+            font-size: 20px;
+            height: calc(100% - 10px);
+            width: calc(100% - 10px);
+        }
+      }
+</style>
+
+<script>
+    let calcScrollValue = () => {
+        let scrollProgress = document.getElementById("progress");
+        let progressValue = document.getElementById("progress-value");
+        let pos = document.documentElement.scrollTop;
+        let calcHeight =
+            document.documentElement.scrollHeight -
+            document.documentElement.clientHeight;
+        let scrollValue = Math.round((pos * 100) / calcHeight);
+        if (pos > 50) {
+            scrollProgress.style.display = "grid";
+        } else {
+            scrollProgress.style.display = "none";
+        }
+        scrollProgress.addEventListener("click", () => {
+            document.documentElement.scrollTop = 0;
+        });
+        scrollProgress.style.background = `conic-gradient(#884da0 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+    };
+
+    window.onload = calcScrollValue;
+    window.onscroll = () => {
+    calcScrollValue();
+
+    document.documentElement.style.scrollBehavior = 'smooth';
+};
+</script>

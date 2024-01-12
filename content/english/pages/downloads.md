@@ -26,7 +26,7 @@ The following downloads are made available under GPLv3. Qoherent can make an alt
     <div class="row">
       <div class="md:col-10 lg:col-6 mx-auto">
         <!-- Change this to new qoherent form when made -->
-        <form action="https://formspree.io/f/xpzvwqqb" method="post" onsubmit=submitForm(event)>
+        <form action="https://formspree.io/f/xdoqkevp" method="post" onsubmit=submitForm(event)>
           <div class="mb-6">
             <label for="email" class="form-label whitespace-nowrap">
               Enter your email to unlock download links! <span class="text-red-500">*</span>
