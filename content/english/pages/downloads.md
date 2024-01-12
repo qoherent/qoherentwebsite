@@ -5,7 +5,6 @@ description: "Sample RF Datasets and Recordings."
 image: "/images/5g.png"
 draft: false
 
-
 ---
 
 <!-- ## Custom RF Datasets for Model Training -->
@@ -26,19 +25,20 @@ The following downloads are made available under GPLv3. Qoherent can make an alt
   <div class="container">
     <div class="row">
       <div class="md:col-10 lg:col-6 mx-auto">
-        <form action="{{ site.Params.contact_form_action }}" method="post">
+        <!-- Change this to new qoherent form when made -->
+        <form action="https://formspree.io/f/xpzvwqqb" method="post" onsubmit=submitForm(event)>
           <div class="mb-6">
             <label for="email" class="form-label whitespace-nowrap">
               Enter your email to unlock download links! <span class="text-red-500">*</span>
             </label>
             <input
-              id="email"
+              id="email-download"
               name="email"
               class="form-input"
               placeholder="your.email@example.com"
               type="email" required />
           </div>
-          <button type="button" class="btn btn-primary" onclick="updateLinks()">Enter</button>
+          <button type="submit" class="btn btn-primary">Enter</button>
         </form>
       </div>
     </div>
@@ -69,7 +69,7 @@ The following downloads are made available under GPLv3. Qoherent can make an alt
 
 
 <script>
-function updateLinks() {
+  function submitForm(event) {
   // Adjust links as needed - Made the most sense this way since links will be different for each
   document.getElementById("lock1").innerHTML = '<a href="">Link</a>';
   document.getElementById("lock2").innerHTML = '<a href="">Link</a>';
@@ -83,5 +83,26 @@ function updateLinks() {
   document.getElementById("lock10").innerHTML = '<a href="">Link</a>';
   document.getElementById("lock11").innerHTML = '<a href="">Link</a>';
   document.getElementById("lock12").innerHTML = '<a href="">Link</a>'; // GNU Radio
-}
+
+  
+    event.preventDefault(); 
+
+    const formData = new FormData(event.target);
+    // Change this to new qoherent form when made
+    fetch('https://formspree.io/f/xpzvwqqb', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json',
+      },
+    })
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('email-download').value = '';
+    })
+    .catch(error => {
+      console.error('Error submitting form:', error);
+    });
+  }
+
 </script>
