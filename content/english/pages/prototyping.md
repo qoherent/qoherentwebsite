@@ -7,14 +7,28 @@ date: "2021-07-19"
 
 At Qoherent, we are committed to pushing the boundaries of radio signal processing solutions through cutting-edge research, machine learning, and quantum computing. We collaborate with a diverse range of partners, including government labs, corporate researchers, and universities, to lead and contribute to active projects that shape the future of RF technology.
 
+
+
 ## Research Activities
 
 We offer end-to-end research and prototyping services for any stage of a project, including:
 
+<div style="display:flex;">
+
+
 - Reviewing and consulting on state-of-the-art methods for performing radio signal classification.
 - Designing and experimenting with algorithmic solutions for classifying radio signals.
 - Replicating and advancing peer-reviewed research in the field.
+- Signal synthesis and over-the-air recording capture.
 - Designing and developing software-defined radio (SDR)-based testbeds, from two radios to large channel emulators.
+
+
+<div style="display:flex; width:50%; float: right;">
+{{< image src="images/testbed.png" caption="" alt="alter-text" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="image title"  webp="false" >}}
+</div>
+</div>
+
+
 
 ## Engineering Activities
 

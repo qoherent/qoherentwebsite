@@ -31,14 +31,18 @@ RIARAN consists of the [RIA project](radiointelligenceapps-suite/), and the RIAR
 - **Enhances a network**: Transform your communications-oriented radios into dynamic sensing platforms.
 - **Scalability**: Whether it’s small networks or large-scale deployments, RIARAN is adept at handling varying scales with ease.
 - **Future-Ready**: With RIARAN, models can be redeployed, thereby enabling the most state-of-the art methods to be used in production.
-- **Low latency**: With predictions coming directly from the gNodeB, enable the integration of ML into mission critical application.
+- **Low latency**: With predictions coming directly from the gNodeB, enable the integration of ML into mission critical physical layer processing applications.
 
+<div style="display:flex; width:50%; ">
 {{< image src="images/riaran-table.png" caption="" alt="alter-text" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="image title"  webp="false" >}}
-__ Credit: [Melodia et al](https://arxiv.org/pdf/2203.02370.pdf). __
+</div>
+
+
+__Credit: [Melodia et al](https://arxiv.org/pdf/2203.02370.pdf)__
 
 ### Applications
 
-RIARAN finds its use in a wide range of sectors:
+RIARAN finds use in a wide range of sectors:
 
 - **Telecommunications**: Revolutionize how 5G networks operate with enhanced efficiency and security.
 - **Defense & Security**: Gain superior situational awareness with advanced signal processing and anomaly detection capabilities.

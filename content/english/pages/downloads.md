@@ -106,3 +106,9 @@ The following downloads are made available under GPLv3. Qoherent can make an alt
   }
 
 </script>
+
+
+
+
+<!-- {{< slider dir="images/gallery" class="ml-0" webp="true" command="Fit" option="" zoomable="true" >}} -->
+{{< image src="images/iq_5GNR.png" caption="" alt="alter-text" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="image title"  webp="false" >}}

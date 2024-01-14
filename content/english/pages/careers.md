@@ -17,3 +17,6 @@ We are always looking to meet those who are eager to join in our mission to buil
 Active postings for full-time or contract positions can be found here or on our LinkedIn page.
 
 We also occasionally offer Co-op postings to qualified Canadian university or college students from accredited engineering, computer science, or physics programs, including graduate students. Postings can be found at your school's career centre, but we also encourage students to reach out to us via email directly.
+
+
+{{< image src="images/iq_short.png" caption="" alt="alter-text" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="image title"  webp="false" >}}
