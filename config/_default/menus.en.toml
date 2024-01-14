@@ -171,10 +171,10 @@ weight = 1
 
 ##Will change these later based on what we want
 
-[[footer]]
-name = "Elements"
-url = "elements/"
-weight = 2
+# [[footer]]
+# name = "Elements"
+# url = "elements/"
+# weight = 2
 
 [[footer]]
 name = "Careers"
@@ -182,16 +182,16 @@ weight = 5
 url = "careers/"
 
 [[footer]]
-name = "Resources"
-url = "resources/"
+name = "News"
+url = "categories/news/"
 hasChildren = true
 weight = 7
 
 ################################################
-[[footer]]
-name = "Privacy Policy"
-url = "privacy-policy/"
-weight = 3
+# [[footer]]
+# name = "Privacy Policy"
+# url = "privacy-policy/"
+# weight = 3
 
 # [[main]]
 # name = " "

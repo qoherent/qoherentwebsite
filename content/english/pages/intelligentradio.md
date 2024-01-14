@@ -57,8 +57,10 @@ Today, machine learning technology is used to build "passive" intelligent radios
 
 **_[The advancement of "radio intelligence" can be likened to the "levels of autonomy" that is used to describe autonomous vehicles.](/blog/2108-5-levels-of-intelligent-radio/)_**
 
-# Qoherent's Radio Intelligence Apps
+## Qoherent's Radio Intelligence Apps
 
 Qoherent is building the Radio Intelligence Apps platform (RIA) to drive the creation of intelligent radios as part of more robust, aware, and adaptive wireless communications systems.
 
 RIA is an AI development automation platform for engineers who are building next-generation wireless communications technologies, which rely heavily on machine learning. RIA bridges the gap between expert-designed signal processing and machine learning workflows, helping save time and engineering resources in the deployment of machine learning into radio. RIA consists of tools for signal synthesis, dataset curation, naive model training, model testing, and model integration for a range of sensing tasks, such as classification, filtering, segmentation, and detection. RIA is an automated machine learning operations environment, that enables engineers to build, deploy, and retrain prediction services to cloud and edge.
+
+{{< image src="images/sgram_2.png" caption="" alt="alter-text" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="image title"  webp="false" >}}
