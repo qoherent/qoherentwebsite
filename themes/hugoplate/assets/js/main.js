@@ -16,9 +16,13 @@
 
   // Testimonial Slider
   // ----------------------------------------
-  new Swiper(".testimonial-slider", {
+  var testimonialSlider = new Swiper(".testimonial-slider", {
     spaceBetween: 24,
     loop: false,
+    autoplay: {
+      delay: 2500, // set the delay in milliseconds between slides
+      disableOnInteraction: false, // continue autoplay even when user interacts with the slider
+    },
     pagination: {
       el: ".testimonial-slider-pagination",
       type: "bullets",
@@ -29,11 +33,11 @@
         slidesPerView: 2,
       },
       900: {
-        slidesPerView:3
+        slidesPerView: 3,
       },
       1100: {
         slidesPerView: 5,
-      }
+      },
     },
   });
 })();

@@ -14,7 +14,7 @@
         <ul>
           {{ range site.Menus.footer }}
             <li class="m-3 block">
-              <a
+              <a class="hover:text-white"
                 {{ if findRE `^http` .URL }}
                   target="_blank" rel="noopener"
                 {{ end }}
@@ -25,8 +25,7 @@
                 {{ else }}
                   {{ .URL | relLangURL }}
                 {{ end }}"
-                >{{ .Name }}</a
-              >
+                >{{ .Name }}</a>
             </li>
           {{ end }}
         </ul>
