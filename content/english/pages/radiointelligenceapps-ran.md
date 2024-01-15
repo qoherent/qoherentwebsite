@@ -33,12 +33,40 @@ RIARAN consists of the [RIA project](radiointelligenceapps-suite/), and the RIAR
 - **Future-Ready**: With RIARAN, models can be redeployed, thereby enabling the most state-of-the art methods to be used in production.
 - **Low latency**: With predictions coming directly from the gNodeB, enable the integration of ML into mission critical physical layer processing applications.
 
-<div style="display:flex; width:50%; ">
-{{< image src="images/riaran-table.png" caption="" alt="alter-text" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="image title"  webp="false" >}}
+<div class="div">
+
+  {{< image src="images/riaran-table.png" caption="" alt="alter-text" height="" width="" position="center" command="fill" option="q100" class="img-fluid-div" title="image title" webp="false" >}}
+
+  __Credit: [Melodia et al](https://arxiv.org/pdf/2203.02370.pdf)__
 </div>
 
+<style>
 
-__Credit: [Melodia et al](https://arxiv.org/pdf/2203.02370.pdf)__
+    .div {
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center;
+    }
+
+    .img-fluid-div {
+        width: 50%;
+    }
+
+    @media screen and (max-width:1000px) {
+        .img-fluid-div {
+            width: 70%; 
+        }
+    }
+
+    @media screen and (max-width:500px) {
+        .img-fluid-div {
+            width: 80%; 
+        }
+    }
+
+</style>
+
 
 ### Applications
 

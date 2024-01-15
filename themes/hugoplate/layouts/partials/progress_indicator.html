@@ -1,5 +1,5 @@
 <div id="progress">
-    <span id="progress-value">&#8593;</span>
+    <span id="progress-value"><strong>^</strong></span>
 </div>
 
 <style>
@@ -15,17 +15,20 @@
         box-shadow: 0 0 8.5px rgba(0, 0, 0, 0.15);
         cursor: pointer;
       }
+
       #progress-value {
         display: block;
         height: calc(100% - 15px);
         width: calc(100% - 15px);
-        background-color: #ffffff;
+        background-color: #1c1c1c;
         z-index: 1;
         display: grid;
         place-items: center;
-        font-size: 35px;
-        color: #001a2e;
-      }
+        font-size: 40px;
+        color: #717171;
+        font-weight: bold;
+        line-height: 1;
+    }
       
       @media screen and (max-width: 1250px) {
         #progress {

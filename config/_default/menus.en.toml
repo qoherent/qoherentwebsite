@@ -155,11 +155,13 @@ url = "downloads/"
 # name = "Docs"
 # url = "docs/"
 
-# [[main]]
-# parent = "Resources"
-# name = "Elements"
-# url = "elements/"
-# weight = 5
+# Remove when done using this
+
+[[main]]
+parent = "Resources"
+name = "Elements"
+url = "elements/"
+weight = 5
 
 
 #####################################

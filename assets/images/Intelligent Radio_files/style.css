@@ -75,14 +75,21 @@ abbr:where([title]) {
 Remove the default font size and weight for headings.
 */
 
-h1,
-h2,
+
 h3,
 h4,
 h5,
 h6 {
   font-size: inherit;
-  font-weight: inherit;
+  font-weight: 300;
+}
+
+h1,
+h2
+ {
+  font-size: inherit;
+  font-weight: 100;
+  color: inherit;
 }
 
 /*
@@ -3370,6 +3377,12 @@ input#nav-toggle:checked ~ #nav-menu {
 :is(.dark .dark\:hover\:text-darkmode-primary:hover) {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.full-height-section {
+  height: 70vh; 
+  background: #000; 
+  overflow: hidden;
 }
 
 @media (min-width: 540px) {

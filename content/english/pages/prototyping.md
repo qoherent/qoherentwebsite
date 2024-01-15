@@ -13,20 +13,63 @@ At Qoherent, we are committed to pushing the boundaries of radio signal processi
 
 We offer end-to-end research and prototyping services for any stage of a project, including:
 
-<div style="display:flex;">
+<style>
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
+  .flex-item {
+    box-sizing: border-box;
+    padding: 10px;
+  }
 
-- Reviewing and consulting on state-of-the-art methods for performing radio signal classification.
-- Designing and experimenting with algorithmic solutions for classifying radio signals.
-- Replicating and advancing peer-reviewed research in the field.
-- Signal synthesis and over-the-air recording capture.
-- Designing and developing software-defined radio (SDR)-based testbeds, from two radios to large channel emulators.
+  @media (min-width: 1300px) {
+    .flex-item {
+      width: 50%;
+    }
 
+    .image-container {
+      float: right;
+    }
+  }
 
-<div style="display:flex; width:50%; float: right;">
-{{< image src="images/testbed.png" caption="" alt="alter-text" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="image title"  webp="false" >}}
+  @media (max-width: 1024px) {
+    .flex-item {
+      width: 100%;
+    }
+
+    .image-container {
+      float: none;
+      text-align: center; 
+    }
+  }
+</style>
+
+<div class="flex-container">
+  <div class="flex-item">
+    <p>
+      - Reviewing and consulting on state-of-the-art methods for performing radio signal classification.
+    </p>
+    <p>
+      - Designing and experimenting with algorithmic solutions for classifying radio signals.
+    </p>
+    <p>
+      - Replicating and advancing peer-reviewed research in the field.
+    </p>
+    <p>
+      - Signal synthesis and over-the-air recording capture.
+    </p>
+    <p>
+      - Designing and developing software-defined radio (SDR)-based testbeds, from two radios to large channel emulators.
+    </p>
+  </div>
+
+  <div class="flex-item image-container">
+    {{< image src="images/testbed.png" caption="" alt="alter-text" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="image title"  webp="false" >}}
+  </div>
 </div>
-</div>
+
 
 
 

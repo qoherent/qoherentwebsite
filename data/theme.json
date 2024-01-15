@@ -13,7 +13,10 @@
         "dark": "#040404",
         "light": "#717171",
         "qoherentgray": "#625f63",
-        "qoherentblack": "#333745"
+        "qoherentblack": "#333745",
+        "qoherentpink": "#e63462",
+        "qoherentblue": "#03a9f4",
+        "qoherentpurple": "#884da0"
       }
     },
     "darkmode": {
@@ -27,7 +30,12 @@
       "text_color": {
         "default": "#B4AFB6",
         "dark": "#fff",
-        "light": "#B4AFB6"
+        "light": "#B4AFB6",
+        "qoherentgray": "#625f63",
+        "qoherentblack": "#333745",
+        "qoherentpink": "#e63462",
+        "qoherentblue": "#03a9f4",
+        "qoherentpurple": "#884da0"
       }
     }
   },
@@ -37,7 +45,7 @@
       "primary_type": "sans-serif",
       "secondary": "Open+Sans:wght@300", 
       "secondary_type": "sans-serif"
-    },
+    },    
     "font_size": {
       "base": "16",
       "scale": "1.250"
