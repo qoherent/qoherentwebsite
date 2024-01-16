@@ -2,31 +2,32 @@
   {{ partial "progress_indicator" }}
   <!-- Banner -->
   {{ with .Params.banner }}
-    <section class="section pt-14">
-      <div class="container">
-        <div class="row justify-center">
-          <div class="lg:col-7 mb-8 text-center">
-            <h1 class="mb-4">
-              {{ .title | markdownify }}
-            </h1>
-            <p class="mb-8">
-              {{ .content | markdownify }}
-            </p>
-            {{ with .button }}
-              {{ if .enable }}
-                <a class="btn btn-primary" href="{{ .link | absURL }}">
-                  {{ .label }}
-                  <i class="fa fa-arrow-right pl-2"></i>
-                </a>
-              {{ end }}
-            {{ end }}
-          </div>
-          <div class="col-12">
-            {{ partial "image" (dict "Src" .image "Alt" "Banner image" "Loading" "eager" "Class" "mx-auto lg:!max-w-[800px]" ) }}
-          </div>
+  <section class="section relative" style="height: 75vh; background: linear-gradient(to top, transparent 0%, #1c1c1c 80%);">
+    {{ partial "image" (dict "Src" .image "Alt" "Banner image" "Loading" "eager" "Class" "absolute inset-0 w-full h-full z-[-1] min-h-full") }}
+      <div class="absolute inset-0 flex flex-col justify-center items-center text-white">
+        <div class="container">
+            <div class="row justify-center">
+                <div class="text-center mb-[10vh]">
+                    <h1 class="text-center lg:whitespace-nowrap " style="font-weight: 100;"> 
+                        {{ .title | markdownify }}
+                    </h1>
+                    <p class="mb-8 text-center"> 
+                        {{ .content | markdownify }}
+                    </p>
+                    {{ with .button }}
+                        {{ if .enable }}
+                            <a class="btn btn-primary" href="{{ .link | absURL }}">
+                                {{ .label }}
+                                <i class="fa fa-arrow-right pl-2"></i>
+                            </a>
+                        {{ end }}
+                    {{ end }}
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
+
   {{ end }}
   <!-- /Banner -->
 

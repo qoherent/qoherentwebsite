@@ -237,3 +237,39 @@ print s
 ### Custom video
 
 {{< video src="https://www.w3schools.com/html/mov_bbb.mp4" width="100%" height="auto" autoplay="false" loop="false" muted="false" controls="true" class="rounded-lg" >}}
+
+### Adding CSS styles to title/page headers 
+
+To add a text color use the following tailwind css style: text-{color}
+
+All the colors from the Qoherent Palette have been added as folows 
+
+Qoherent Gray - dark:qoherentgray
+Qoherent Black - dark:qoherentblack 
+Qoherent Purple - dark:qoherentpurple
+Qoherent Pink - dark:qoherentpink
+Qoherent Blue - dark:qoherentblue 
+
+if you wanted to add the Qoherent pink color to all the titles for example, you would do: 
+
+dark:text-qoherentpink
+
+### Where to add text colors
+
+If you want to add a color to all h1 headings then change the current CSS property text-white of all h1 tags in themes/hugoplate/assets/scss/base.scss to dark:text-qoherentcolor
+
+If you want to change the h2 do the same for the h2 tags
+
+If you want to change the color of titles in the page-header go to themes/hugoplate/layouts/partials/page-header and change the h1 class to dark:text-qoherentcolor
+
+Note "color" is a placeholder so if you want gray you would do dark:qoherentgray
+
+There will be comments in each of the css files to help
+
+Examples:
+
+<h1 class="dark:text-qoherentgray">I am gray text</h1>
+<h1 class="dark:text-qoherentblack">I am black text</h1>
+<h1 class="dark:text-qoherentpink">I am pink text</h1>
+<h1 class="dark:text-qoherentblue">I am blue text</h1>
+<h1 class="dark:text-qoherentpurple">I am purple text</h1>

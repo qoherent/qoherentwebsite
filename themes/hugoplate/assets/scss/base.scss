@@ -6,13 +6,23 @@ body {
   @apply bg-body dark:bg-darkmode-body font-primary font-normal leading-relaxed text-text dark:text-darkmode-text;
 }
 
-h1,
-h2,
+/* To change colors of all h1/h2 headings change the color in h1, h2 class below, delete text-white and add your color. naming scheme of colors in elements.md, you can also bold using text-bold */
+
+h1 {
+  @apply font-secondary leading-tight text-white
+}
+
+h2 {
+  @apply font-secondary leading-tight text-white
+}
+
+/* To change colors of all h3 and onwards text change the color in the class below, delete 'text-dark dark:text-darkmode-dark' and add your color. naming scheme of colors in elements.md, you can also bold using text-bold */
+
 h3,
 h4,
 h5,
 h6 {
-  @apply font-secondary font-bold leading-tight text-dark dark:text-darkmode-dark;
+  @apply font-secondary leading-tight text-dark dark:text-darkmode-dark;
 }
 
 h1,

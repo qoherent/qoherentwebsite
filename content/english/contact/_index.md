@@ -42,11 +42,11 @@ draft: false
 
 <div class="contact-grid">
   <div class="contact-item">
-    <span class="icon">🏤</span>
+    <i class="fa-regular fa-building icon"></i>
     <p>111 Queen St. East - Suite 210, Toronto, ON, Canada, Canada M5G 1S1</p>
   </div>
   <div class="contact-item">
-    <span class="icon">📬</span>
+    <i class="fa-solid fa-truck icon"></i>
     <p>Qoherent @ YSpace
         169 Enterprise Blvd.
         Suite 300
@@ -54,7 +54,7 @@ draft: false
         L6G 0E7</p>
   </div>
   <div class="contact-item">
-    <span class="icon">✉️</span>
+    <i class="fa-regular fa-envelope icon"></i>
     <p>info at qoherent dot ai</p>
   </div>
 </div>

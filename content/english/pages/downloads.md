@@ -80,8 +80,8 @@ The following downloads are made available under GPLv3. Qoherent can make an alt
   document.getElementById("lock7").innerHTML = '<a href="">Link</a>';
   document.getElementById("lock8").innerHTML = '<a href="">Link</a>';
   document.getElementById("lock9").innerHTML = '<a href="">Link</a>';
-  document.getElementById("lock10").innerHTML = '<a href="">Link</a>';
-  document.getElementById("lock11").innerHTML = '<a href="">Link</a>';
+  document.getElementById("lock10").innerHTML = '<a href="https://console.cloud.google.com/storage/browser/_details/qoherent_external_drive/general_dataset_library/synthetic/qoherent_modulation_awgn.h5">Link</a>';
+  document.getElementById("lock11").innerHTML = '<a href="https://console.cloud.google.com/storage/browser/_details/qoherent_external_drive/general_dataset_library/synthetic/qoherent_modulation_unimpaired.h5">Link</a>';
   document.getElementById("lock12").innerHTML = '<a href="">Link</a>'; // GNU Radio
 
   
@@ -89,7 +89,7 @@ The following downloads are made available under GPLv3. Qoherent can make an alt
 
     const formData = new FormData(event.target);
     // Change this to new qoherent form when made
-    fetch('https://formspree.io/f/xpzvwqqb', {
+    fetch('https://formspree.io/f/xdoqkevp', {
       method: 'POST',
       body: formData,
       headers: {
