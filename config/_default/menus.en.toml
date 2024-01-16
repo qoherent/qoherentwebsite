@@ -157,11 +157,11 @@ url = "downloads/"
 
 # Remove when done using this
 
-[[main]]
-parent = "Resources"
-name = "Elements"
-url = "elements/"
-weight = 5
+# [[main]]
+# parent = "Resources"
+# name = "Elements"
+# url = "elements/"
+# weight = 5
 
 
 #####################################

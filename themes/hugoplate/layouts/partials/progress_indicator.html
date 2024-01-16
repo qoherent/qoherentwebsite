@@ -1,5 +1,5 @@
 <div id="progress">
-    <span id="progress-value"><strong>^</strong></span>
+    <span class="top" id="progress-value"><strong>^</strong></span>
 </div>
 
 <style>
@@ -10,24 +10,26 @@
         height: 65px;
         width: 65px;
         display: none;
-        z-index: 1;
-        place-items: center;
+        z-index: 1000;
         box-shadow: 0 0 8.5px rgba(0, 0, 0, 0.15);
         cursor: pointer;
-      }
-
-      #progress-value {
+        text-align: center; 
+    }
+    
+    #progress-value {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         display: block;
         height: calc(100% - 15px);
         width: calc(100% - 15px);
         background-color: #1c1c1c;
         z-index: 1;
-        display: grid;
-        place-items: center;
         font-size: 40px;
         color: #717171;
         font-weight: bold;
-        line-height: 1;
+        line-height: 60px;
     }
       
       @media screen and (max-width: 1250px) {
@@ -40,6 +42,7 @@
       
         #progress-value {
             font-size: 25px;
+            line-height: 40px;
         }
       }
       
@@ -55,6 +58,7 @@
             font-size: 20px;
             height: calc(100% - 10px);
             width: calc(100% - 10px);
+            line-height: 35px;
         }
       }
 </style>

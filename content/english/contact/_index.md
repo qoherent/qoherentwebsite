@@ -27,6 +27,7 @@ draft: false
 
   .icon{
     font-size: 35px;
+    color: #625f63;
   }
 
   @media (min-width: 600px) {

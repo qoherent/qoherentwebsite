@@ -2,12 +2,12 @@
   {{ partial "progress_indicator" }}
   <!-- Banner -->
   {{ with .Params.banner }}
-  <section class="section relative" style="height: 75vh; background: linear-gradient(to top, transparent 0%, #1c1c1c 80%);">
+  <section class="section relative" style="height: 65vh; background: linear-gradient(to top, transparent 0%, #1c1c1c 80%);">
     {{ partial "image" (dict "Src" .image "Alt" "Banner image" "Loading" "eager" "Class" "absolute inset-0 w-full h-full z-[-1] min-h-full") }}
       <div class="absolute inset-0 flex flex-col justify-center items-center text-white">
         <div class="container">
             <div class="row justify-center">
-                <div class="text-center mb-[10vh]">
+                <div class="text-center lg:mb-[17.5vh] mb-[10.5vh]">
                     <h1 class="text-center lg:whitespace-nowrap " style="font-weight: 100;"> 
                         {{ .title | markdownify }}
                     </h1>
@@ -89,13 +89,13 @@
                 {{ .Params.description | markdownify }}
               </p>
             </div>
-            <div class="col-12">
+            <div class="col-12  z-[-1]">
               <div class="swiper testimonial-slider">
                 <div class="swiper-wrapper">
                   {{ range .Params.testimonials }}
                     <div class="swiper-slide">
                       <div
-                        class="bg-theme-light dark:bg-darkmode-theme-light rounded-lg px-7 py-10">
+                        class="bg-theme-light dark:bg-darkmode-theme-light rounded-lg px-7 py-10  z-[-1]">
                         {{/*<div class="text-dark dark:text-white">
                           <svg
                             width="33"
