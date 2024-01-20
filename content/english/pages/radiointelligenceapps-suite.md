@@ -22,8 +22,8 @@ _**The RIA Suite, and RIA Open Source Project is coming soon.**_
 - Automated testing, integration, and deployment into SDR-enabled systems, including OpenRAN-ready 5G solutions.
 
 #### Comprehensive reference library
-- Includes popular off-the-shelf deep learning algorithms, adapted for radio applications"
-- Open Source and community libraries
+- Includes popular off-the-shelf deep learning algorithms, adapted for radio applications.
+- Open Source and community libraries.
 - Synthesizers, recordings, pre-trained models, and API's for accelerating the time to prototype.
 
 
