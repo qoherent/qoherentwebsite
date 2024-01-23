@@ -11,7 +11,7 @@ draft: false
 
 <!-- ## Transforming Communications with State-of-the-Art Technology -->
 
-RIARAN consists of the [RIA project](radiointelligenceapps-suite/), and the RIARAN gNB. The RIARAN gNB integrates high-performance ML inference software onto the gNodeB. RIARAN, integrates deep learning models into open source telecommunications infrastructure, giving them the ability harness the power of AI for a range of sensing and communications tasks. RIARAN is designed to enhance applications within telecommunications, defense, and satellite communications. Leveraging the latest advancements in deep learning, artificial intelligence, and big data analytics, RIARAN is set to redefine the value of OpenRAN and SDR-based networks.
+RIARAN consists of the [RIA project](radiointelligenceapps-suite/), and the RIARAN gNB. The RIARAN gNB integrates high-performance ML inference software onto the gNodeB. RIARAN, integrates deep learning models into open source telecommunications infrastructure, giving them the ability to harness the power of AI for a range of sensing and communications tasks. RIARAN is designed to enhance applications within telecommunications, defense, and satellite communications. Leveraging the latest advancements in deep learning, artificial intelligence, and big data analytics, RIARAN is set to redefine the value of OpenRAN and SDR-based networks.
 
 {{< image src="images/riaran.png" caption="" alt="alter-text" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="image title"  webp="false" >}}
 
