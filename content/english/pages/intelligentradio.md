@@ -77,10 +77,10 @@ Intelligent radios will be able to:
 
 - Perform signal processing tasks with less computational intensity or system complexity.
 - Sense and adapt to changing environmental conditions, such as noise, congestion, or interference.
-- Sense other radios, learn then use the protocols those devices are are using to communicate
+- Sense other radios, learn then use the protocols those devices are are using to communicate.
 - Generate new communications protocols, that can transmit more information more robustly than human-designed ones.
-- Propagate learned protocols with other intelligent radios
-- Collaborate with other intelligent radios to share available spectrum, or to adapt around evolving conditions
+- Propagate learned protocols with other intelligent radios.
+- Collaborate with other intelligent radios to share available spectrum, or to adapt around evolving conditions.
 
 As our need for radio technologies scales and becomes more complex, intelligent radio technologies will ensure our radio infrastructure can keep up with demand. Intelligent radios will enable smart cities, self-driving cars, Industrial IoT, and future 6G networks.
 
