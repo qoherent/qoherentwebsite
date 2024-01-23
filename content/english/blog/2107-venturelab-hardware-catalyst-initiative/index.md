@@ -1,12 +1,12 @@
 ---
-title: "ventureLAB Hardware Catalyst Initiative"
-title: "ventureLAB Hardware Catalyst Initiative"
+title: "VentureLAB Hardware Catalyst Initiative"
+title: "VentureLAB Hardware Catalyst Initiative"
 date: "2021-07-19"
 draft: false
 cover:
     # image img/example.jpg
-    alt: 'ventureLAB Hardware Catalyst Initiative.'
-    caption: 'ventureLAB Hardware Catalyst Initiative'
+    alt: 'VentureLAB Hardware Catalyst Initiative.'
+    caption: 'VentureLAB Hardware Catalyst Initiative'
 tags: ['SDR','Qoherent','venturelab']
 categories: ['news']
 ---

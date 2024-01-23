@@ -1,13 +1,11 @@
 ---
-title: "Prototyping services for RF signal processing with artificial intelligence."
+title: "Prototyping services for RF signal processing with artificial intelligence"
 date: "2021-07-19"
 ---
 
 <!-- ## Machine learning for passive RF signal processing -->
 
 At Qoherent, we are committed to pushing the boundaries of radio signal processing solutions through cutting-edge research, machine learning, and quantum computing. We collaborate with a diverse range of partners, including government labs, corporate researchers, and universities, to lead and contribute to active projects that shape the future of RF technology.
-
-
 
 ## Research Activities
 
@@ -22,6 +20,10 @@ We offer end-to-end research and prototyping services for any stage of a project
   .flex-item {
     box-sizing: border-box;
     padding: 10px;
+  }
+  
+  .flex-item li {
+    list-style: disc;
   }
 
   @media (min-width: 1300px) {
@@ -48,29 +50,29 @@ We offer end-to-end research and prototyping services for any stage of a project
 
 <div class="flex-container">
   <div class="flex-item">
-    <p>
-      - Reviewing and consulting on state-of-the-art methods for performing radio signal classification.
-    </p>
-    <p>
-      - Designing and experimenting with algorithmic solutions for classifying radio signals.
-    </p>
-    <p>
-      - Replicating and advancing peer-reviewed research in the field.
-    </p>
-    <p>
-      - Signal synthesis and over-the-air recording capture.
-    </p>
-    <p>
-      - Designing and developing software-defined radio (SDR)-based testbeds, from two radios to large channel emulators.
-    </p>
+    <ul>
+      <li>
+       Reviewing and consulting on state-of-the-art methods for performing radio signal classification.
+      </li>
+      <li>
+        Designing and experimenting with algorithmic solutions for classifying radio signals.
+      </li>
+      <li>
+        Replicating and advancing peer-reviewed research in the field.
+      </li>
+      <li>
+        Signal synthesis and over-the-air recording capture.
+      </li>
+      <li>
+        Designing and developing software-defined radio (SDR)-based testbeds, from two radios to large channel emulators.
+      </li>
+    </ul>
   </div>
 
   <div class="flex-item image-container">
     {{< image src="images/testbed.png" caption="" alt="alter-text" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="image title"  webp="false" >}}
   </div>
 </div>
-
-
 
 
 ## Engineering Activities

@@ -18,8 +18,8 @@ Whether you need a small dataset for a specific project or a massive dataset for
 
 Our experts can generate synthetic RF datasets for a wide range of scenarios and applications, including:
 
-- Space-based communications and sensing environments.
-- 5G, LTE, and standard cellular environments.
+- Space-based communications and sensing environments
+- 5G, LTE, and standard cellular environments
 - ISM band
 - Radars
 - Vehicular communications
