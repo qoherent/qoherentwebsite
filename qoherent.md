@@ -1,3 +1,17 @@
+<h1 align="center">About Qoherent</h1>
+
+<p align="center">Qoherent™ is a technology company that specializes in AI development for software-defined radios, focusing on streamlining the workflow for radio signal processing engineers and researchers in wireless technologies with software and IP products. Intelligent radios integrate machine learning-based signal processing to build more robust, aware, and adaptive radiofrequency (RF) communications and sensing systems that generally outperform traditional radio systems.</p>
+
+<p align="center">
+Qoherent creates data-driven solutions using machine learning techniques for passive sensing of the RF spectrum to identify and analyze signals such as LTE, 5GNR, and more. Our product offering includes application-specific IP composed of datasets and models, as well as design tools that help engineers bridge the knowledge gap between the RF and ML domains. Qoherent also investigates applications of quantum machine learning as applied to real-world RF problems.
+</p>
+
+<p align="center">
+Qoherent’s team of RF and machine learning experts are passionate about working with scientists and engineers to solve hard problems. We come from a diverse background that includes test & measurement, data analytics, and cybersecurity. We are experts in bridging the gap between machine learning and radio signal processing.
+</p>
+
+<hr>
+
 <h1 align="center">Hugo + Tailwind CSS Starter and Boilerplate</h1>
 
 <p align="center">Hugoplate is a free starter template built with Hugo, and TailwindCSS, providing everything you need to jumpstart your Hugo project and save valuable time.</p>
@@ -239,7 +253,3 @@ You can customize all the parameters from the `config/_default/params.toml` file
 You can change the colors and fonts from the `data/theme.json` file. This includes the primary color, secondary color, font family, and font size.
 
 You can change the social links from the `data/social.json` file. Add your social links here, and they will automatically be displayed on the site.
-
-## Notes for contributors 
-
-Localhost will only run when baseURL is set to "/", once done making changes and pushing to main/opening a PR revert baseURL to "https://qoherent.github.io/qoherentwebsite/"
