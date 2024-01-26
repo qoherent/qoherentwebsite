@@ -15,7 +15,7 @@ draft: false
 _**The RIA Suite, and RIA Open Source Project is coming soon.**_
 
 
-#### End-to-end workflow for deploying machine learning into software-defined radios.
+#### End-to-end workflow for deploying machine learning into software-defined radios
 - Supports signal generation in python, GNU Radio and MATLAB as well as controlling a SDR testbeds for over-the-air emulation.
 - Automated design and training for producing high performance models.
 - Interoperable with several popular signal processing and deep learning back ends.

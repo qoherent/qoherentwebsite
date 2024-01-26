@@ -9,7 +9,7 @@ draft: false
 ---
 
 
-> **Our mission**:  _Drive the creation of intelligent radio._
+<blockquote>Our mission:  Drive the creation of intelligent radio.</blockquote>
 
 
 

@@ -15,11 +15,14 @@ We offer end-to-end research and prototyping services for any stage of a project
   .flex-container {
     display: flex;
     flex-wrap: wrap;
+    padding: 0;
+    margin: -20px;
   }
 
   .flex-item {
     box-sizing: border-box;
-    padding: 10px;
+    padding: 0px;
+    margin: 0;
   }
   
   .flex-item li {
