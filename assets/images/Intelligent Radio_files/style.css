@@ -298,6 +298,7 @@ hr,
 figure,
 p,
 pre {
+  quotes: none;
   margin: 0;
 }
 
@@ -668,6 +669,7 @@ select {
   blockquote > p {
   margin-top: 0px !important;
   margin-bottom: 0px !important;
+  quotes: none;
 }
 
 *, ::before, ::after {
@@ -1050,6 +1052,7 @@ main {
 }
 .content :where(blockquote strong):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
   color: inherit;
+  quotes: none;
 }
 .content :where(thead th strong):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
   color: inherit;
@@ -1121,12 +1124,13 @@ main {
   margin-top: 1.6em;
   margin-bottom: 1.6em;
   padding-left: 1em;
+  quotes: none;
 }
 .content :where(blockquote p:first-of-type):not(:where([class~="not-prose"],[class~="not-prose"] *))::before {
-  content: open-quote;
+  quotes: none;
 }
 .content :where(blockquote p:last-of-type):not(:where([class~="not-prose"],[class~="not-prose"] *))::after {
-  content: close-quote;
+  quotes: none;
 }
 .content :where(h1):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
   color: var(--tw-prose-headings);
@@ -1226,6 +1230,7 @@ main {
 }
 .content :where(blockquote code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
   color: inherit;
+  quotes: none;
 }
 .content :where(thead th code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
   color: inherit;
@@ -1517,6 +1522,7 @@ main {
   --tw-text-opacity: 1;
   color: rgb(4 4 4 / var(--tw-text-opacity));
   border-radius: 12px;
+  quotes: none;
 }
 :is(.dark .content) :is(:where(blockquote):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
   --tw-border-opacity: 1;
@@ -1525,6 +1531,7 @@ main {
   background-color: rgb(34 34 34 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(180 175 182 / var(--tw-text-opacity));
+  quotes: none;
 }
 .content :is(:where(pre):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
   border-radius: 0.5rem;
