@@ -2,7 +2,7 @@
 # Banner
 banner:
   title: "Identifying things in wireless spectrum with AI"
-  content: "Lets build intelligent radios together."
+  content: "Let's build intelligent radios together."
   image: "/images/sgramF.jpg"
   button:
     enable: true
