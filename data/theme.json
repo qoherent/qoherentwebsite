@@ -15,7 +15,7 @@
         "qoherentgray": "#625f63",
         "qoherentblack": "#333745",
         "qoherentpink": "#e63462",
-        "qoherentblue": "#03a9f4",
+        "qoherentblue": "#35BAF6",
         "qoherentpurple": "#884da0"
       }
     },
@@ -24,7 +24,7 @@
         "primary": "#fff",
         "body": "#1c1c1c",
         "border": "#3E3E3E",
-        "theme_light": "#222222",
+        "theme_light": "#262626",
         "theme_dark": ""
       },
       "text_color": {
