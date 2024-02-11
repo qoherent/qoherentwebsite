@@ -54,7 +54,9 @@ Should your use case require a virtual environment or you encounter difficulties
 
 This workaround, involving [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link), can be used to pull your system-level GNU Radio installation into a standard Python virtual environment.
 
-> **Caveat:** This is not the recommended way to use GNU Radio. GNU Radio is built against a specific Python installation, and using it with a different Python installation—such as the one in your virtual environment—may result in unexpected behavior.
+{{< notice "note" >}}
+ **Caveat:** This is not the recommended way to use GNU Radio. GNU Radio is built against a specific Python installation, and using it with a different Python installation—such as the one in your virtual environment—may result in unexpected behavior.
+{{< /notice >}}
 
 In a Python virtual environment, user-installed packages are typically installed in the `site-packages` directory within the module directory of the Python installation. For example, if I created a virtual environment for Python 3.10 using `venv`, user-installed packages would be installed to `venv/lib/python3.10/site-packages`.
 
