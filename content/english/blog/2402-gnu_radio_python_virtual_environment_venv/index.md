@@ -16,7 +16,7 @@ categories: ['tech-blog']
 
 This article explains how to access your system-level GNU Radio installation from within a pre-existing Python virtual environment. After completing these steps, you'll be able to import GNU Radio or any of its subpackages into your Python modules using simple import statements, such as: `from gnuradio import gr`. 
 
-We provide an explanation and a recommendation before the solution, but to [jump straight to the solution, click here.](#h-example-solution)
+We provide an explanation and a recommendation before the solution, but to [jump straight to the solution, click here.](#example-solution)
 
 ## Motivation
 
