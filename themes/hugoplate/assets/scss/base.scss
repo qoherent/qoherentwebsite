@@ -61,7 +61,7 @@ strong {
 }
 
 code {
-  @apply after:border-none;
+  @apply after:content-none before:content-none dark:text-qoherentblack;
 }
 
 blockquote > p {
