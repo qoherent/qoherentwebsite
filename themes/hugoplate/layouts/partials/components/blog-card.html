@@ -1,4 +1,4 @@
-<div class=" dark:bg-qoherentblack px-10 py-10 rounded-lg" style="height:100%">
+<div class=" dark:bg-darkmode-theme-light px-10 py-10 rounded-lg" style="height:100%">
   {{ $image:= .Params.image }}
   {{ if $image }}
     {{ partial "image" (dict "Src" $image "Alt" .Title "Class" "mb-6 w-full rounded") }}
@@ -8,8 +8,8 @@
       {{ .Title }}
     </a>
   </h4>
-  <ul class="mb-4 dark:bg-qoherentblack ">
-    <li class="mr-4 inline-block dark:bg-qoherentblack">
+  <ul class="mb-4 dark:bg-darkmode-theme-light ">
+    <li class="mr-4 inline-block dark:bg-darkmode-theme-light">
       <a href="{{ `authors/` | relLangURL }}{{ .Params.Author | urlize }}/">
         <i class="fa-regular fa-circle-user mr-2"></i>{{ .Params.author }}
       </a>
