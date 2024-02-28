@@ -74,8 +74,14 @@ weight = 5
 [[main]]
 parent = "Products"
 weight = 1
-name = "RIA Suite"
-url = "radiointelligenceapps-suite/"
+name = "RIAHUB"
+url = "radiointelligenceapps-riahub/"
+
+[[main]]
+parent = "Products"
+weight = 3
+name = "RIA"
+url = "radiointelligenceapps-project/"
 
 # ## for later
 # [[main]]

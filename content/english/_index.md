@@ -7,11 +7,11 @@ banner:
   button:
     enable: true
     label: "Radio Intelligence Apps"
-    link: "radiointelligenceapps-suite/"
+    link: "radiointelligenceapps-riahub/"
 
 # Features
 features:
-  - title: "RIA Project"
+  - title: "RIA"
     image: "/images/signal.png"
     content: "The Radio Intelligence Apps project exists to help accelerate the development of intelligent radio technology. The RIA  project contains utlilities for synthesizing, curating, and inspecting datasets of radio signals, example workflows for training high performance machine learning models, and tools for testing them. _**The RIA Project is coming soon.**_"
     bulletpoints:
@@ -24,7 +24,7 @@ features:
       label: "Get Started Now"
       link: "#"
 
-  - title: "RIA Suite"
+  - title: "RIAHUB"
     image: "/images/work2.png"
     content: "RIA is an end-to-end development suite for creating and deploying intelligent radio applications to realworld software-defined radio enabled systems. RIA is built on top of the open source RIA project."
     bulletpoints:
