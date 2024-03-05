@@ -2,26 +2,28 @@
   {{ partial "progress_indicator" }}
   <!-- Banner -->
   {{ with .Params.banner }}
-  <section class="section relative" style="height: 65vh; background: linear-gradient(to top, transparent 0%, #1c1c1c 80%);">
+  <section class="section relative lg:h-[65vh] sm:h-[75vh] h-[85vh]" style="background: linear-gradient(to top, transparent 0%, #1c1c1c 80%);">
     {{ partial "image" (dict "Src" .image "Alt" "Banner image" "Loading" "eager" "Class" "absolute inset-0 w-full h-full z-[-1] min-h-full") }}
       <div class="absolute inset-0 flex flex-col justify-center items-center text-white">
         <div class="container">
             <div class="row justify-center">
-                <div class="text-center lg:mb-[17.5vh] mb-[10.5vh]">
+                <div class="text-center">
                     <h1 class="text-center lg:whitespace-nowrap " style="font-weight: 100;"> 
                         {{ .title | markdownify }}
                     </h1>
-                    <p class="mb-8 text-center"> 
+                    <p class="mb-4 text-center"> 
                         {{ .content | markdownify }}
                     </p>
-                    {{ with .button }}
-                        {{ if .enable }}
-                            <a class="btn btn-primary" href="{{ .link | absURL }}">
-                                {{ .label }}
-                                <i class="fa fa-arrow-right pl-2"></i>
-                            </a>
-                        {{ end }}
-                    {{ end }}
+                      <div class="form-div w-[80%] mx-auto max-w-lg">
+                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+                        <script>
+                          hbspt.forms.create({
+                            region: "na1",
+                            portalId: "45248873",
+                            formId: "39c3ea3e-3194-4d06-a9a6-f54201223e81"
+                          });
+                        </script>
+                      </div>
                 </div>
             </div>
         </div>

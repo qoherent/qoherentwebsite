@@ -30,7 +30,7 @@ _**Radio Intelligence Apps Hub (RIAHUB)**_ by Qoherent is an AI development plat
 
 <p class="text">Sign up for our early access program below:</p>
 <br>
-<div class="form-div" style="width: 40%; margin: auto;">
+<div class="form-div">
 <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
 <script>
 hbspt.forms.create({
@@ -40,5 +40,13 @@ hbspt.forms.create({
 });
 </script>
 </div>
+
+<style>
+    .form-div {
+        width: 80%;
+        margin: auto;
+        max-width: 500px;
+    }
+</style>
 
 <p class="text">RIAHUB is built on top of the <a href="https://github.com/qoherent/ria">RIA project</a> and <a href="https://github.com/go-gitea/gitea">Gitea</a>.</p>
