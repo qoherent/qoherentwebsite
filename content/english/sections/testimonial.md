@@ -9,6 +9,9 @@ testimonials:
     # name: "ESA"
   - avatar: "/images/yspace.png"
     # name: "YSpace @ York University"
+  - avatar: "/images/feddev.png"
+    class: "avatar-feedev"
+    # name: "YSpace @ York University"
   # - avatar: "/images/csa.png"
     # name: "CSA"
   - avatar: "/images/esa.png"
@@ -46,3 +49,8 @@ testimonials:
 _build:
   render: "never"
 ---
+<style>
+  .avatar-feddev {
+    margin-bottom: 20px; /* Adjust the value as per your requirement */
+  }
+</style>
