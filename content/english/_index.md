@@ -7,7 +7,7 @@ banner:
   button:
     enable: true
     label: "Radio Intelligence Apps"
-    link: "radiointelligenceapps-riahub/"
+    link: "radiointelligenceapps-RIA Hub/"
 
 # Features
 features:
@@ -24,7 +24,7 @@ features:
       label: "Get Started Now"
       link: "#"
 
-  - title: "RIAHUB"
+  - title: "RIA Hub"
     image: "/images/work2.png"
     content: "RIA is an end-to-end development suite for creating and deploying intelligent radio applications to realworld software-defined radio enabled systems. RIA is built on top of the open source RIA project."
     bulletpoints:
