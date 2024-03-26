@@ -74,7 +74,7 @@ weight = 5
 [[main]]
 parent = "Products"
 weight = 1
-name = "RIAHUB"
+name = "RIA Hub"
 url = "radiointelligenceapps-riahub/"
 
 [[main]]

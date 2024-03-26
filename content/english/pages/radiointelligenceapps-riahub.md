@@ -1,6 +1,6 @@
 ---
-title: "RIAHUB - create Radio Intelligence Apps"
-meta_title: "RIAHUB for creating Radio Intelligence Apps"
+title: "RIA Hub - create Radio Intelligence Apps"
+meta_title: "RIA Hub for creating Radio Intelligence Apps"
 description: "Suite for curating RF datasets, training models, and testing then deploying them."
 image: "/images/5g.png"
 draft: false
@@ -8,10 +8,10 @@ draft: false
 
 ---
 {{< notice "note" >}}
-_**RIAHUB and the RIA Open Source Project are coming soon.**_
+_**RIA Hub and the RIA Open Source Project are coming soon.**_
 {{< /notice >}}
 
-_**Radio Intelligence Apps Hub (RIAHUB)**_ by Qoherent is an AI development platform for software-defined radios, designed for radio signal processing engineers and researchers in wireless technologies. RIA accelerates intelligent radio development by significantly reducing integration between stages, allowing a sharper focus on innovation. The platform streamlines dataset creation, algorithm design, and model deployment, enhancing productivity and reducing project timelines. Built on a foundation of open-source accessibility, a comprehensive IP library, and automation capabilities, *RIA drives the creation of intelligent radios*, unlocking solutions in an increasingly congested and challenged wireless spectrum.
+_**Radio Intelligence Apps Hub (RIA Hub)**_ by Qoherent is an AI development platform for software-defined radios, designed for radio signal processing engineers and researchers in wireless technologies. RIA accelerates intelligent radio development by significantly reducing integration between stages, allowing a sharper focus on innovation. The platform streamlines dataset creation, algorithm design, and model deployment, enhancing productivity and reducing project timelines. Built on a foundation of open-source accessibility, a comprehensive IP library, and automation capabilities, *RIA drives the creation of intelligent radios*, unlocking solutions in an increasingly congested and challenged wireless spectrum.
 
 
 #### End-to-end workflow for deploying machine learning into software-defined radios
@@ -49,4 +49,4 @@ hbspt.forms.create({
     }
 </style>
 
-<p class="text">RIAHUB is built on top of the <a href="https://github.com/qoherent/ria">RIA project</a> and <a href="https://github.com/go-gitea/gitea">Gitea</a>.</p>
+<p class="text">RIA Hub is built on top of the <a href="https://github.com/qoherent/ria">RIA project</a> and <a href="https://github.com/go-gitea/gitea">Gitea</a>.</p>
