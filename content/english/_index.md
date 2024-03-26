@@ -7,7 +7,7 @@ banner:
   button:
     enable: true
     label: "Radio Intelligence Apps"
-    link: "radiointelligenceapps-RIA Hub/"
+    link: "radiointelligenceapps-riahub/"
 
 # Features
 features:
