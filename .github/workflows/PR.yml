@@ -1,8 +1,8 @@
-name: Deploy Hugo site to Pages
+name: Deploy artifact for testing
 
 on:
-  # Runs on pushes targeting the default branch
-  push:
+  # Runs on Pull Request targeting the default branch
+  pull_request:
     branches: ["main"]
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
@@ -56,19 +56,7 @@ jobs:
       - name: Publish to GitHub Pages
         run: npm run build
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
+          name: Qoherent Website Preview
           path: ./public
-
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
