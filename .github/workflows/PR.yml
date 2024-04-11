@@ -53,10 +53,10 @@ jobs:
       - name: Install npm dependencies
         run: npm install
 
-      - name: Publish to GitHub Pages
+      - name: Build Site
         run: npm run build
 
-      - uses: actions/upload-artifact@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: Qoherent Website Preview
           path: ./public
