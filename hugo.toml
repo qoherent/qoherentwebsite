@@ -3,7 +3,7 @@
 
 ## IMPORTANT - If editing locally change the below URL to: "/" otherwise it will not run on local host
 ## IMPORTANT - When done editing locally and creating a PR/pushing to main change it back to: "https://qoherent.github.io/qoherentwebsite/" otherwise it will not be deployed
-baseURL = "https://www.qoherent.ai/"
+baseURL = "/"
 # Title of your website (required).
 title = "Qoherent - drive the creation of intelligent radios."
 # Your theme name
