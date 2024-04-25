@@ -30,7 +30,7 @@ features:
     bulletpoints:
       - "Experiment, training, and deployment automation features."
       - "Interoperable with a selection of DSP and deep learning technologies."
-      - "Enable deployment with leading SDR hardware solutions."
+      - "Streamline deployment with leading SDR hardware solutions."
       - "Accelerate prototyping with a library of functions, pre-trained models, model implementations, workflows, and datasets."
     button:
       enable: false
