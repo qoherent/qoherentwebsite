@@ -32,7 +32,7 @@ draft: false
 
   @media (min-width: 600px) {
     .contact-grid {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
 
     .icon {
@@ -42,10 +42,6 @@ draft: false
 </style>
 
 <div class="contact-grid">
-  <div class="contact-item">
-    <i class="fa-regular fa-building icon"></i>
-    <p>111 Queen St. East - Suite 210, Toronto, ON, Canada, Canada M5G 1S1</p>
-  </div>
   <div class="contact-item">
     <i class="fa-solid fa-truck icon"></i>
     <p>Qoherent @ YSpace
