@@ -32,7 +32,7 @@ draft: false
 
   @media (min-width: 600px) {
     .contact-grid {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
 
     .icon {
@@ -42,10 +42,6 @@ draft: false
 </style>
 
 <div class="contact-grid">
-  <div class="contact-item">
-    <i class="fa-regular fa-building icon"></i>
-    <p>111 Queen St. East - Suite 210, Toronto, ON, Canada, Canada M5G 1S1</p>
-  </div>
   <div class="contact-item">
     <i class="fa-solid fa-truck icon"></i>
     <p>Qoherent @ YSpace
@@ -61,7 +57,7 @@ draft: false
 </div>
 
 <div style="width: 80%; margin: 0 auto; text-align: center; margin-bottom:40px margin-top:40px; border-radius:30px">
-            <iframe style="width: 100%; height: 425px; border: 2px solid #ccc; border-radius: 15px;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=111%20Queen%20Street%20East,%20Toronto+(Qoherent)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            <iframe style="width: 100%; height: 425px; border: 2px solid #ccc; border-radius: 15px;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=169%20Enterprise%20Blvd,%20Markham+(Qoherent)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
           </div>
 
 Please fill out this form for **business inquiries**. _For technical support, please contact your Qoherent support representative directly._
