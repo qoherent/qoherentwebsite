@@ -44,7 +44,15 @@
 
 // cookie consent
 .cookie-box {
-  @apply rounded-lg #{!important};
+  @apply left-[unset] w-[15rem] h-[7.785rem] text-[13.5px] right-[2rem] p-[1rem] rounded-lg #{!important};
+}
+
+.cookie-box-button {
+  @apply mt-[0.25rem] text-[0.7rem] pt-[0.27rem] pb-[0.27rem] pr-[0.7rem] pl-[0.7rem] bg-white
+}
+
+:is(.dark .btn-outline-primary).cookie-box-button {
+  @apply text-black
 }
 
 // slider
