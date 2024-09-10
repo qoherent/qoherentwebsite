@@ -82,12 +82,23 @@ The following prerequisites are required to complete this guide:
 * A valid license from the relevant regulatory authority is required for any over-the-air RF transmissions. ***==This guide assumes that you have obtained the necessary license and fulfilled all related requirements.==***
 * An internet connection is required for the host machine to complete speed testing and benchmarks.
 
-\* *The computer impacts gNodeB performance and configuration such as bandwidth it can support. For more details on computer requirements, see **__[this guide](https://docs.srsran.com/projects/4g/en/latest/app_notes/source/hw_packs/source/index.html)__** from SRS*
+<div class="fine-print">
 
-\*\* *SFP+ NIC's are compatible with an appropriate adapter. [Please see the Ettus support page.](https://kb.ettus.com/X410#Guidance_on_SFP.2B_Adapters_for_Fiber_Connectivity_on_NI_Ettus_USRP_X410)*
-
+*\* The computer impacts gNodeB performance and configuration such as bandwidth it can support. For more details on computer requirements, see **__[this guide](https://docs.srsran.com/projects/4g/en/latest/app_notes/source/hw_packs/source/index.html)__** from SRS*  
+*\*\* SFP+ NIC's are compatible with an appropriate adapter. [Please see the Ettus support page.](https://kb.ettus.com/X410#Guidance_on_SFP.2B_Adapters_for_Fiber_Connectivity_on_NI_Ettus_USRP_X410)*  
 *\*\*\* Other USRP's such as the B210 or X310 may be used with some extra configuration and timing controls.*
 
+</div>
+
+<style>
+  .fine-print p em, .fine-print {
+    font-size: 0.75rem; 
+    color: #ffffff;
+    line-height: 1.15;
+    font-style: normal;
+    font-weight: bold;
+  }
+</style>
 
 ## Simplified USRP X410 Setup instructions
 
@@ -402,9 +413,9 @@ Note: You can change the password in ***Account*** Menu.
 To add subscriber information, you can do WebUI operations in the following order: 
 
 
-1. Go to `Subscriber `Menu. 
+1. Go to `Subscriber` Menu. 
 2. Click `+` Button to add a new subscriber. Fill the IMSI, security context **(K, OPc, AMF), and APN** of the subscriber. 
-3. Click the `SAVE `Button
+3. Click the `SAVE` Button
 
  ![](attachments/b9d09e44-69b8-4add-a310-f0c4502a97fd.png)
 

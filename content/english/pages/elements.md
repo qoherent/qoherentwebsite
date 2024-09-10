@@ -114,7 +114,129 @@ This is a simple info.
 This is a simple warning.
 {{< /notice >}}
 
+#### Adding a custom notice
+
+The following code:
+
+```bash
+{{</* notice "Notice title" */>}}
+This is a demo of a custom notice.
+{{</* /notice */>}}
+
+<style>
+    .notice.Notice.title {
+        color: #1b83e2;
+        border-color: currentColor;
+    }
+</style>
+
+<script>
+document.querySelector('.notice.Notice.title .notice-head svg').outerHTML = `
+<svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM9.25 3.75C9.25 4.44036 8.69036 5 8 5C7.30964 5 6.75 4.44036 6.75 3.75C6.75 3.05964 7.30964 2.5 8 2.5C8.69036 2.5 9.25 3.05964 9.25 3.75ZM12 8H9.41901L11.2047 13H9.081L8 9.97321L6.91901 13H4.79528L6.581 8H4V6H12V8Z" fill="currentColor"/>
+</svg>
+`;
+</script>
+
+```
+Creates the following notice: 
+
+{{<notice "Notice title" >}}
+This is a demo of a custom notice.
+{{< /notice >}}
+
+<style>
+    .notice.Notice.title {
+        color: #1b83e2;
+        border-color: currentColor;
+    }
+</style>
+
+<script>
+document.querySelector('.notice.Notice.title .notice-head svg').outerHTML = `
+<svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM9.25 3.75C9.25 4.44036 8.69036 5 8 5C7.30964 5 6.75 4.44036 6.75 3.75C6.75 3.05964 7.30964 2.5 8 2.5C8.69036 2.5 9.25 3.05964 9.25 3.75ZM12 8H9.41901L11.2047 13H9.081L8 9.97321L6.91901 13H4.79528L6.581 8H4V6H12V8Z" fill="currentColor"/>
+</svg>
+`;
+</script>
+
+
+Note: The class selector of the CSS must target the `notice.{notice_title}`. For the javascript, it will always be `.notice.{notice_title} .notice-head svg`. 
+
+Note 2: The `fill` property of the SVG must be set to `currentColor` as shown above. The `width` and `height` should both be `20` to stay in line with the other notices.
+
 <hr>
+
+### Customizing Image Size in Markdown
+
+To customize the image size in Markdown, we need to make use of HTML. To accomplish this, we can do:
+
+```HTML
+<img src="attachments/sc2430-usrp-x410.png" alt="SCM2430 + USRP X410 System" width="700" height="300"/>
+```
+
+Where the width and height can be specified. If you need to center as well you would do: 
+
+```HTML
+<p align="center">
+  <img src="attachments/sc2430-usrp-x410.png" alt="SCM2430 + USRP X410 System" width="700" height="300"/>
+</p>
+```
+
+This would for example, be replacing something like `![SCM2430 + USRP X410 System](attachments/sc2430-usrp-x410.png)`
+
+### Modifying fine print style
+
+To modify the style of fine print in Markdown, we need to use inline HTML. 
+
+This is an example of the standard rendered: 
+
+*\* The computer impacts gNodeB performance and configuration such as bandwidth it can support. For more details on computer requirements, see **__[this guide](https://docs.srsran.com/projects/4g/en/latest/app_notes/source/hw_packs/source/index.html)__** from SRS*  
+*\*\* SFP+ NIC's are compatible with an appropriate adapter. [Please see the Ettus support page.](https://kb.ettus.com/X410#Guidance_on_SFP.2B_Adapters_for_Fiber_Connectivity_on_NI_Ettus_USRP_X410)*  
+*\*\*\* Other USRP's such as the B210 or X310 may be used with some extra configuration and timing controls.*
+
+Modifying and adding inline HTML/CSS like so:
+
+```HTML
+<div class="fine-print">
+
+*\* The computer impacts gNodeB performance and configuration such as bandwidth it can support. For more details on computer requirements, see **__[this guide](https://docs.srsran.com/projects/4g/en/latest/app_notes/source/hw_packs/source/index.html)__** from SRS*  
+*\*\* SFP+ NIC's are compatible with an appropriate adapter. [Please see the Ettus support page.](https://kb.ettus.com/X410#Guidance_on_SFP.2B_Adapters_for_Fiber_Connectivity_on_NI_Ettus_USRP_X410)*  
+*\*\*\* Other USRP's such as the B210 or X310 may be used with some extra configuration and timing controls.*
+
+</div>
+
+<style>
+  .fine-print p em, .fine-print {
+    font-size: 0.75rem; 
+    color: #ffffff;
+    line-height: 1.15;
+    font-style: normal;
+    font-weight: bold;
+  }
+</style>
+
+```
+
+Would instead render this as: 
+
+<div class="fine-print">
+
+*\* The computer impacts gNodeB performance and configuration such as bandwidth it can support. For more details on computer requirements, see **__[this guide](https://docs.srsran.com/projects/4g/en/latest/app_notes/source/hw_packs/source/index.html)__** from SRS*  
+*\*\* SFP+ NIC's are compatible with an appropriate adapter. [Please see the Ettus support page.](https://kb.ettus.com/X410#Guidance_on_SFP.2B_Adapters_for_Fiber_Connectivity_on_NI_Ettus_USRP_X410)*  
+*\*\*\* Other USRP's such as the B210 or X310 may be used with some extra configuration and timing controls.*
+
+</div>
+
+<style>
+  .fine-print p em, .fine-print {
+    font-size: 0.75rem; 
+    color: #ffffff;
+    line-height: 1.15;
+    font-style: normal;
+    font-weight: bold;
+  }
+</style>
 
 ### Tab
 
