@@ -2,8 +2,8 @@ function addCopyButtonToCodeBlocks() {
     const codeBlocks = document.querySelectorAll(
       'pre > code[class^="language-"]'
     );
-    const copyIcon = '<i class="fas fa-copy"></i>';
-    const copiedIcon = '<i class="fas fa-check"></i>';
+    const copyIcon = '<i class="fa-solid fa-copy"></i>';
+    const copiedIcon = '<i class="fa-solid fa-check"></i>';
   
     codeBlocks.forEach((codeBlock) => {
       codeBlock.style.backgroundColor = "#272822";

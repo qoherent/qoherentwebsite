@@ -71,12 +71,14 @@ strong {
   font-size: 80%;
 }
 
-.btn.copy-code-button:hover i.fas.fa-copy::before{
+.btn.copy-code-button:hover i.fa-solid.fa-copy::before {
   color: #884da0 !important;
+  font-family: 'Font Awesome 6 Free';
 }
 
-.btn.copy-code-button:hover i.fas.fa-check::before{
+.btn.copy-code-button:hover i.fa-solid.fa-check::before {
   color: #884da0 !important;
+  font-family: 'Font Awesome 6 Free';
 }
 
 .notice {
