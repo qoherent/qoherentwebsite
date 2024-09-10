@@ -1,5 +1,5 @@
 ---
-title: "Setting up an srsRAN testbed with the SC2430 and the USRP X410."
+title: "Setting up an srsRAN 5G testbed with the SC2430 and the USRP X410."
 date: 2024-09-05T01:16:34-04:00
 draft: false
 cover:
@@ -32,8 +32,11 @@ The ***[SC2430 NR Signal Conditioning Module](https://www.signalcraft.com/produc
 The ***[USRP X410](https://www.ettus.com/all-products/usrp-x410/)***, by ***[Ettus Research](https://www.ettus.com)***, is a high-performance SDR designed for advanced wireless research and development. Featuring up to 400 MHz of instantaneous bandwidth per channel and support for MIMO configurations, its robust hardware is well-suited for testing and deploying advanced 5G features. Fully compatible with open-source platforms, it offers the flexibility for developers to experiment and optimize network performance in real-world environments, making it a powerful tool for researchers and network operators building open-source 5G networks and pushing the boundaries of 5G innovation.
 
 
- ![SCM2430 + USRP X410 System](attachments/sc2430-usrp-x410.png)
+ <!-- ![SCM2430 + USRP X410 System](attachments/sc2430-usrp-x410.png) -->
 
+<p align="center">
+  <img src="attachments/sc2430-usrp-x410.png" alt="SCM2430 + USRP X410 System" width="700" height="300"/>
+</p>
 
 <!-- {{< image src="images/ria-logo.png" caption="" alt="alter-text" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="image title"  webp="false" >}} -->
 
@@ -94,14 +97,14 @@ We present simplified instructions for setting up a USRP by building the UHD fro
 
 Starting from a desired work area on your machine, clone the repo:
 
-```javascript
+```bash
 cd ~/workarea/
 git clone https://github.com/EttusResearch/uhd.git
 ```
 
 Step-by-step build instructions:
 
-```javascript
+```bash
 cd uhd/host
 mkdir build
 cd build
@@ -114,7 +117,7 @@ sudo ldconfig
 
 #### **Build a specific version of uhd - e.g.** `4.4.0.0.`**:**
 
-```javascript
+```bash
 cd ~/workarea/
 git clone https://github.com/EttusResearch/uhd.git
 cd uhd/host
@@ -141,14 +144,14 @@ The procedure to build the SC2430 Extension is similar to that of the UHD source
 
 Start by cloning the SCM UHD Extension
 
-```javascript
+```bash
 cd ~/workarea/
 git clone https://github.com/SignalCraftTechnologies/SC2430-UHDExtension.git
 ```
 
 To build the extension library source, use CMake to generate Makefiles.
 
-```javascript
+```bash
 cd SC2430-UHDExtension
 mkdir build && cd build
 cmake ../
@@ -156,13 +159,13 @@ cmake ../
 
 Additional configuration parameters can be provided to CMake. The Extension is built against UHD, therefore, a non-default UHD prefix must be specified as shown below.
 
-```javascript
+```bash
 cmake ../ -DCMAKE_INSTALL_PREFIX=<install-path>
 ```
 
 Next, build and install - The SC2430 extension is installed into the UHD directory *UHD_PREFIX/share/uhd/modules/*. The Extension Library will be loaded automatically at runtime by UHD.
 
-```javascript
+```bash
 make
 sudo make install
 ```
@@ -186,7 +189,9 @@ Open5GS project can be used to configure a private NR/LTE network. It implements
 Download and install MongoDB
 
 ```bash
-sudo apt update $ sudo apt install gnupg $ curl -fsSL https://pgp.mongodb.com/server-6.0.asc | sudo gpg -o /usr/share/keyrings/mongodb-server-6.0.gpg --dearmor
+sudo apt update
+sudo apt install gnupg 
+curl -fsSL https://pgp.mongodb.com/server-6.0.asc | sudo gpg -o /usr/share/keyrings/mongodb-server-6.0.gpg --dearmor
 ```
 
 Create the list file `/etc/apt/sources.list.d/mongodb-org-6.0.list` for your version of Ubuntu. 
@@ -208,13 +213,13 @@ Setting up TUN device (not persistent after rebooting) Create the TUN device wit
 
 ```bash
 
-$ sudo ip tuntap add name ogstun mode tun
-$ sudo ip addr add 10.45.0.1/16 dev ogstun
-$ sudo ip link set ogstun up
-$ sudo sysctl -w net.ipv4.ip_forward=1
+sudo ip tuntap add name ogstun mode tun
+sudo ip addr add 10.45.0.1/16 dev ogstun
+sudo ip link set ogstun up
+sudo sysctl -w net.ipv4.ip_forward=1
 
 ### Add NAT Rule
-$ sudo iptables -t nat -A POSTROUTING -s 10.45.0.0/16 ! -o ogstun -j MASQUERADE
+sudo iptables -t nat -A POSTROUTING -s 10.45.0.0/16 ! -o ogstun -j MASQUERADE
 ```
 
 #### **Building Open5GS**
@@ -222,7 +227,7 @@ $ sudo iptables -t nat -A POSTROUTING -s 10.45.0.0/16 ! -o ogstun -j MASQUERADE
 Install the dependencies for building the source code.
 
 ```bash
-$ sudo apt install python3-pip python3-setuptools python3-wheel ninja-build build-essential flex bison git cmake libsctp-dev libgnutls28-dev libgcrypt-dev libssl-dev libidn11-dev libmongoc-dev libbson-dev libyaml-dev libnghttp2-dev libmicrohttpd-dev libcurl4-gnutls-dev libnghttp2-dev libtins-dev libtalloc-dev meson
+sudo apt install python3-pip python3-setuptools python3-wheel ninja-build build-essential flex bison git cmake libsctp-dev libgnutls28-dev libgcrypt-dev libssl-dev libidn11-dev libmongoc-dev libbson-dev libyaml-dev libnghttp2-dev libmicrohttpd-dev libcurl4-gnutls-dev libnghttp2-dev libtins-dev libtalloc-dev meson
 ```
 
 Clone the source code from the GitHub repo
@@ -282,7 +287,7 @@ Settings that require configuration:
 
 1. Access and Mobility Management Function (AMF) Configuration:
 
-```bash
+```yaml
 amf:
     sbi:
       - addr: 127.0.0.5
@@ -320,7 +325,7 @@ amf:
 
 User Plane Function (UPF) Configuration:
 
-```javascript
+```yaml
 upf:
     pfcp:
       - addr: 127.0.0.7
@@ -351,7 +356,9 @@ By default the application with fetch the config `sample.yaml` file from above: 
 Open5GS is best used with its Web GUI. [Node.js](https://nodejs.org/en) (v18.x or greater) must be installed to build the Web GUI.
 
 ```bash
-sudo apt install curl $ curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - $ sudo apt install nodejs
+sudo apt install curl
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt install nodejs
 ```
 
 Install the dependencies to run WebUI via `npm`
@@ -371,7 +378,8 @@ npm run dev
 Server listening configuration can be changed by setting the environment variable `HOSTNAME `or `PORT `as below.
 
 ```bash
-HOSTNAME=192.168.0.11 npm run dev $ PORT=7777 npm run dev
+HOSTNAME=192.168.0.11 npm run dev 
+PORT=7777 npm run dev
 ```
 
 
@@ -433,7 +441,7 @@ The srsRAN Project has the following necessary dependencies:
 
   
 
-```javascript
+```bash
 sudo apt-get install cmake make gcc g++ pkg-config libfftw3-dev libmbedtls-dev libsctp-dev libyaml-cpp-dev libgtest-dev
 ```
 
@@ -441,7 +449,7 @@ sudo apt-get install cmake make gcc g++ pkg-config libfftw3-dev libmbedtls-dev l
 
 First, clone the srsRAN Project repository:
 
-```javascript
+```bash
 git clone https://github.com/srsRAN/srsRAN_Project.git
 ```
 
@@ -475,7 +483,7 @@ The MMC, MNC, IMSI and other credentials in the ISIM can be set by reprogramming
 
 Download and install the UICC programming application:
 
-```javascript
+```bash
 wget https://open-cells.com/d5138782a8739209ec5760865b1e53b0/uicc-v3.2.tgz
 tar -xzf uicc-v3.2.tgz
 cd uicc-v3.2
@@ -487,16 +495,18 @@ make
 
 Insert the card in the reader and the reader in a USB socket as:
 
- ![Programmable SIM card in the reader (Source: Open-Cells)](attachments/c78022a1-fb60-457e-89c1-36cdc123128f.png)To read the existing basic data on the card:
+ ![Programmable SIM card in the reader (Source: Open-Cells)](attachments/c78022a1-fb60-457e-89c1-36cdc123128f.png)
+ 
+ To read the existing basic data on the card:
 
-```javascript
+```bash
 sudo ./program_uicc
 ```
 
 
 To see the parameters that may be set up with `program_uicc`:
 
-```javascript
+```bash
 sudo ./program_uicc --help
 ```
 
@@ -625,7 +635,7 @@ To start the gnb run `gnb` and call the YAML file that was configured:
 
 If the connection to the core is successful you should see the following from the AMF log:
 
-```python
+```bash
 04/03 13:25:13.469: [amf] INFO: gNB-N2 accepted[127.0.0.1]:47633 in ng-path module (../src/amf/ngap-sctp.c:113)
 04/03 13:25:13.469: [amf] INFO: gNB-N2 accepted[127.0.0.1] in master_sm module (../src/amf/amf-sm.c:706)
 04/03 13:25:13.469: [amf] INFO: [Added] Number of gNBs is now 1 (../src/amf/context.c:1034)
@@ -637,12 +647,17 @@ The COTS UE can now search for the network. Select the carrier for the network b
 
 The UE will show "5G" in the upper right corner:
 
- ![](attachments/3f17e038-6a31-478b-8925-9deb032ff909.png " =479x155")
+ <!-- ![](attachments/3f17e038-6a31-478b-8925-9deb032ff909.png " =479x155") -->
+
+
+
+<img src="attachments/3f17e038-6a31-478b-8925-9deb032ff909.png" alt="Attached UE" width="350"/>
+
 
 
 To confirm that the attachment operation is successful both the AMF log and gNB console output can be monitored. The AMF log should look similar to the following:
 
-```python
+```bash
 04/27 13:16:31.746: [amf] INFO: InitialUEMessage (../src/amf/ngap-handler.c:361)
 04/27 13:16:31.746: [amf] INFO: [Added] Number of gNB-UEs is now 1 (../src/amf/context.c:2036)
 04/27 13:16:31.746: [amf] INFO:     RAN_UE_NGAP_ID[0] AMF_UE_NGAP_ID[78] TAC[7] CellID[0x0] (../src/amf/ngap-handler.c:497)
@@ -659,7 +674,7 @@ To confirm that the attachment operation is successful both the AMF log and gNB 
 
 The gNB trace should show the following:
 
-```python
+```bash
           -------------DL----------------|------------------UL--------------------
 pci rnti  cqi  mcs  brate   ok  nok  (%) | pusch  mcs  brate   ok  nok  (%)    bsr
   1 4601   15   15   4.3k    7    0   0% |  21.3   23    17k    4    0   0%    0.0
@@ -756,13 +771,13 @@ nano /etc/open5gs/umf.yaml
 Open another terminal and from the host run the userplane configuration, IP Masquerading and route to the internet commands
 
 ```bash
-$ sudo ip tuntap add name ogstun mode tun
-$ sudo ip addr add 10.45.0.1/16 dev ogstun
-$ sudo ip link set ogstun up
-$ sudo sysctl -w net.ipv4.ip_forward=1
+sudo ip tuntap add name ogstun mode tun
+sudo ip addr add 10.45.0.1/16 dev ogstun
+sudo ip link set ogstun up
+sudo sysctl -w net.ipv4.ip_forward=1
 
 ### Add NAT Rule
-$ sudo iptables -t nat -A POSTROUTING -s 10.45.0.0/16 ! -o ogstun -j MASQUERADE
+sudo iptables -t nat -A POSTROUTING -s 10.45.0.0/16 ! -o ogstun -j MASQUERADE
 sudo ufw disable
 ```
 
