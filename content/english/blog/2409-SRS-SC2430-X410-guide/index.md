@@ -92,9 +92,9 @@ The following prerequisites are required to complete this guide:
 
 <style>
   .fine-print p em, .fine-print {
-    font-size: 0.75rem; 
+    font-size: 0.875rem; 
     color: #ffffff;
-    line-height: 1.15;
+    line-height: 1.2;
     font-style: normal;
     font-weight: bold;
   }
