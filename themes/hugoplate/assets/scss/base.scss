@@ -60,14 +60,14 @@ strong {
   @apply font-semibold;
 }
 
-code {
+:not(pre) > code {
   @apply dark:text-qoherentblack;
   border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgb(29, 32, 42);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: rgb(29, 32, 42) !important;
   padding: 3px 4px;
-  color: rgb(206, 145, 120);
-  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  color: rgb(206, 145, 120) !important;
+  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace !important;
   font-size: 80%;
 }
 
