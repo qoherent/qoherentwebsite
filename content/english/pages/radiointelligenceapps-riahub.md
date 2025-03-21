@@ -27,26 +27,4 @@ _**Radio Intelligence Apps Hub (RIA Hub)**_ by Qoherent is an AI development pla
 - Open Source and community libraries.
 - Synthesizers, recordings, pre-trained models, and API's for accelerating the time to prototype.
 
-
-<p class="text">Sign up for our early access program below:</p>
-<br>
-<div class="form-div">
-<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-<script>
-hbspt.forms.create({
-    region: "na1",
-    portalId: "45248873",
-    formId: "1fba45f6-b9bc-44ac-b908-8ac42274ae72"
-});
-</script>
-</div>
-
-<style>
-    .form-div {
-        width: 80%;
-        margin: auto;
-        max-width: 500px;
-    }
-</style>
-
 <p class="text">RIA Hub is built on top of the <a href="https://github.com/qoherent/ria">RIA project</a> and <a href="https://github.com/go-gitea/gitea">Gitea</a>.</p>
