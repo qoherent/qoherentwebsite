@@ -7,7 +7,7 @@ draft: false
 ---
 
 
-Qoherent are experts in conceptualizing, prototypeing, and testing unique implementations of srsRAN. 
+Qoherent are experts in conceptualizing, prototyping, and testing unique implementations of srsRAN.
 
 Qoherent has experience partnering with other companies to explore 5G and OpenRAN technology development, [researching applications of AI on 5G](https://www.youtube.com/watch?v=CQ0ak4I21qk), and we are also working on a [platform for deploying inference applications into a gNodeB](/radiointelligenceapps-ran) for RAN control and JCAS.
 

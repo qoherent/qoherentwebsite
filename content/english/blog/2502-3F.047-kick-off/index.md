@@ -12,7 +12,7 @@ categories: ['news']
 
 Qoherent recently kicked off a new CSA supported, co-funded ESA ARTES activity, with a special focus on 5G NTN. The project, code 3F.047, named _"ML-based Dense Area RF Resource Management for Open source 5G-NTN systems"_ explores the use of AI for dynamic radio resource management.
 
-The project is breifly touched on in our presentation during the srsRAN workshop, in the video below.
+The project is briefly touched on in our presentation during the srsRAN workshop, in the video below.
 
 If you are interested in learning about the project, [please contact us](/contact). More updates will be provided as the project progresses.
 

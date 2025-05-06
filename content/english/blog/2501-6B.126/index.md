@@ -10,7 +10,7 @@ tags: ['SDR','Qoherent','ESA']
 categories: ['news']
 ---
 
-Qoherent has completed the 6B.126 project, titled _"MACHINE-LEARNING BASED RADIOFREQUENCY IMPAIRMENT CLASSIFIERS FOR SATELLITE COMMUNICATIONS"_. The project was a CSA-supported, ESA co-funded activity where Qoherent developed workflows, datasets, and models for various signal degredation problems, including interference recognition and channel model recognition. We also identified opportunities to apply the work towards a family of RF Fingerprinting problems (e.g. fleet recognition and specific emitter identification).
+Qoherent has completed the 6B.126 project, titled _"MACHINE-LEARNING BASED RADIOFREQUENCY IMPAIRMENT CLASSIFIERS FOR SATELLITE COMMUNICATIONS"_. The project was a CSA-supported, ESA co-funded activity where Qoherent developed workflows, datasets, and models for various signal degradation problems, including interference recognition and channel model recognition. We also identified opportunities to apply the work towards a family of RF Fingerprinting problems (e.g. fleet recognition and specific emitter identification).
 
 During the project we developed over 30 models, developed testbed automation software, and advanced the components of RIA HUB. Qoherent is commercializing new products within our portfolio based on the innovations in this project.
 
