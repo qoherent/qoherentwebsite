@@ -1,11 +1,11 @@
 ---
-title: Adrian Kaczmarczyk
-image: "images/Adrian.jpg"
-description: Radio R&D Manager
+title: Lee Hanna
+image: "images/lee.png"
+description: ML Lead
 social:
   # - name: github
   #   icon: fa-brands fa-github
-  #   link: https://github.com
+  #   link: https://github.com/lswersk
 
   # - name: twitter
   #   icon: fa-brands fa-twitter
@@ -13,7 +13,7 @@ social:
 
   - name: linkedin
     icon: fa-brands fa-linkedin
-    link: https://www.linkedin.com/in/adrian-kaczmarczyk-50a609133/
+    link: https://www.linkedin.com/in/lee-hanna-a5433046/
 ---
 
-Radio R&D Manager
+Operations Manager

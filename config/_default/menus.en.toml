@@ -113,6 +113,12 @@ weight = 6
 [[main]]
 parent = "Services"
 weight = 1
+name = "Open Source 5G"
+url = "open-source-5g/"
+
+[[main]]
+parent = "Services"
+weight = 2
 name = "ML Prototyping & Testbeds"
 url = "prototyping/"
 
@@ -125,7 +131,7 @@ url = "prototyping/"
 
 [[main]]
 parent = "Services"
-weight = 3
+weight = 4
 name = "Custom Datasets"
 url = "custom-datasets/"
 
