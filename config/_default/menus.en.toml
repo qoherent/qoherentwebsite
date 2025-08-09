@@ -75,13 +75,13 @@ weight = 5
 parent = "Products"
 weight = 1
 name = "RIA Hub"
-url = "radiointelligenceapps-riahub/"
+url = "riahub/"
 
 [[main]]
 parent = "Products"
 weight = 3
-name = "RIA"
-url = "radiointelligenceapps-project/"
+name = "RIA & Signal Testbed"
+url = "radioinferenceapps/"
 
 # ## for later
 # [[main]]
@@ -100,8 +100,15 @@ url = "radiointelligenceapps-project/"
 [[main]]
 parent = "Products"
 weight = 4
-name = "RIARAN"
-url = "radiointelligenceapps-ran/"
+name = "RIA RAN - Intelligent 5G RAN"
+url = "intelligent-5g-ran/"
+
+[[main]]
+parent = "Products"
+weight = 4
+name = "GRC Agent"
+url = "gnu-radio-agent/"
+
 
 #####################
 [[main]]
@@ -113,7 +120,7 @@ weight = 6
 [[main]]
 parent = "Services"
 weight = 1
-name = "Open Source 5G"
+name = "Open Source 5G Testing and Deployment"
 url = "open-source-5g/"
 
 [[main]]
@@ -121,6 +128,12 @@ parent = "Services"
 weight = 2
 name = "ML Prototyping & Testbeds"
 url = "prototyping/"
+
+[[main]]
+parent = "Services"
+weight = 3
+name = "RF Infrastructure & SDR Support"
+url = "rf-infrastructure-sdr-services/"
 
 # ##for later
 # [[main]]
@@ -132,7 +145,7 @@ url = "prototyping/"
 [[main]]
 parent = "Services"
 weight = 4
-name = "Custom Datasets"
+name = "Custom RF Datasets"
 url = "custom-datasets/"
 
 #####################
