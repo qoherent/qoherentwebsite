@@ -14,6 +14,14 @@
                     <p class="mb-4 text-center"> 
                         {{ .content | markdownify }}
                     </p>
+                    {{ with .button }}
+                      {{ if .enable }}
+                        <a class="btn btn-primary mt-2" href="{{ .link | absURL }}">
+                          {{ .label }}
+                          <i class="fa fa-arrow-right pl-2"></i>
+                        </a>
+                      {{ end }}
+                    {{ end }}
                 </div>
             </div>
         </div>
@@ -106,4 +114,17 @@
     {{ end }}
   {{ end }}
   <!-- /Testimonials -->
+
+  <!-- Optional Body Content (renders shortcodes from _index.md) -->
+  {{ with .Content }}
+  <section class="section">
+    <div class="container">
+      <div class="prose dark:prose-invert max-w-none">
+        {{ . | safeHTML }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+  <!-- /Optional Body Content -->
+
 {{ end }}

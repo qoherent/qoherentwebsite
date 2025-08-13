@@ -167,3 +167,86 @@ ip_portfolio:
   #     link: ""
 ---
 
+{{< notice "info" >}}
+Qoherent develops, tests, and deploys **Radio Inference Applications**. We combine RF engineering, machine learning, and SDR systems integration to move from concept to validated capability.
+{{< /notice >}}
+
+## Who We Work With
+
+- **Space and defence organisations** evaluating spectrum awareness, interference management, and resilient comms  
+- **Industrial and telecom teams** building private 5G, Open RAN pilots, and edge deployments  
+- **Research labs and universities** prototyping RF ML models and building reproducible testbeds  
+
+{{< button label="Book a Technical Briefing →" link="/contact" style="solid" >}}
+
+---
+
+## How We Work
+
+{{< tabs >}}
+{{< tab "1) Define" >}}
+Scope the problem and deployment constraints. Establish target tasks, signals, environments, data sources, and **success criteria**.
+- Requirements and TRL baseline  
+- Prior‑art review and risk register  
+- Data/capture plan and integration targets  
+{{< /tab >}}
+{{< tab "2) Prototype" >}}
+Build fast and measure. Start from our portfolio of model templates; adapt to your bands, bandwidths, and hardware.
+- Model selection and training  
+- SDR‑based validation and tuning  
+- Iterations guided by metrics  
+{{< /tab >}}
+{{< tab "3) Validate & Deploy" >}}
+Prove performance and readiness. Compare against baselines; document results; plan deployment steps.
+- Performance, robustness, efficiency  
+- Documentation and handover  
+- Deployment roadmap and options  
+{{< /tab >}}
+{{< /tabs >}}
+
+---
+
+## IP Portfolio
+
+A portfolio of **30+ prototype‑ready models** for RF environments, grouped into seven categories:
+
+{{< accordion "Signal Detection & Classification" >}}
+Modulation recognition, protocol identification, and signal presence detection.
+{{< /accordion >}}
+{{< accordion "Interference Management" >}}
+Interference classification, jamming detection, source separation, anomaly detection.
+{{< /accordion >}}
+{{< accordion "Beamforming & Spatial Processing" >}}
+Beam selection, angle‑of‑arrival estimation, pattern optimisation.
+{{< /accordion >}}
+{{< accordion "Spectrum Intelligence" >}}
+Occupancy prediction, dynamic assignment, usage pattern analysis.
+{{< /accordion >}}
+{{< accordion "RF Fingerprinting" >}}
+Specific emitter identification, front‑end recognition, authentication support.
+{{< /accordion >}}
+{{< accordion "Channel & Propagation" >}}
+Channel state prediction, environment recognition, link quality estimation.
+{{< /accordion >}}
+{{< accordion "Advanced AI‑DSP" >}}
+Signal enhancement and blind signal analysis.
+{{< /accordion >}}
+
+---
+
+## Selected Work
+
+- Interference recognition datasets for satellite communications research (LEO/MEO/GEO scenarios)  
+- Private 5G pilots in industrial and remote environments, including airborne relay and underground sites  
+- Beamforming model prototyping with SDR testbeds, low‑latency architectures comparable to classical methods  
+- Spectrum occupancy studies using distributed sensors and controlled interference injection  
+
+{{< notice "tip" >}}
+Open RAN and AI: we partner with the **srsRAN** project, conduct trials on AI‑driven RAN control and **JCAS**, and are developing **RIA Hub** to deploy inference in the gNodeB. Watch a short overview of our work on **AI in 5G**:
+{{< /notice >}}
+
+{{< youtube CQ0ak4I21qk >}}
+
+{{< button label="Talk to Us →" link="/contact" style="solid" >}}
+
+---
