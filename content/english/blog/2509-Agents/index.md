@@ -1,7 +1,7 @@
 ---
 title: "LLM Agents 101: Beyond Chatbots to Autonomous Engineering Tools."
 date: 2025-09-05T01:16:34-04:00
-draft: false
+draft: true
 cover:
     # image img/example.jpg
     alt: 'LLM Agents 101: Beyond Chatbots to Autonomous Engineering Tools.'
@@ -13,7 +13,7 @@ categories: ['tech-blog']
 
 
 
-*How LLM-powered agents are transforming engineering workflows and why they're perfect for accelerating hardware design cycles*
+*How LLM-powered agents are transforming engineering workflows and why they're perfect for accelerating design design cycles*
 
 ## Introduction
 

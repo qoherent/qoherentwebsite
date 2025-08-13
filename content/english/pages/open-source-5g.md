@@ -1,84 +1,92 @@
-
-
 ---
 title: "Open Source 5G Network Testing & Deployment Services"
 meta_title: "Private 5G Testing | Open Source Network Deployment"
-description: "Professional 5G network testing and deployment services. Expert implementation of srsRAN and OpenAirInterface for research and production applications."
+description: "Professional 5G network testing and deployment services. Expert implementation of srsRAN, OpenAirInterface, and Open RAN for research and production applications."
 ---
 
+# Open Source 5G Network Testing & Deployment
 
-Organizations exploring private 5G networks need expert support to validate use cases and deploy functional systems. We provide comprehensive 5G testing and deployment services using open-source platforms and commercial-grade SDR equipment.
+Private 5G networks offer new opportunities for secure, high-performance communications — but real-world adoption requires careful validation and robust integration.  
+
+Qoherent delivers **end-to-end testing, deployment, and integration services** for open-source 5G platforms, combining Open RAN expertise, commercial-grade SDR hardware, and AI/ML integration for RAN control and joint communications and sensing (JCAS).
+
+{{< notice "info" >}}
+We partner directly with the **srsRAN** project and industry collaborators to advance Open RAN capabilities.  
+Watch our work on [AI in 5G networks](https://www.youtube.com/watch?v=CQ0ak4I21qk) and learn about [RIA Hub](/riahub) or [RIA RAN](/intelligent-5g-ran) , our platform for deploying inference applications into the gNodeB.
+{{< /notice >}}
+
+---
 
 ## Testing Services
 
-### Network Performance Validation
-- Coverage mapping and range testing (indoor/outdoor environments)
-- Throughput and latency characterization under real-world conditions
-- Multi-UE capacity and handover performance
-- Quality of Service (QoS) verification for critical applications
+We plan and execute targeted test campaigns to evaluate network capability, application performance, and integration with operational systems.
 
-### Integration Testing
-- Device compatibility validation
-- Application-layer performance testing
-- Coexistence analysis with existing wireless systems
-- Edge computing integration scenarios
+{{< tabs >}}
+{{< tab "Network Performance Validation" >}}
+- Coverage mapping and range testing in indoor and outdoor environments  
+- Throughput and latency measurement under representative loads  
+- Multi-UE capacity assessment, mobility, and handover testing  
+- Latency- and reliability verification  
+{{< /tab >}}
 
-### Specialized Testing Scenarios
-We've successfully tested unique 5G applications including:
-- Drone-mounted relay networks achieving 1.5km range
-- Underground mining communications
-- Maritime and port operations
-- Smart factory deployments with ultra-low latency requirements
+{{< tab "Integration Testing" >}}
+- UE and device compatibility validation  
+- Application-layer performance and stability testing  
+- Coexistence analysis with other wireless systems  
+- Edge computing integration and orchestration validation  
+{{< /tab >}}
+
+{{< tab "Specialised Scenarios" >}}
+- Relay nodes extending extending coverage for remote operations with ad-hoc networks.  
+- Incumbent-based spectrum sharing and opportunistic spectrum consumption.
+- Sensing with sub-10ms latency in time critical applications
+{{< /tab >}}
+{{< /tabs >}}
+
+---
 
 ## Deployment Services
 
-### Private Network Implementation
-Our team deploys complete private 5G networks tailored to your requirements:
-
-- **Core Network**: 5G Core (5GC) or EPC configuration
-- **Radio Access**: gNodeB/eNodeB deployment and optimization
-- **Integration**: Connection to existing IT infrastructure
-- **Security**: Network isolation and access control
-
-### Technology Stack
-- **Software Platforms**: srsRAN, OpenAirInterface
-- **Hardware Support**: USRP platforms, commercial SDRs
-- **Deployment Models**: On-premises, edge, hybrid architectures
-
-## Engagement Models
-
-We offer flexible engagement approaches based on your project needs:
-
-- **Proof-of-Concept**: Rapid validation of 5G for your use case
-- **Pilot Deployment**: Limited production deployment with full testing
-- **Production Support**: Ongoing optimization and feature development
-
-[Explore 5G Testing Options →](/contact)
+We deploy both research-grade and small-scale, AI-enabled private 5G networks, from single-site testbeds to multi-node operational systems.
 
 
+{{< accordion "Private Network Implementation" >}}
+- **Core network**: 5G Core (5GC) or EPC deployment and configuration  
+- **Radio access**: gNodeB/eNodeB installation, tuning, and optimisation  
+- **Integration**: Seamless connection to existing IT and operational infrastructure  
+- **Security**: Network segmentation, isolation, and access control policies  
+{{< /accordion >}}
 
+{{< accordion "Technology Stack" >}}
+- **Software platforms**: srsRAN, OpenAirInterface, Open RAN frameworks, and custom modules  
+- **Hardware**: USRP devices, other SDR platforms, and O-RU integration  
+- **Deployment models**: On-premises labs, edge compute environments, and hybrid architectures  
+{{< /accordion >}}
 
-
-
-
-
-
-<!-- ---
-title: "Open Source 5G"
-meta_title: "Open Source 5G development and deployment"
-description: "Open Source 5G development and deployment"
-image: "/images/5g.png"
-draft: false
 ---
 
 
-Qoherent are experts in conceptualizing, prototyping, and testing unique implementations of srsRAN.
 
-Qoherent has experience partnering with other companies to explore 5G and OpenRAN technology development, [researching applications of AI on 5G](https://www.youtube.com/watch?v=CQ0ak4I21qk), and we are also working on a [platform for deploying inference applications into a gNodeB](/radiointelligenceapps-ran) for RAN control and JCAS.
+{{< notice "tip" >}}
+We offer flexible project structures based on scope and readiness:
+### Engagement Models
 
-Whether you require an indoor testbed for research, or want to develop custom features in your private network, Qoherent's team can support you or develop the solution.
+1. **Proof-of-concept** – rapid build to evaluate 5G/Open RAN applicability  
+2. **Pilot deployment** – live network with defined scope and full test coverage  
+3. **AI Enhancement** – optimization, scaling, and AI-driven RAN control features  
+{{< /notice >}}
 
-[Contact](/contact/) us today to discuss your open source 5G needs. Our team is ready to work closely with you to create a system that meets your design requirements.
+---
+
+## Why Work With Qoherent
+
+- Proven delivery of open-source 5G and Open RAN systems for operational and R&D use  
+- Partnership with the **srsRAN** project and experience in standards-aligned Open RAN  
+- Expertise in applying AI and ML to the RAN, including RAN control and JCAS applications  
+- In-house SDR testbeds, portable deployment kits, and measurement tooling  
+- Experience in regulated, remote, and industrial environments  
+
+{{< button label="Explore 5G Testing Options →" link="/contact" style="solid" >}}
 
 
-{{< image src="images/gael-cold.jpg" caption="" alt="alter-text" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="image title"  webp="false" >}} -->
+{{< image src="images/gael-cold.jpg" caption="" alt="alter-text" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="image title"  webp="false" >}}

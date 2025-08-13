@@ -126,7 +126,7 @@ url = "open-source-5g/"
 [[main]]
 parent = "Services"
 weight = 2
-name = "ML Prototyping & Testbeds"
+name = "Radio Inference Prototypes"
 url = "prototyping/"
 
 [[main]]
