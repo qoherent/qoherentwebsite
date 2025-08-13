@@ -22,6 +22,7 @@
   </head>
 
   <body>
+    {{ partial "framebust.html" . }}
     <!-- cache partial only in production -->
     {{ if hugo.IsProduction }}
       {{ partialCached "preloader.html" . }}
