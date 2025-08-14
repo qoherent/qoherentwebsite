@@ -1,6 +1,6 @@
 ---
 enable: true
-title: "Ecosystem, Support, and Partners:"
+title: "Our Innovation Ecosystem:"
 description: ""
 
 # Testimonials

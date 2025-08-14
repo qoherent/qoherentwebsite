@@ -8,10 +8,10 @@
         <div class="container">
             <div class="row justify-center">
                 <div class="text-center">
-                    <h1 class="text-center lg:whitespace-nowrap " style="font-weight: 100;"> 
+                    <h1 class="text-center lg:whitespace-nowrap " style="font-weight: 150; font-size: 3rem"> 
                         {{ .title | markdownify }}
                     </h1>
-                    <p class="mb-4 text-center"> 
+                    <p class="mb-4 text-center" style="font-size: 1.5rem"> 
                         {{ .content | markdownify }}
                     </p>
                     {{ with .button }}
@@ -77,7 +77,7 @@
 
   <!-- Optional Body Content (renders shortcodes from _index.md) -->
   {{ with .Content }}
-  <section class="section">
+  <section class="section !py-0">
     <div class="container">
       <div class="prose dark:prose-invert max-w-none">
         {{ . | safeHTML }}
