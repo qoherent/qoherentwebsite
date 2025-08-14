@@ -1,5 +1,5 @@
 ---
-title: "RIA Hub - create Radio Intelligence Apps"
+title: "RIA Hub"
 meta_title: "RIA Hub for creating Radio Intelligence Apps"
 description: "Suite for curating RF datasets, training models, and testing then deploying them."
 image: "/images/5g.png"
@@ -15,20 +15,30 @@ _**Radio Inference Applications Hub (RIA Hub)**_ by Qoherent is an AI developmen
 
 
 #### End-to-end workflow for deploying machine learning into software-defined radios
-- Automated and procedural signal generation in python, GNU Radio and MATLAB as well as control of SDR testbeds for over-the-air emulation.
-- Automated design and training for producing high performance models.
-- Interoperable with several popular signal processing and deep learning back ends.
-- Social, community, and collaboration features for sharing models and datasets with colleagues or to a community
+- Automated and procedural signal generation in Python, GNU Radio and MATLAB, as well as SDR testbed control for over-the-air emulation.
+- Plugins for popular signal processing and deep learning back ends.
+- Automated design, training, and optimizations of high performance models.
 - Automated testing, integration, and deployment into SDR-enabled systems, including OpenRAN-ready 5G solutions.
-- Optimization and deployment of models to a range of SDR-enabled targets.
+- Tools for sharing datasets, models, and inference applications with colleagues and the broader community.
 
 #### Comprehensive reference library
-- Includes popular off-the-shelf deep learning algorithms, adapted for radio applications.
+- Labelled datasets, pre-trained models, and optimized inference applications for radio.
+- Reference designs for radio ML solutions.
+- Example workflows and reusable actions for common tasks.
 - Open Source and community libraries.
-- Synthesizers, recordings, pre-trained models, and API's for accelerating the time to prototype.
 
-<p class="text">RIA Hub is built on top of the <a href="https://riahub.ai/ria/ria">RIA project</a> and <a href="https://github.com/go-gitea/gitea">Gitea</a>.</p>
+#### The development workflow you love, tailored for radio
+- RIA Hub is built on <a href="https://github.com/go-gitea/gitea">Gitea</a>, an open-source DevOps platform.
+- Write workflows in GitHub Actions-flavoured YAML.
+- Store and version datasets and models directly in repositories using Git LFS.
+- Manage containerized inference applications on the RIA Hub Container Registry.
 
-
-{{< button label="Sign Up for the RIA Hub beta" link="https://docs.google.com/forms/d/e/1FAIpQLSeQn7aMOljwtQeaiRs1TaHZknAzyf8BJmxtiiGH9V4NQ0ZDnA/viewform?usp=header" style="solid" >}}
-{{< button label="Check Out RIA Hub" link="https://riahub.ai" style="outline" >}}
+<div class="button-group" style="display: flex; gap: 1rem;">
+  <style>
+    .button-group a {
+      text-decoration: none;
+    }
+  </style>
+  {{< button label="Sign Up for the RIA Hub beta" link="https://docs.google.com/forms/d/e/1FAIpQLSeQn7aMOljwtQeaiRs1TaHZknAzyf8BJmxtiiGH9V4NQ0ZDnA/viewform?usp=header" style="solid" >}}
+  {{< button label="Go to RIA Hub" link="https://riahub.ai" style="outline" >}}
+</div>
