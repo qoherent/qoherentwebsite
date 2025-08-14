@@ -106,7 +106,7 @@ Our iterative approach delivers results quickly:
 
 {{< accordion "Comprehensive Validation" >}}
 Every prototype undergoes rigorous testing:
-- Performance across signal conditions
+- Performance across channel conditions
 - Computational efficiency analysis
 - Robustness to real-world impairments
 - Detailed comparison to baseline approaches

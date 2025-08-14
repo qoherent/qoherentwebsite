@@ -75,10 +75,22 @@
   {{ end }}
   <!-- /Features -->
 
+  <!-- Optional Body Content (renders shortcodes from _index.md) -->
+  {{ with .Content }}
+  <section class="section">
+    <div class="container">
+      <div class="prose dark:prose-invert max-w-none">
+        {{ . | safeHTML }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+  <!-- /Optional Body Content -->
+
   <!-- Testimonials -->
   {{ with site.GetPage "sections/testimonial" }}
     {{ if .Params.enable }}
-      <section class="section">
+      <section class="section-sm">
         <div class="container">
           <div class="row">
             <div class="md:col-10 lg:col-8 xl:col-6 mx-auto mb-12 text-center">
@@ -115,16 +127,6 @@
   {{ end }}
   <!-- /Testimonials -->
 
-  <!-- Optional Body Content (renders shortcodes from _index.md) -->
-  {{ with .Content }}
-  <section class="section">
-    <div class="container">
-      <div class="prose dark:prose-invert max-w-none">
-        {{ . | safeHTML }}
-      </div>
-    </div>
-  </section>
-  {{ end }}
-  <!-- /Optional Body Content -->
+
 
 {{ end }}
