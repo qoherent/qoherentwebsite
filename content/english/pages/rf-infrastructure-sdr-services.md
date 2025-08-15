@@ -124,8 +124,10 @@ We don't just provide support services, we ensure your team understands the solu
 {{< /tab >}}
 {{< /tabs >}}
 
-{{< notice "tip" >}}
-Need immediate SDR support? We can respond within 24 hours for urgent issues.
-{{< /notice >}}
+<div style="padding-top: 1.5rem;">
+  {{< notice "tip" >}}
+  Need immediate SDR support? We can respond within 24 hours for urgent issues.
+  {{< /notice >}}
+</div>
 
 {{< button label="Discuss Your RF Infrastructure Needs →" link="/contact" style="solid" >}}

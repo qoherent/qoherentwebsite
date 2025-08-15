@@ -12,11 +12,7 @@ Applying machine learning to RF systems requires advanced expertise at the inter
 
 Prototyping projects at Qoherent benefit from an extensive library of pre-configured model templates and proven reference architectures.
 The portfolio contains over **30 prototype-ready models** organized into **seven primary categories** of RF signal processing problems.
-Each category includes multiple specialised sub-problems with dedicated models designed for real-world conditions, enabling faster progress and reducing technical risk.
-
-
-
-
+Each category includes multiple specialized sub-problems with dedicated models designed for real-world conditions, enabling faster progress and reducing technical risk.
 
 {{< tabs >}}
 {{< tab "Summary" >}}
@@ -30,56 +26,59 @@ Each category includes multiple specialised sub-problems with dedicated models d
 {{< /tab >}}
 {{< tab "Signal" >}}
 ### Signal Detection & Classification
-- **Modulation & Protocol Recognition**: Classify 20+ modulation types including QAM, PSK, FSK variants. Detect WiFi, LTE, 5G NR, Bluetooth, and IoT protocols
+- **Modulation & Protocol Recognition**: Classify 20+ modulation types including QAM, PSK, FSK variants. Detect WiFi, LTE, 5G NR, Bluetooth, and IoT protocols.
 - **Impairment Recognition**: Measure and quantify degradations of signal data, e.g. EVM, SNR, skew.
-- **Signal Enhancement**: Improve SNR in challenging conditions or implement a custom learned filter
-- **Blind Signal Analysis**: Extract parameters without prior knowledge
+- **Signal Enhancement**: Improve SNR in challenging conditions or implement a custom learned filter.
+- **Blind Signal Analysis**: Extract parameters without prior knowledge.
 {{< /tab >}}
 {{< tab "Interference" >}}
 ### Interference Management
-- **Interference Recognition**: Identify several interference types from intentional jamming to unintentional emissions
-- **Source Separation**: Isolate signals of interest in congested spectrum
-- **Signal Presence Detection**: Sub 10-ms detection in wideband spectrum
-- **Anomaly Detection**: Real-time identification of unexpected signals
+- **Interference Recognition**: Identify several interference types from intentional jamming to unintentional emissions.
+- **Source Separation**: Isolate signals of interest in congested spectrum.
+- **Signal Presence Detection**: Sub 10-ms detection in wideband spectrum.
+- **Anomaly Detection**: Real-time identification of unexpected signals.
 {{< /tab >}}
 {{< tab "Beams" >}}
 
 ### Beamforming & Spatial Processing
 - **Beam Selection**: Lightweight ML-driven beam selection for low-element phased arrays.
-- **Angle of Arrival Estimation**: Multi-antenna direction finding
-- **Intelligent boosting and suppression**: Dynamic beam pattern optimization
+- **Angle of Arrival Estimation**: Multi-antenna direction finding.
+- **Intelligent boosting and suppression**: Dynamic beam pattern optimization.
 {{< /tab >}}
 {{< tab "Spectrum" >}}
 ### Spectrum Intelligence
-- **Occupancy/Vacancy Prediction**: Forecast spectrum utilization and occupancy
-- **Dynamic Spectrum Assignment**: Optimize channel allocation in real-time
-- **Usage Pattern Recognition**: Identify temporal patterns in spectrum usage
+- **Occupancy/Vacancy Prediction**: Forecast spectrum utilization and occupancy.
+- **Dynamic Spectrum Assignment**: Optimize channel allocation in real-time.
+- **Usage Pattern Recognition**: Identify temporal patterns in spectrum usage.
 {{< /tab >}}
 {{< tab "Fingerprints" >}}
 ### RF Fingerprinting
-- **Specific Emitter Identification**: Unique device identification from signal characteristics
-- **Front-end Recognition**: Classify transmitter types and manufacturers
-- **Authentication Support**: Verify transmitter validity for security applications
+- **Specific Emitter Identification**: Unique device identification from signal characteristics.
+- **Front-end Recognition**: Classify transmitter types and manufacturers.
+- **Authentication Support**: Verify transmitter validity for security applications.
 {{< /tab >}}
 {{< tab "Channels" >}}
 ### Channel & Propagation Environments
-- **Channel State Prediction**: Forecast channel conditions for adaptive systems
-- **Channel Recognition**: Identify multipath, fading, and atmospheric effects
-- **Link Quality Estimation**: Predict communication reliability
+- **Channel State Prediction**: Forecast channel conditions for adaptive systems.
+- **Channel Recognition**: Identify multipath, fading, and atmospheric effects.
+- **Link Quality Estimation**: Predict communication reliability.
 {{< /tab >}}
 
 {{< /tabs >}}
 
 
 
-{{< notice "Advantages of Our IP Portfolio" >}}
-
-Our IP portfolio provides proven models that accelerate your development timeline and reduce technical risk:
-- Start from a higher Technology Readiness Level (TRL) using validated model architectures.
-- Models designed specifically for RF environments, accounting for spectrum dynamics, non-stationary channels, and hardware impairments.
-- Rapid adaptation of existing models to match customer-specific signal types, bandwidths, and deployment conditions.
-- Architectures optimised for deployment on embedded SDR platforms, edge compute devices, and cloud infrastructure.
-{{< /notice >}}
+<div style="padding-top: 1.5rem;">
+  {{< notice "Advantages of Our IP Portfolio" >}}
+  
+  Our IP portfolio provides proven models that accelerate your development timeline and reduce technical risk:
+  - Start from a higher Technology Readiness Level (TRL) using validated model architectures.
+  - Models designed specifically for RF environments, accounting for spectrum dynamics, non-stationary channels, and hardware impairments.
+  - Rapid adaptation of existing models to match customer-specific signal types, bandwidths, and deployment conditions.
+  - Architectures optimised for deployment on embedded SDR platforms, edge compute devices, and cloud infrastructure.
+  
+  {{< /notice >}}
+</div>
 
 
 
