@@ -1,65 +1,97 @@
 ---
 # Banner
 banner:
-  title: "Identifying things in wireless spectrum with AI"
-  content: "Let's build intelligent radios together."
+  title: "The Radio Intelligence Company"
+  content: "We build machine learning applications for software-defined radio systems."
   image: "/images/sgramF.jpg"
   button:
     enable: true
-    label: "Radio Intelligence Apps"
-    link: "radiointelligenceapps-riahub/"
+    label: "Let's build intelligent radios together"
+    link: "/prototyping/"
 
 # Features
 features:
-  - title: "RIA"
+  - title: Radio Inference Prototyping
     image: "/images/signal.png"
-    content: "The Radio Intelligence Apps project exists to help accelerate the development of intelligent radio technology. The RIA  project contains utlilities for synthesizing, curating, and inspecting datasets of radio signals, example workflows for training high performance machine learning models, and tools for testing them. _**The RIA Project is coming soon.**_"
+    content: We help organizations tackle their RF challenges with machine learning. Using our library of proven machine learning models, SDR hardware, and domain expertise, we build and prototype smarter and more autonomous RF systems.
     bulletpoints:
-      - "Generate radio signals using Python, GNU Radio, and MATLAB."
-      - "Curate radio datasets from collections of SigMF recordings and save them as HDF5."
-      - "Train models with off-the-shelf deep learning algorithms tailored for radio."
-      - "**RIA, the foundational core of RIA Hub, is free and open-source**"
+      - 6-10 week prototype development
+      - Validation on real hardware
+      - 30+ field-tested models to build from
+      - Feasibility testing and design trade-offs
     button:
-      enable: false
-      label: "Get Started Now"
-      link: "#"
+      enable: true
+      label: "ML Prototyping Services"
+      link: "/prototyping/"
 
-  - title: "RIA Hub"
+  - title: Radio Inference Applications
     image: "/images/work2.png"
-    content: "RIA is an end-to-end development suite for creating and deploying intelligent radio applications to realworld software-defined radio enabled systems. RIA is built on top of the open source RIA project."
+    content: We're building the toolkit to make RF machine learning more accessible. We call it RIA. RIA Hub, a web platform for RIA, makes getting started with RIA easy, enabling accelerated reserach and development without the need to set up and maintain your own infrastructure.
     bulletpoints:
-      - "Experiment, training, and deployment automation features."
-      - "Interoperable with a selection of DSP and deep learning technologies."
-      - "Streamline deployment with leading SDR hardware solutions."
-      - "Accelerate prototyping with a library of functions, pre-trained models, model implementations, workflows, and datasets."
+      - Dataset generation, curation, and management
+      - Model development, training, and testing
+      - Ultra-low latency inference deployment and benchmarking
+      - Seamless integration with SDR hardware and RAN software stacks
     button:
-      enable: false
-      label: ""
-      link: "radiointelligenceapps-suite/"
+      enable: true
+      label: "Learn More"
+      link: "/riahub/"
 
-  - title: "Intelligent Radio Research"
+  - title: SDR & Open Source 5G Engineering Services
     image: "/images/sdrresearch.png"
-    content: "Qoherent partners on the research of better radio signal processing solutions with machine learning and quantum computing. Qoherent partners with government labs, corporate researchers, and universities to: "
+    content: We provide end-to-end RF, SDR, and open-source 5G engineering support, accelerating your path from concept to operational capability.
     bulletpoints:
-      - "Build environment emulators and testbeds."
-      - "Design and experiment on algoritmic solutions for classifying radio signals."
-      - "Systems integration with software-defined radios."
+      - Custom RF dataset creation and labeling
+      - AI-enabled private 5G/LTE network deployment
+      - SDR system integration and application design
+      - Technical support and training
     button:
-      enable: false
-      label: ""
-      link: ""
+      enable: true
+      label: "Engineering Services"
+      link: "/rf-infrastructure-sdr-services/"
 
-  # - title: "The Top Reasons to Choose Hugo for Your Hugo Project"
-  #   image: "/images/service-3.png"
-  #   content: "With Hugo, you can build modern and content-focused websites without sacrificing performance or ease of use."
-  #   bulletpoints:
-  #     - "Instantly load static sites for better user experience and SEO."
-  #     - "Intuitive syntax and support for popular frameworks make learning and using Hugo a breeze."
-  #     - "Use any front-end library or framework, or build custom components, for any project size."
-  #     - "Built on cutting-edge technology to keep your projects up-to-date with the latest web standards."
-  #   button:
-  #     enable: false
-  #     label: ""
-  #     link: ""
 ---
 
+{{< notice "We work at the intersection of three disciplines:" >}}
+- **Software-defined radio** – flexible RF hardware  
+- **Machine learning** – algorithms that understand complex signals  
+- **Software & MLOps** – enabling rapid deployment, integration, and development
+{{< /notice >}}
+
+
+
+## Why Radio Intelligence?
+
+Modern wireless systems face challenges that traditional DSP can’t solve:  
+- **Crowded spectrum** that requires rapid, intelligent adaptation  
+- **Complex interference** patterns in contested and shared bands  
+- **Unknown or non-cooperative signals** that must be identified on the fly  
+- **Performance trade-offs** that shift with changing conditions  
+
+Machine learning has proven effective at addressing these challenges, enabling faster decisions, smarter resource allocation, and greater operational resilience.
+
+**Radio intelligence is how we make it happen**, integrating inference-tuned models directly into SDR and 5G platforms to deliver actionable results in real-world conditions.
+
+
+## Current Work
+
+- **Research**: Driving innovation in next-generation wireless with AI
+- **Services**: Helping organizations validate and deploy radio inference applications
+- **RIA Hub**: Building tools to make RF ML development more accessible
+- **Open Source**: Contributing to trailblazing projects such as srsRAN, GNU Radio, and IQ Engine
+
+
+## Let's Build Intelligent Radios Together
+
+Whether you require a prototype to evaluate a concept, a dataset to support research, assistance with private network deployment, or guidance on radio intelligence, we provide practical engineering support tailored to your RF requirements.
+
+
+<div class="button-group" style="display: flex; gap: 1rem;">
+  <style>
+    .button-group a {
+      text-decoration: none;
+    }
+  </style>
+  {{< button label="Get connected" link="/contact/" style="solid" >}}
+  {{< button label="Learn more about RIA Hub" link="https://riahub.ai" style="outline" >}}
+</div>

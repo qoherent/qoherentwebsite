@@ -8,12 +8,20 @@
         <div class="container">
             <div class="row justify-center">
                 <div class="text-center">
-                    <h1 class="text-center lg:whitespace-nowrap " style="font-weight: 100;"> 
+                    <h1 class="text-center lg:whitespace-nowrap " style="font-weight: 150; font-size: 3rem"> 
                         {{ .title | markdownify }}
                     </h1>
-                    <p class="mb-4 text-center"> 
+                    <p class="mb-4 text-center" style="font-size: 1.5rem"> 
                         {{ .content | markdownify }}
                     </p>
+                    {{ with .button }}
+                      {{ if .enable }}
+                        <a class="btn btn-primary mt-2" href="{{ .link | absURL }}">
+                          {{ .label }}
+                          <i class="fa fa-arrow-right pl-2"></i>
+                        </a>
+                      {{ end }}
+                    {{ end }}
                 </div>
             </div>
         </div>
@@ -67,10 +75,22 @@
   {{ end }}
   <!-- /Features -->
 
+  <!-- Optional Body Content (renders shortcodes from _index.md) -->
+  {{ with .Content }}
+  <section class="section !py-0">
+    <div class="container">
+      <div class="prose dark:prose-invert max-w-none">
+        {{ . | safeHTML }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+  <!-- /Optional Body Content -->
+
   <!-- Testimonials -->
   {{ with site.GetPage "sections/testimonial" }}
     {{ if .Params.enable }}
-      <section class="section">
+      <section class="section-sm">
         <div class="container">
           <div class="row">
             <div class="md:col-10 lg:col-8 xl:col-6 mx-auto mb-12 text-center">
@@ -106,4 +126,7 @@
     {{ end }}
   {{ end }}
   <!-- /Testimonials -->
+
+
+
 {{ end }}
