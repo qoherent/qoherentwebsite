@@ -21,7 +21,7 @@ The telecommunications industry is undergoing a revolution, and artificial intel
 
 AI enables machines to perform tasks requiring human-like reasoning: pattern recognition, autonomous decision-making, and prediction. ML, a subset of AI, uses algorithms that adapt based on data inputs rather than explicit programming.
 
-The core value proposition is ***prediction at scale***. AI and ML dramatically reduce the cost and complexity of making accurate predictions across telecommunications networks. This capability transforms network operations from reactive maintenance to proactive optimization.
+The core value proposition is ***prediction at scale***. AI and ML have the potential to dramatically reduce the cost and complexity of making accurate predictions across telecommunications networks. This capability transforms network operations from reactive maintenance to proactive optimization.
 
 In finance, they are used to detect fraud and anomalous activity, keeping their customers' bank accounts safe. In ecommerce, they power recommendation engines, helping people find exactly what they want. For social media, algorithms are the backbone of what appears on your feed. TikTok, with its recommendations that seem to know what you want before you do, relies on algorithms. Recently, LLMs like ChatGPT, which have algorithms underneath it, have taken the world by storm. An algorithm may have sent this very article your way.
 
@@ -38,7 +38,7 @@ To make this possible, industry-leading organizations like 3GPP (3rd Generation 
 {{< image src="images/oran.png" caption="" alt="alter-text" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="image title"  webp="false" >}}<p style="text-align: center;font-style: italic;">Architecture of an Open Radio Access Network.</p>
 
 
-**O-RAN represents a significant transformation in the design and operation of mobile networks.** It is an open-source architecture that eliminates traditional vendor lock-in, enabling operators to integrate equipment from multiple vendors while ensuring seamless interoperability. In this sense, O-RAN serves as an open platform for innovation and collaboration across the telecommunications industry.
+**O-RAN represents a significant transformation in the design and operation of mobile networks.** It is an open architecture that eliminates traditional vendor lock-in, enabling operators to integrate equipment from multiple vendors while ensuring seamless interoperability. In this sense, O-RAN serves as an open platform for innovation and collaboration across the telecommunications industry.
 
 To appreciate the impact of O-RAN, it's helpful to contrast it with the traditional system architecture. Conventional RANs are defined by several limiting characteristics:
 
@@ -129,7 +129,7 @@ Standard RIC operations achieve this with inference latencies under 50ms, which 
 
 A 5G frame operates on a 10ms cycle. When AI inference latencies drop below this threshold, it becomes possible to complete a full capture-infer-respond cycle faster than a single frame. To achieve this, inference needs to occur on or near the radio itself, where the signal processing is happening. This breakthrough enables AI to directly control physical radio operations in real-time.
 
-With sub-frame latency, AI systems can dynamically control beam steering, mitigate signal collisions, maximize spectrum utilization, and adapt to changing channel conditions, all with minimal processing overhead, applied directly to radio signal data. This ultra-low latency inference transforms traditional RANs into high-performance adaptive cells that respond to conditions faster than the underlying communication protocols.
+With sub-frame latency, AI systems can dynamically control beam steering, mitigate signal collisions, maximize spectrum utilization, and adapt to changing channel conditions, all with minimal processing overhead, applied directly to radio signal data. This ultra-low latency inference can transform RANs into high-performance adaptive cells that respond to conditions faster than the underlying communication protocols.
 
 
 {{< image src="images/timing.png" caption="" alt="alter-text" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="image title"  webp="false" >}}<p style="text-align: center;font-style: italic;">Radio inference directly on RAN hardware unlocks control and sensing.</p>
