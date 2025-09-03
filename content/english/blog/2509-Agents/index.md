@@ -164,6 +164,5 @@ For teams interested in exploring AI agents further:
 - **Research**: Review papers on ReAct (Reasoning and Acting), AutoGPT, and LangGraph architectures
 - **Tools**: Experiment with existing frameworks like LangChain, CrewAI, or build custom solutions
 - **Community**: Join discussions on platforms like r/AI_Agents to learn from other practitioners
-- **Internal**: Check our evolving documentation at `/wiki/llm-agents` for Qoherent-specific implementations
 
 The agent revolution is just beginning, and early adopters who understand both the potential and the pitfalls will have a significant advantage in the rapidly evolving landscape of AI-assisted engineering.
