@@ -90,6 +90,6 @@ Whether you require a prototype to evaluate a concept, a dataset to support rese
       text-decoration: none;
     }
   </style>
-  {{< button label="Get connected" link="/contact/" style="solid" >}}
-  {{< button label="Learn more about RIA Hub" link="https://riahub.ai" style="outline" >}}
+  {{< button label="Get connected" link="/contact" style="solid" >}}
+  {{< button label="Learn more about RIA Hub" link="/riahub" style="outline" >}}
 </div>
