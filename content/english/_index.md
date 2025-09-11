@@ -26,7 +26,7 @@ features:
 
   - title: Radio Inference Applications
     image: "/images/work2.png"
-    content: We're building the toolkit to make RF machine learning more accessible. We call it RIA. RIA Hub, a web platform for RIA, makes getting started with RIA easy, enabling accelerated reserach and development without the need to set up and maintain your own infrastructure.
+    content: We're building the RIA Toolkit to make RF machine learning more accessible. RIA Hub, our web-based development platform, lets you wield the RIA Toolkit, plus purpose-built automations, directly in your browser, enabling accelerated research and development without the need to write code or set up and maintain infrastructure.
     bulletpoints:
       - Dataset generation, curation, and management
       - Model development, training, and testing
@@ -55,10 +55,8 @@ features:
 {{< notice "We work at the intersection of three disciplines:" >}}
 - **Software-defined radio** – flexible RF hardware  
 - **Machine learning** – algorithms that understand complex signals  
-- **Software & MLOps** – enabling rapid deployment, integration, and development
+- **Software & MLOps** – enabling rapid development, integration, and deployment 
 {{< /notice >}}
-
-
 
 ## Why Radio Intelligence?
 
