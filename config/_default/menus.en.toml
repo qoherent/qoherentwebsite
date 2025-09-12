@@ -74,14 +74,14 @@ weight = 5
 [[main]]
 parent = "Products"
 weight = 1
-name = "RIA Hub"
-url = "riahub/"
+name = "RIA Toolkit"
+url = "riatoolkit/"
 
 [[main]]
 parent = "Products"
-weight = 3
-name = "RIA & Signal Testbed"
-url = "radioinferenceapps/"
+weight = 2
+name = "RIA Hub"
+url = "riahub/"
 
 # ## for later
 # [[main]]
@@ -99,8 +99,8 @@ url = "radioinferenceapps/"
 
 [[main]]
 parent = "Products"
-weight = 4
-name = "RIA RAN - Intelligent 5G RAN"
+weight = 3
+name = "RIA RAN"
 url = "intelligent-5g-ran/"
 
 [[main]]

@@ -1,5 +1,5 @@
 ---
-title: "RIA RAN: AI Enhanced OpenRAN 5G Networks"
+title: "RIA RAN"
 # meta title
 meta_title: "Radio Intelligence Apps on a gNodeB"
 # meta description
@@ -10,6 +10,15 @@ draft: false
 
 
 <!-- ## Transforming Communications with State-of-the-Art Technology -->
+
+<div style="max-width: 300px; margin: -60px auto -20px auto; text-align: center;">
+  {{< image 
+      src="images/ria-logo.png" 
+      alt="RIA logo" 
+      class="img-fluid"
+      style="display: block; margin: 0 auto;"
+  >}}
+</div>
 
 RIA RAN consists of a purpose-built radio application and the RIA RAN gNB. The RIA RAN gNB integrates high-performance ML inference software onto the gNodeB. RIA RAN, integrates deep learning models into open source telecommunications infrastructure, giving them the ability to harness the power of AI for a range of sensing and communications tasks. RIA RAN is designed to enhance applications within telecommunications, defense, and satellite communications. Leveraging the latest advancements in deep learning, artificial intelligence, and big data analytics, RIA RAN is set to redefine the value of OpenRAN and SDR-based networks.
 

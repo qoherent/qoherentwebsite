@@ -8,58 +8,54 @@ draft: false
 
 ---
 
-## Radio and Spectrum
-
 <div class="container-ir">
+  <div class="content-ir">
+    <h3>Radio and Spectrum</h3>
+    <p>
+      Radiofrequency technologies such as wireless communications, GPS, and radar are critical to the modern way of life. These technologies enable us to connect with each other, understand our environment, and share information across vast distances.<br/><br/>
+      Radios will also power the future. They are the foundational infrastructure of disruptive technologies such as self-driving cars, smart cities, and industrial IoT, allowing a high-throughput, low-latency transfer of vast amounts of information. Consequently, their continued development and innovation are essential for building smarter, more connected, and resilient systems across industries.
+    </p>
+  </div>
 
-<p class = "content-ir">
-<br/>
-Radiofrequency technologies such as wireless communications, GPS, and radar are critical to the modern way of life. These technologies enable us to connect with each other, understand our environment, and share information across vast distances. <br/><br/>
-Radios will also power the future, by being the foundational infrastructure of disruptive technologies such as self-driving cars, smart cities, and industrial IoT, allowing a high-throughput, low latency transfer of vast amounts of information.
-<br/><br/>
-Radio technologies rely on wireless spectrum to operate. Spectrum is a finite and fixed resource, which is regulated by governments and international agreements. Every radio application technology operates on a section of spectrum that is assigned to it based on legislation, ownership of rights to the spectrum, and suitability.
-</p>
-
-
-<div class="image-container-ir">
-{{< image src="images/city-2048x1358.png" caption="" alt="alter-text" position="right" command="fill" option="q100" class="img-fluid" title="image title" webp="false" >}}
-</div>
+  <div class="image-container-ir">
+    {{< image src="images/city-2048x1358.png" caption="" alt="alter-text" position="right" command="fill" option="q100" class="img-fluid" title="image title" webp="false" >}}
+  </div>
 </div>
 
 <style>
     .container-ir {
     display: flex;
-    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 60px;
     }
 
     .content-ir {
-    width: 100%;
+    flex: 1;
+    }
+
+    .content-ir p {
+    margin-bottom: 0;
     }
 
     .image-container-ir {
-    width: 100%;
+    flex: 0 0 500px; /* fixed width */
     }
 
-    @media (min-width: 1025px) {
-    .content-ir {
-        width: 45%;
+    /* Responsive: stack on small screens */
+    @media (max-width: 1200px) {  /* adjust breakpoint as needed */
+    .container-ir {
+        flex-direction: column;
+        gap: 20px;
     }
 
     .image-container-ir {
-        width: 55%;
-    }
-
-    @media (min-width: 1300px) {
-        .content-ir {
-        width: 45%;
-        }
-
-        .image-container-ir {
-        width: 50%;
-        }
+        flex: none;
+        width: 100%; /* make image full width */
     }
     }
 </style>
+
+Radio technologies rely on wireless spectrum to operate. Spectrum is a finite and fixed resource, which is regulated by governments and international agreements. Every radio application technology operates on a section of spectrum that is assigned to it based on legislation, ownership of rights to the spectrum, and suitability.
 
 As the demand for radio technologies increases, spectrum is increasingly congested, and the usage of it requires complex techniques (such as beamforming or MIMO) to ensure adequate performance.
 
@@ -92,10 +88,42 @@ Today, machine learning technology is used to build "passive" intelligent radios
 
 **_[The advancement of "radio intelligence" can be likened to the "levels of autonomy" that is used to describe autonomous vehicles.](/blog/2108-5-levels-of-intelligent-radio/)_**
 
-## Qoherent's Radio Intelligence Apps
+<div class="button-group" style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+  <style>
+    .button-group a {
+      text-decoration: none;
+    }
+  </style>
+  {{< button label="Let's build intelligent radios together" link="/prototyping" style="solid" >}}
+</div>
 
-Qoherent is building the Radio Intelligence Apps platform (RIA) to drive the creation of intelligent radios as part of more robust, aware, and adaptive wireless communications systems.
+## Radio Inference Applications
 
-RIA is an AI development automation platform for engineers who are building next-generation wireless communications technologies, which rely heavily on machine learning. RIA bridges the gap between expert-designed signal processing and machine learning workflows, helping save time and engineering resources in the deployment of machine learning into radio. RIA consists of tools for signal synthesis, dataset curation, naive model training, model testing, and model integration for a range of sensing tasks, such as classification, filtering, segmentation, and detection. RIA is an automated machine learning operations environment, that enables engineers to build, deploy, and retrain prediction services to cloud and edge.
 
-{{< image src="images/sgram_2.png" caption="" alt="alter-text" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="image title"  webp="false" >}}
+
+Radio inference applications (RIA) are software programs that perform machine learning inference on data from radio signals. Often integrated into RAN systems, RIA drives the creation of intelligent radios, unlocking solutions in an increasingly congested, contested, and complex wireless spectrum.
+
+
+
+RIA Hub is an AI development platform for engineers who are building next-generation wireless communications technologies, which rely heavily on machine learning. RIA Hub bridges the gap between expert-designed signal processing and machine learning workflows, helping save time and engineering resources in the deployment of machine learning into radio. RIA Hub is an MLOps platform tailored for radio, that enables engineers to build, deploy, and retrain prediction services to cloud and edge.
+
+RIA Hub is build on the RIA Toolkit, a library of robust tools for signal synthesis, dataset curation, naive model training, model testing, and model integration for a range of sensing tasks, such as classification, filtering, segmentation, and detection.
+
+<div class="button-group" style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+  <style>
+    .button-group a {
+      text-decoration: none;
+    }
+  </style>
+  {{< button label="Learn more about the RIA Toolkit" link="/riatoolkit" style="solid" >}}
+  {{< button label="Learn more about RIA Hub" link="/riahub" style="outline" >}}
+</div>
+
+<div style="max-width: 300px; margin: -20px auto; text-align: center;">
+  {{< image 
+      src="images/ria-logo.png" 
+      alt="RIA logo" 
+      class="img-fluid"
+      style="display: block; margin: 0 auto;"
+  >}}
+</div>
