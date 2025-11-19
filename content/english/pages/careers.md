@@ -19,4 +19,11 @@ Active postings for full-time or contract positions can be found here or on our 
 We also occasionally offer Co-op postings to qualified Canadian university or college students from accredited engineering, computer science, or physics programs, including graduate students. Postings can be found at your school's career centre, but we also encourage students to reach out to us via email directly.
 
 
+## Current Openings
+
+- [Applications Engineering Specialist](/post_AE/)
+- [Project Manager](/post_PM/)
+- [Software Development Co-op](/post_SDcoop/)
+- [Software Developer](/post_SD/)
+
 {{< image src="images/iq_short.png" caption="" alt="alter-text" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="image title"  webp="false" >}}
