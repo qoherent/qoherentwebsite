@@ -4,9 +4,6 @@ meta_title: "Applications Engineering Specialist (New Grad)"
 description: "Applications Engineering Specialist (New Grad)"
 ---
 
-
-# **Applications Engineering Specialist (New Grad)**
-
 **Qoherent • Fixed Term Contract • Full-Time • Toronto**
 
 ## **Summary**
