@@ -21,9 +21,9 @@ We also occasionally offer Co-op postings to qualified Canadian university or co
 
 ## Current Openings
 
-- [Applications Engineering Specialist](/post_AE/)
-- [Project Manager](/post_PM/)
-- [Software Development Co-op](/post_SDcoop/)
-- [Software Developer](/post_SD/)
+- [Applications Engineering Specialist](/post_ae/)
+- [Project Manager](/post_pm/)
+- [Software Development Co-op](/post_sdcoop/)
+- [Software Developer](/post_sd/)
 
 {{< image src="images/iq_short.png" caption="" alt="alter-text" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="image title"  webp="false" >}}

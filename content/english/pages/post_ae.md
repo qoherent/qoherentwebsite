@@ -7,13 +7,15 @@ description: "Applications Engineering Specialist (New Grad)"
 
 # **Applications Engineering Specialist (New Grad)**
 
-**Qoherent • Full-Time • Toronto**
+**Qoherent • Fixed Term Contract • Full-Time • Toronto**
 
 ## **Summary**
 
 Qoherent is seeking an enthusiastic, curious, and self-driven newly graduated engineering student to join our team as an *Applications Engineering Specialist*. In this role, you will contribute to the creation of advanced machine learning applications for software-defined radios, support technical engagements with key customers, design and produce datasets for RF machine learning training, and help drive commercial development efforts. This position offers the opportunity to work across software, embedded systems, signal processing, and machine learning within a growing deep-tech startup.
 
 We offer a hybrid work environment, combining remote flexibility with in-person collaboration in downtown Toronto. Benefits include dental, health and vision coverage, professional development opportunities, exposure to AI and SDR technologies, and the chance to work in a dynamic, early-stage startup culture.
+
+This role will be a 6 month contract, which may be renewed, and with consideration for becoming a permanent position at the end of the contract.
 
 
 ---

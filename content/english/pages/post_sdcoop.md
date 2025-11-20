@@ -7,7 +7,7 @@ draft: false
 
 ---
 
-**Qoherent • Full-Time • Toronto**
+**Qoherent • 4-month Fixed Term Contract • Toronto**
 
 ## **Summary**
 
