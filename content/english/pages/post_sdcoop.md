@@ -15,6 +15,8 @@ Qoherent is looking for an enthusiastic, curious, and self-driven student to joi
 
 This position is offered through the SWPP program, and successful internships will be considered for full-time positions upon graduation.
 
+---
+
 ## Responsibilities
 
 - Contribute to dataset and model production pipelines that power our core products
@@ -23,6 +25,8 @@ This position is offered through the SWPP program, and successful internships wi
 - Develop utilities and tooling in support of company projects
 - Create demonstrations and demonstration collaterals of our software
 - Contribute to general software development, research, and IP development tasks as assigned
+
+---
 
 ## Qualifications
 

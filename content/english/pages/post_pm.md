@@ -7,11 +7,13 @@ description: "Project Manager"
 
 **Qoherent • Full-Time • Toronto**
 
-## The Role
+## Summary
 
 Qoherent seeks a *Project Manager* to manage project tracking, documentation, and reporting across 4-6 concurrent projects plus our software product. The successful candidate will report directly to the CEO and serve as the central point of visibility for all initiatives, ensuring tasks are assigned and tracked, progress is monitored, risks are identified and escalated, and deliverables meet contractual obligations.
 
 This is a full-time, hybrid position requiring 2-3 days on-site per week, combining remote flexibility with in-person collaboration in downtown Toronto. Benefits include dental, health and vision coverage, professional development opportunities, exposure to AI and SDR technologies, and the chance to work in a dynamic, early-stage startup culture. The Project Manager will also contribute individually to projects as needed, gaining technical understanding of constraints and maintaining credibility across the engineering team.
+
+---
 
 ## Responsibilities
 
@@ -24,6 +26,8 @@ This is a full-time, hybrid position requiring 2-3 days on-site per week, combin
 - Maintain current project status and serve as the central hub for project visibility
 - Contribute technically to projects as appropriate to build credibility and understand constraints
 - Build and iterate on project management processes as the company scales
+
+---
 
 ## Qualifications
 
@@ -41,6 +45,8 @@ This is a full-time, hybrid position requiring 2-3 days on-site per week, combin
 - Experience with ESA, DND, or CSA style project management
 - Background in electrical engineering, computer science, or related technical field
 - Experience managing distributed or hybrid teams
+
+---
 
 ## Key Attributes
 
