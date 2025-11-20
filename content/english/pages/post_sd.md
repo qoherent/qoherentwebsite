@@ -9,7 +9,7 @@ description: "Software Developer"
 
 Qoherent seeks a *Software Developer* to participate in development of RIAHub, our end-to-end platform for software-defined radio machine learning. RIAHub enables the complete workflow: problem formulation, dataset production, model production, compression, application packaging, testing, and deployment-with potential for agentic components. The successful candidate will focus on RIAHub as their primary responsibility, refactoring and building upon existing utilities while maintaining focus on usability and reliability.
 
-This is a hybrid position requiring 2-3 days on-site per week, with flexibility for exceptions. The developer may contribute to other projects as needed to support RIAHub planning and roadmap decisions, but RIAHub remains the primary focus.
+This is a full-time, hybrid position requiring 2-3 days on-site per week, combining remote flexibility with in-person collaboration in downtown Toronto. Benefits include dental, health and vision coverage, professional development opportunities, exposure to AI and SDR technologies, and the chance to work in a dynamic, early-stage startup culture. The developer may contribute to other projects as needed to support RIAHub planning and roadmap decisions, but RIAHub remains the primary focus. 
 
 ## Responsibilities
 
@@ -23,7 +23,7 @@ This is a hybrid position requiring 2-3 days on-site per week, with flexibility 
 
 ## Qualifications
 
-**Required:**
+### Required
 - 2-3+ years of professional software development experience
 - Strong proficiency in Python and scientific libraries (NumPy, SciPy, etc.)
 - Experience with modern software development practices (version control, testing, CI/CD)
@@ -31,7 +31,7 @@ This is a hybrid position requiring 2-3 days on-site per week, with flexibility 
 - Ability to learn quickly and adapt to a rapidly evolving product and architecture
 - Demonstrated ability to mentor or support junior developers
 
-**Desirable:**
+### Desired
 - Experience with ML/AI frameworks and tooling (PyTorch, TensorFlow, MLOps)
 - Familiarity with RF signal processing, software-defined radio, or spectrum applications
 - Experience building end-to-end data pipelines or ML platforms
@@ -45,5 +45,5 @@ The ideal candidate is comfortable with startup environments where requirements 
 
 
 {{< notice "info" >}}
-*To apply*: Please email your cover letter and resume to info@qoherent.ai with "Software Developer Posting" in the title.
+*To apply*: Please email your cover letter and resume to HR@qoherent.ai with "Software Developer Posting" in the title.
 {{< /notice >}}

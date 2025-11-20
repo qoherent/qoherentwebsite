@@ -11,7 +11,7 @@ description: "Project Manager"
 
 Qoherent seeks a *Project Manager* to manage project tracking, documentation, and reporting across 4-6 concurrent projects plus our software product. The successful candidate will report directly to the CEO and serve as the central point of visibility for all initiatives, ensuring tasks are assigned and tracked, progress is monitored, risks are identified and escalated, and deliverables meet contractual obligations.
 
-This is a full-time position. The Project Manager will also contribute individually to projects as needed, gaining technical understanding of constraints and maintaining credibility across the engineering team.
+This is a full-time, hybrid position requiring 2-3 days on-site per week, combining remote flexibility with in-person collaboration in downtown Toronto. Benefits include dental, health and vision coverage, professional development opportunities, exposure to AI and SDR technologies, and the chance to work in a dynamic, early-stage startup culture. The Project Manager will also contribute individually to projects as needed, gaining technical understanding of constraints and maintaining credibility across the engineering team.
 
 ## Responsibilities
 
@@ -27,7 +27,7 @@ This is a full-time position. The Project Manager will also contribute individua
 
 ## Qualifications
 
-**Required:**
+### Required 
 - At least one formal project management course or equivalent professional experience managing projects in a previous role
 - Technical background with undergraduate-level fundamentals in computer engineering or computer science
 - Strong organizational and communication skills
@@ -35,7 +35,7 @@ This is a full-time position. The Project Manager will also contribute individua
 - Ability to learn domain-specific knowledge quickly (radio, spectrum, ML)
 - Ability to establish structure and processes in early-stage startup environment
 
-**Desirable:**
+### Desired
 - Experience with government contracts or regulated reporting requirements
 - Familiarity with software development workflows and agile methodologies
 - Experience with ESA, DND, or CSA style project management
@@ -48,5 +48,5 @@ The ideal candidate will bring strong operational discipline and an ability to m
 
 
 {{< notice "info" >}}
-*To apply*: Please email your cover letter and resume to info@qoherent.ai with "PM posting" in the title.
+*To apply*: Please email your cover letter and resume to HR@qoherent.ai with "PM posting" in the title.
 {{< /notice >}}

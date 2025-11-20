@@ -7,11 +7,11 @@ draft: false
 
 ---
 
-**Qoherent • 4-month Fixed Term Contract • Toronto**
+**Qoherent • 4-month Fixed Term Contract • Summer 2026 •  Toronto**
 
 ## **Summary**
 
-Qoherent is looking for an enthusiastic, curious, and self-driven student to join us as a *Software Development Co-op* for the summer 2026 semester.
+Qoherent is looking for an enthusiastic, curious, and self-driven student to join us as a *Software Development Co-op* for the May - August 2026 semester. This is a hybrid position requiring 2-3 days on-site per week, combining remote flexibility with in-person collaboration in downtown Toronto. 
 
 This position is offered through the SWPP program, and successful internships will be considered for full-time positions upon graduation.
 
@@ -26,7 +26,7 @@ This position is offered through the SWPP program, and successful internships wi
 
 ## Qualifications
 
-**Required:**
+### Required
 - Currently enrolled in Computer Engineering, Electrical and Computer Engineering, Engineering Physics, Mechatronics Engineering, or Computer Science program (any year)
 - Hands-on experience with Python and scientific libraries (NumPy, SciPy, Plotly, etc.)
 - Hands-on experience with web development technologies including Go, JavaScript, HTML, and CSS
@@ -34,7 +34,7 @@ This position is offered through the SWPP program, and successful internships wi
 - Strong knowledge of version control (Git/GitHub) and open-source software
 - Eligible for the [SWPP Program](https://www.canada.ca/en/employment-social-development/programs/student-work-placement-program.html)
 
-**Nice to Have:**
+### Desired 
 - Experience with RF or audio signal processing theory
 - Experience with design tools such as MATLAB, GNU Radio, or C/C++
 - Familiarity with AI/ML principles
@@ -44,5 +44,5 @@ This position is offered through the SWPP program, and successful internships wi
 
 
 {{< notice "info" >}}
-*To apply*: Please email your cover letter and resume to info@qoherent.ai with "Co-op posting" in the title.
+*To apply*: Please email your cover letter and resume to HR@qoherent.ai with "Co-op posting" in the title.
 {{< /notice >}}
