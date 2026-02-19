@@ -14,14 +14,10 @@ We’re looking for a Sales & Applications Engineering Specialist to help grow o
 
 This is a foundational commercial role in a growing startup. We’re looking for someone who wants to build the playbook, not just follow one. Long-term, this position offers a clear path toward solutions or commercial leadership.
 
----
-
 ## **Location & Work Model**
-
 * Hybrid: in office 2-3 days per week at our downtown Toronto location, except when traveling.
 * Must be within commuting distance of downtown Toronto.
 
----
 
 ## **Eligibility & Travel**
 
@@ -29,7 +25,6 @@ This is a foundational commercial role in a growing startup. We’re looking for
 * Canadian citizenship is strongly preferred due to the nature of our project portfolio.
 * Travel is sporadic and project-dependent. There may be months with no travel, or intensive stretches of up to several weeks on the road for customer engagements, conferences, and demonstrations.
 
----
 
 ## **Responsibilities**
 
@@ -52,8 +47,6 @@ This is a foundational commercial role in a growing startup. We’re looking for
 * Maintain pipeline hygiene: clear CRM notes, defined next steps, timelines, and lightweight reporting.
 * Help refine and formalize our sales processes and reusable assets including qualification checklists, proposal templates, demo scripts, and go-to-market playbooks.
 * Represent Qoherent at conferences, trade shows, and industry events. Help shape our marketing programs and presence.
-
----
 
 ## **Qualifications**
 
@@ -84,7 +77,7 @@ This is a foundational commercial role in a growing startup. We’re looking for
 
 This role is designed to evolve. As the company grows, so does the scope of this position into areas like solutions leadership, commercial strategy, or technical business development. We’re looking for someone who wants to help build the commercial function.
 
-## **Growth Path**
+## **What We Offer**
 
 * Dental, health, and vision coverage.
 * Professional development opportunities.
@@ -93,15 +86,11 @@ This role is designed to evolve. As the company grows, so does the scope of this
 * A collaborative, early-stage startup environment where your contributions have visible impact.
 * Hybrid flexibility with a downtown Toronto office.
 
-
-## **How to Apply**
+{{< notice "How to Apply" >}}
 
 Email your resume and a brief cover note to info@qoherent.ai with the subject line “SALES AE”.
-In your note, we’d appreciate hearing about:*"
-    * A demo, prototype, or technical project you built and what made it work well.
-    * A time you helped move someone else’s decision forward.
+In your note, we’d appreciate hearing about:
+* A demo, prototype, or technical project you built and what made it work well.
+* A time you helped move someone else’s decision forward.
 
-
-{{< notice "info" >}}
-*To apply*: Please email your cover letter and resume to HR@qoherent.ai with "AE NEW GRAD" posting in the title
 {{< /notice >}}
