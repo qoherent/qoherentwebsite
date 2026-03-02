@@ -21,7 +21,6 @@ We also occasionally offer Co-op postings to qualified Canadian university or co
 
 ## Current Openings
 
-- [Software Development Co-op](/post_sdcoop/)
 - [Sales & Applications Engineering Specialist](/post_salesae/)
 
 {{< image src="images/iq_short.png" caption="" alt="alter-text" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="image title"  webp="false" >}}
