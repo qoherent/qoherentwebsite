@@ -109,6 +109,12 @@ weight = 4
 name = "GRC Agent"
 url = "gnu-radio-agent/"
 
+[[main]]
+parent = "Products"
+weight = 5
+name = "Reggie"
+url = "reggie/"
+
 
 #####################
 [[main]]
