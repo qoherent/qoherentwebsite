@@ -112,8 +112,8 @@ url = "gnu-radio-agent/"
 [[main]]
 parent = "Products"
 weight = 5
-name = "Reggie"
-url = "reggie/"
+name = "Reginald"
+url = "reginald/"
 
 
 #####################
