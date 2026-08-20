@@ -1,0 +1,134 @@
+<header
+  class="header {{ if site.Params.navbar_fixed }}sticky top-0{{ end }} z-30">
+  <nav class="navbar container" aria-label="Main navigation">
+    <div class="order-0">
+      <a
+        class="navbar-brand block"
+        href="{{ site.Home.RelPermalink }}"
+        aria-label="{{ site.Title }} home">
+        {{ partial "logo" }}
+      </a>
+    </div>
+
+    <button
+      id="nav-toggle"
+      type="button"
+      class="order-3 flex cursor-pointer items-center text-dark dark:text-white lg:order-1 lg:hidden"
+      aria-expanded="false"
+      aria-controls="nav-menu">
+      <span class="sr-only">Open navigation</span>
+      <svg
+        data-menu-open
+        class="block h-6 fill-current"
+        viewBox="0 0 20 20"
+        aria-hidden="true">
+        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+      </svg>
+      <svg
+        data-menu-close
+        class="hidden h-6 fill-current"
+        viewBox="0 0 20 20"
+        aria-hidden="true">
+        <path
+          d="m4.3 5.7 1.4-1.4 4.3 4.3 4.3-4.3 1.4 1.4-4.3 4.3 4.3 4.3-1.4 1.4-4.3-4.3-4.3 4.3-1.4-1.4L8.6 10 4.3 5.7z"></path>
+      </svg>
+    </button>
+
+    <ul
+      id="nav-menu"
+      class="navbar-nav order-3 hidden w-full pb-6 lg:order-1 lg:flex lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8">
+      {{ $currentPage := . }}
+      {{ range site.Menus.main }}
+        {{ $menuURL := .URL | absLangURL }}
+        {{ $pageURL := $currentPage.Permalink | absLangURL }}
+        {{ $active := eq $menuURL $pageURL }}
+        {{ if .HasChildren }}
+          {{ $dropdownID := printf "nav-%s" (.Name | urlize) }}
+          <li class="nav-item nav-dropdown group relative">
+            <button
+              type="button"
+              class="nav-link nav-dropdown-toggle inline-flex cursor-pointer items-center"
+              style="font-family: 'Open Sans', sans-serif; font-weight: 500"
+              aria-expanded="false"
+              aria-controls="{{ $dropdownID }}">
+              {{ .Name }}
+              <svg
+                class="h-4 w-4 fill-current"
+                viewBox="0 0 20 20"
+                aria-hidden="true">
+                <path
+                  d="M9.293 12.95 10 13.657 15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path>
+              </svg>
+            </button>
+            <ul
+              id="{{ $dropdownID }}"
+              class="nav-dropdown-list lg:group-hover:visible lg:group-hover:opacity-100">
+              {{ range .Children }}
+                {{ $childURL := .URL | absLangURL }}
+                {{ $childActive := eq $childURL $pageURL }}
+                <li class="nav-dropdown-item">
+                  <a
+                    class="nav-dropdown-link whitespace-nowrap {{ if $childActive }}
+                      active
+                    {{ end }}"
+                    style="font-family: 'Open Sans', sans-serif; font-weight: 500"
+                    {{ if findRE `^http` .URL }}
+                      target="_blank" rel="noopener"
+                    {{ end }}
+                    href="{{ if findRE `^#` .URL }}
+                      {{ if not $.IsHome }}
+                        {{ site.Home.RelPermalink }}
+                      {{ end }}{{ .URL }}
+                    {{ else }}
+                      {{ .URL | relLangURL }}
+                    {{ end }}">
+                    {{ .Name }}
+                  </a>
+                </li>
+              {{ end }}
+            </ul>
+          </li>
+        {{ else }}
+          <li class="nav-item">
+            <a
+              class="nav-link {{ if $active }}active{{ end }}"
+              style="font-family: 'Open Sans', sans-serif; font-weight: 400"
+              {{ if findRE `^http` .URL }}
+                target="_blank" rel="noopener"
+              {{ end }}
+              href="{{ if findRE `^#` .URL }}
+                {{ if not $.IsHome }}
+                  {{ site.Home.RelPermalink }}
+                {{ end }}{{ .URL }}
+              {{ else }}
+                {{ .URL | relLangURL }}
+              {{ end }}">
+              {{ .Name }}
+            </a>
+          </li>
+        {{ end }}
+      {{ end }}
+      {{ if site.Params.navigation_button.enable }}
+        <li class="mt-4 inline-block lg:hidden">
+          <a
+            class="btn btn-outline-primary btn-sm"
+            href="{{ site.Params.navigation_button.link | relLangURL }}"
+            >{{ site.Params.navigation_button.label }}</a
+          >
+        </li>
+      {{ end }}
+    </ul>
+
+    <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
+      {{ partial "components/language-switcher" (dict "Context" . "Class" "mr-5 pl-2 py-1 dark:bg-darkmode-theme-light rounded") }}
+      {{ partial "components/theme-switcher" (dict "Class" "mr-5") }}
+      {{ if site.Params.navigation_button.enable }}
+        <a
+          href="{{ site.Params.navigation_button.link | relLangURL }}"
+          class="btn btn-outline-primary btn-sm hidden lg:inline-block"
+          >{{ site.Params.navigation_button.label }}</a
+        >
+      {{ end }}
+    </div>
+  </nav>
+</header>

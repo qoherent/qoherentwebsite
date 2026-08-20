@@ -82,7 +82,7 @@ When you give an agent a task like "create a README file for this project," here
 2. **Planning**: The LLM analyzes the context and your request, then decides what actions are needed
 3. **Action Generation**: The model outputs both human-readable explanations AND machine-readable commands:
 
-```
+```text
 I'll create a README file for you with standard sections for your signal processing project.
 
 WRITE_FILE: README.md | # Signal Processing Toolkit

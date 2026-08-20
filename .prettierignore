@@ -1,0 +1,9 @@
+.hugo-validation/
+node_modules/
+public/
+resources/
+themes/
+content/
+layouts/blog/single.html
+layouts/partials/components/breadcrumb.html
+layouts/partials/essentials/footer.html

@@ -1,0 +1,37 @@
+<meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, maximum-scale=5" />
+<meta name="theme-name" content="hugoplate" />
+
+{{ partialCached "favicon" . }}
+{{ partialCached "manifest" . }}
+{{ partialCached "site-verifications.html" . }}
+{{ partial "basic-seo.html" . }}
+<link rel="canonical" href="{{ .Permalink }}" />
+
+{{ $organization := dict
+  "@context" "https://schema.org"
+  "@type" "Organization"
+  "name" site.Title
+  "url" site.Home.Permalink
+}}
+{{ $schema := $organization }}
+{{ if and .IsPage (eq .Section "blog") }}
+  {{ $schema = dict
+    "@context" "https://schema.org"
+    "@type" "BlogPosting"
+    "headline" .Title
+    "description" (.Description | default .Summary | plainify)
+    "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+    "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+    "mainEntityOfPage" .Permalink
+    "publisher" $organization
+  }}
+{{ end }}
+<script type="application/ld+json">{{ $schema | jsonify | safeJS }}</script>
+{{ partialCached "custom-script.html" . }}
+{{ if and site.Config.Services.GoogleAnalytics.ID (ne site.Config.Services.GoogleAnalytics.ID "G-MEASUREMENT_ID") }}
+  {{ template "_internal/google_analytics.html" . }}
+{{ end }}
+{{ partialCached "gtm.html" . }}

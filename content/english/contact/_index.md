@@ -60,9 +60,8 @@ draft: false
   </div>
 </div>
 
-<div style="width: 80%; margin: 0 auto; text-align: center; margin-bottom:40px margin-top:40px; border-radius:30px">
-            <iframe style="width: 100%; height: 425px; border: 2px solid #ccc; border-radius: 15px;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=120%20Carlton%20St,%20Toronto+(Qoherent)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+<div style="width: 80%; margin: 40px auto; text-align: center; border-radius: 30px">
+            <iframe title="Map showing Qoherent's office location" loading="lazy" style="width: 100%; height: 425px; border: 2px solid #ccc; border-radius: 15px;" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=120%20Carlton%20St,%20Toronto+(Qoherent)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
           </div>
 
 Please fill out this form for **business inquiries**. _For technical support, please contact your Qoherent support representative directly._
-

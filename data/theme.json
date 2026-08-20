@@ -43,12 +43,12 @@
     "font_family": {
       "primary": "Open+Sans:wght@300",
       "primary_type": "sans-serif",
-      "secondary": "Open+Sans:wght@300", 
+      "secondary": "Open+Sans:wght@300",
       "secondary_type": "sans-serif"
-    },    
+    },
     "font_size": {
       "base": "16",
       "scale": "1.250"
     }
-  }  
+  }
 }

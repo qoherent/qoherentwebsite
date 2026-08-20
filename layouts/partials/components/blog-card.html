@@ -1,0 +1,41 @@
+{{ $headingID := printf "post-%s" (.Title | urlize) }}
+<article
+  class="dark:bg-darkmode-theme-light rounded-lg px-10 py-10"
+  style="height: 100%"
+  aria-labelledby="{{ $headingID }}">
+  {{ $image := .Params.image }}
+  {{ with $image }}
+    {{ partial "image" (dict "Src" . "Alt" $.Title "Class" "mb-6 w-full rounded") }}
+  {{ end }}
+  <h2 id="{{ $headingID }}" class="h4 mb-3">
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </h2>
+  <ul class="dark:bg-darkmode-theme-light mb-4">
+    {{ with .Params.author }}
+      <li class="dark:bg-darkmode-theme-light mr-4 inline-block">
+        <span
+          ><i class="fa-regular fa-circle-user mr-2" aria-hidden="true"></i
+          >{{ . }}</span
+        >
+      </li>
+    {{ end }}
+    {{ with .Params.categories }}
+      <li class="mr-4 inline-block">
+        <i class="fa-regular fa-folder mr-2" aria-hidden="true"></i>
+        {{ range $index, $category := . }}
+          <a
+            href="{{ `categories/` | relLangURL }}{{ $category | urlize | lower }}/"
+            class="ms-1"
+            >{{ $category | humanize }}{{ if ne $index (sub (len $.Params.categories) 1) }}
+              ,
+            {{ end }}</a
+          >
+        {{ end }}
+      </li>
+    {{ end }}
+  </ul>
+  <p class="mb-6">{{ .Summary | plainify | truncate 240 }}</p>
+  <a class="btn btn-outline-primary btn-sm" href="{{ .RelPermalink }}"
+    >{{ i18n "read_more" }}</a
+  >
+</article>

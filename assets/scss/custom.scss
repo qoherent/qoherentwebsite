@@ -1,1 +1,75 @@
 // Add your own custom styles here
+*:focus-visible {
+  outline: 3px solid #b87bd1;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+.cookie-box {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 9999;
+  width: 25rem;
+  max-width: calc(100% - 4rem);
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: inherit;
+  box-shadow: 1px 0 10px 7px rgba(154, 154, 154, 0.11);
+}
+
+.cookie-box-hide {
+  display: none;
+}
+
+.cookie-box-button {
+  display: block;
+  margin-top: 1rem;
+}
+
+.dark .cookie-box {
+  background-color: #222;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: 1px solid transparent;
+  border-radius: 0.375rem;
+}
+
+.dark .form-input {
+  color: #b4afb6;
+  background-color: #262626;
+  border-color: #3e3e3e;
+}
+
+.form-input:focus {
+  border-color: #3e3e3e;
+  box-shadow: none;
+}
+
+@media (min-width: 1024px) {
+  #nav-menu::before {
+    display: block;
+    flex: none;
+    width: 8rem;
+    content: "";
+  }
+}
+
+@media (min-width: 1280px) {
+  #nav-menu::before {
+    width: 14rem;
+  }
+}

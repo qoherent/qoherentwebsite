@@ -1,0 +1,134 @@
+{{ define "main" }}
+  {{ partial "progress_indicator" }}
+  <!-- Banner -->
+  {{ with .Params.banner }}
+    <section
+      class="section relative lg:h-[65vh] sm:h-[75vh] h-[85vh]"
+      style="background: linear-gradient(to top, transparent 0%, #1c1c1c 80%);">
+      {{ partial "image" (dict "Src" .image "Alt" "Banner image" "Loading" "eager" "Class" "absolute inset-0 w-full h-full z-[-1] min-h-full") }}
+      <div
+        class="absolute inset-0 flex flex-col justify-center items-center text-white">
+        <div class="container">
+          <div class="row justify-center">
+            <div class="text-center">
+              <h1
+                class="text-center lg:whitespace-nowrap "
+                style="font-weight: 150; font-size: 3rem">
+                {{ .title | markdownify }}
+              </h1>
+              <p class="mb-4 text-center" style="font-size: 1.5rem">
+                {{ .content | markdownify }}
+              </p>
+              {{ with .button }}
+                {{ if .enable }}
+                  <a class="btn btn-primary mt-2" href="{{ .link | absURL }}">
+                    {{ .label }}
+                    <i class="fa fa-arrow-right pl-2"></i>
+                  </a>
+                {{ end }}
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+  <!-- /Banner -->
+
+  <!-- Features -->
+  {{ range $i, $e:= .Params.features }}
+    <section class="section-sm bg-gradient">
+      <div class="container">
+        <div class="row items-center justify-between">
+          <div
+            class="mb:md-0 {{ if not (modBool $i 2) }}
+              md:order-2
+            {{ end }} md:col-5 mb-6">
+            {{ partial "image" (dict "Src" .image "Alt" "feature image") }}
+          </div>
+          <div
+            class="{{ if not (modBool $i 2) }}
+              md:order-1
+            {{ end }} md:col-7 lg:col-6">
+            <h2 class="mb-4">
+              {{ .title | markdownify }}
+            </h2>
+            <p class="mb-8 text-lg">
+              {{ .content | markdownify }}
+            </p>
+            <ul>
+              {{ range .bulletpoints }}
+                <li class="relative mb-4 pl-6">
+                  <i class="fa fa-check absolute left-0 top-1.5"></i>
+                  {{ . | markdownify }}
+                </li>
+              {{ end }}
+            </ul>
+            {{ with .button }}
+              {{ if .enable }}
+                <a class="btn btn-primary mt-6" href="{{ .link | absURL }}">
+                  {{ .label }}
+                  <i class="fa fa-arrow-right pl-2"></i>
+                </a>
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+  <!-- /Features -->
+
+  <!-- Optional Body Content (renders shortcodes from _index.md) -->
+  {{ with .Content }}
+    <section class="section !py-0">
+      <div class="container">
+        <div class="prose dark:prose-invert max-w-none">
+          {{ . | safeHTML }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
+  <!-- /Optional Body Content -->
+
+  <!-- Testimonials -->
+  {{ with site.GetPage "sections/testimonial" }}
+    {{ if .Params.enable }}
+      <section class="section-sm">
+        <div class="container">
+          <div class="row">
+            <div class="md:col-10 lg:col-8 xl:col-6 mx-auto mb-12 text-center">
+              <h2 class="mb-4">
+                {{ .Title | markdownify }}
+              </h2>
+              <p>
+                {{ .Params.description | markdownify }}
+              </p>
+            </div>
+            <div class="col-12 z-[-1]">
+              <div class="swiper testimonial-slider">
+                <div class="swiper-wrapper">
+                  {{ range .Params.testimonials }}
+                    <div class="swiper-slide">
+                      <div
+                        class="bg-theme-light dark:bg-darkmode-theme-light rounded-lg px-7 py-10 z-[-1]">
+                        <div class="flex items-center">
+                          <div class="text-dark dark:text-white">
+                            {{ partial "image" (dict "Src" .avatar "Class" "rounded-small" "Alt" .name) }}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  {{ end }}
+                </div>
+                <div
+                  class="testimonial-slider-pagination mt-9 flex items-center justify-center text-center"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    {{ end }}
+  {{ end }}
+  <!-- /Testimonials -->
+{{ end }}

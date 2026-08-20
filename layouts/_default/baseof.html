@@ -1,0 +1,40 @@
+<!doctype html>
+<html
+  class="{{ if not site.Params.theme_switcher }}
+    {{ site.Params.theme_default }}
+  {{ end }}"
+  lang="{{ site.Language.Locale | default `en-US` }}">
+  <head>
+    {{ partial "essentials/head.html" . }}
+    {{ partialCached "essentials/style.html" . }}
+    {{ with resources.Get "js/copybutton.js" }}
+      {{ $script := . | minify | fingerprint }}
+      <script
+        src="{{ $script.RelPermalink }}"
+        integrity="{{ $script.Data.Integrity }}"
+        defer></script>
+    {{ end }}
+  </head>
+  <body>
+    <a class="sr-only focus:not-sr-only" href="#main-content"
+      >Skip to content</a
+    >
+    {{ partial "framebust.html" . }}
+    {{ if hugo.IsProduction }}
+      {{ partialCached "gtm-noscript.html" . }}
+    {{ else }}
+      {{ partial "components/tw-size-indicator.html" . }}
+    {{ end }}
+    {{ partial "essentials/header.html" . }}
+    <main id="main-content">
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ if hugo.IsProduction }}
+      {{ partialCached "essentials/footer.html" . }}
+      {{ partial "essentials/script.html" . }}
+    {{ else }}
+      {{ partial "essentials/footer.html" . }}
+      {{ partial "essentials/script.html" . }}
+    {{ end }}
+  </body>
+</html>
