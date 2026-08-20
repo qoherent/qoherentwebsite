@@ -1,6 +1,6 @@
 {{ with site.Params.cookies }}
   {{ if .enable }}
-    <div id="cookie-box" class="cookie-box cookie-box-hide">
+    <div id="cookie-box" class="cookie-box">
       {{ .content | markdownify }}
       <button
         type="button"
@@ -13,11 +13,12 @@
       (() => {
         const cookieBox = document.querySelector("#cookie-box");
         const cookieButton = document.querySelector("#cookie-button");
-        if (!localStorage.getItem("cookie-consent"))
-          cookieBox?.classList.remove("cookie-box-hide");
+        if (!localStorage.getItem("cookie-consent")) {
+          requestAnimationFrame(() => cookieBox?.classList.add("is-visible"));
+        }
         cookieButton?.addEventListener("click", () => {
           localStorage.setItem("cookie-consent", "accepted");
-          cookieBox?.classList.add("cookie-box-hide");
+          cookieBox?.classList.remove("is-visible");
         });
       })();
     </script>

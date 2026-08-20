@@ -1,0 +1,42 @@
+{{ $headingID := printf "post-%s" (.Title | urlize) }}
+<article
+  class="border-r border-b border-darkmode-border bg-darkmode-body p-6 md:p-7">
+  <div class="flex h-full min-w-0 flex-col">
+    <div
+      class="mb-5 flex flex-wrap justify-between gap-x-4 gap-y-1 text-sm leading-6 text-darkmode-light">
+      <time datetime="{{ .PublishDate.Format `2006-01-02` }}">
+        {{ time.Format ":date_long" .PublishDate }}
+      </time>
+      <span>{{ .ReadingTime }} min read</span>
+    </div>
+    {{ with .Params.categories }}
+      <ul class="mb-3 flex flex-wrap gap-x-3 gap-y-1 text-sm">
+        {{ range . }}
+          <li>
+            <a
+              class="font-medium text-darkmode-primary no-underline hover:text-white"
+              href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}/">
+              {{ . | humanize }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    {{ end }}
+    <h2 id="{{ $headingID }}" class="text-2xl">
+      <a
+        class="text-white no-underline hover:text-darkmode-primary"
+        href="{{ .RelPermalink }}">
+        {{ .Title }}
+      </a>
+    </h2>
+    <p class="mt-4 leading-7 text-darkmode-text">
+      {{ .Plain | truncate 180 }}
+    </p>
+    <a
+      class="mt-auto self-start pt-6 text-sm font-semibold text-white no-underline hover:text-darkmode-primary"
+      href="{{ .RelPermalink }}"
+      aria-label="Read {{ .Title }}">
+      Read article <span aria-hidden="true">&rarr;</span>
+    </a>
+  </div>
+</article>

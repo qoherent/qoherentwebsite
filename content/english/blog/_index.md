@@ -1,5 +1,5 @@
 ---
-title: "Blog Posts"
+title: "Qoherent Writing"
 meta_title: ""
-description: "this is meta description"
+description: "Technical guides, analysis, and company updates from the Qoherent team."
 ---

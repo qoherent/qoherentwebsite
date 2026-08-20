@@ -10,13 +10,32 @@
     right: 50px;
     bottom: 50px;
     z-index: 1000;
-    display: none;
+    display: grid;
+    visibility: hidden;
+    pointer-events: none;
     width: 65px;
     height: 65px;
     padding: 0;
     cursor: pointer;
     border: 0;
+    opacity: 0;
     box-shadow: 0 0 8.5px rgba(0, 0, 0, 0.15);
+    transform: translateY(6px);
+    transition:
+      opacity var(--motion-duration-fast) var(--motion-ease-out),
+      transform var(--motion-duration-fast) var(--motion-ease-out),
+      visibility var(--motion-duration-fast) var(--motion-ease-out);
+  }
+
+  #progress.is-visible {
+    visibility: visible;
+    pointer-events: auto;
+    opacity: 1;
+    transform: none;
+  }
+
+  #progress.is-visible:active {
+    transform: scale(0.97);
   }
 
   #progress-value {
@@ -69,6 +88,9 @@
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
     );
+    let animationFrame = 0;
+    let previousPercentage = -1;
+    let wasVisible = false;
 
     const updateProgress = () => {
       const scrollRange =
@@ -78,9 +100,25 @@
         scrollRange > 0
           ? Math.round((document.documentElement.scrollTop * 100) / scrollRange)
           : 0;
-      progress.style.display =
-        document.documentElement.scrollTop > 50 ? "grid" : "none";
-      progress.style.background = `conic-gradient(#884da0 ${percentage}%, #d7d7d7 ${percentage}%)`;
+      const isVisible = document.documentElement.scrollTop > 50;
+
+      if (isVisible !== wasVisible) {
+        progress.classList.toggle("is-visible", isVisible);
+        wasVisible = isVisible;
+      }
+
+      if (percentage !== previousPercentage) {
+        progress.style.background = `conic-gradient(#884da0 ${percentage}%, #d7d7d7 ${percentage}%)`;
+        previousPercentage = percentage;
+      }
+    };
+
+    const scheduleProgressUpdate = () => {
+      if (animationFrame) return;
+      animationFrame = window.requestAnimationFrame(() => {
+        animationFrame = 0;
+        updateProgress();
+      });
     };
 
     progress?.addEventListener("click", () => {
@@ -89,7 +127,9 @@
         behavior: prefersReducedMotion.matches ? "auto" : "smooth",
       });
     });
-    window.addEventListener("scroll", updateProgress, { passive: true });
+    window.addEventListener("scroll", scheduleProgressUpdate, {
+      passive: true,
+    });
     updateProgress();
   })();
 </script>

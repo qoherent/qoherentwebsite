@@ -1,0 +1,13 @@
+{{ $context := .Context }}
+{{ $pages := .Pages }}
+<section class="section-sm">
+  <div class="container">
+    <div
+      class="grid border-t border-l border-darkmode-border md:grid-cols-2 xl:grid-cols-3">
+      {{ range $pages }}
+        {{ partial "components/publication-row.html" . }}
+      {{ end }}
+    </div>
+    {{ partial "components/pagination.html" $context }}
+  </div>
+</section>

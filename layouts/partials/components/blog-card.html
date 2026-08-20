@@ -1,16 +1,16 @@
 {{ $headingID := printf "post-%s" (.Title | urlize) }}
 <article
-  class="dark:bg-darkmode-theme-light rounded-lg px-10 py-10"
-  style="height: 100%"
+  class="flex h-full flex-col rounded-xl border border-border bg-theme-light p-6 dark:border-darkmode-border dark:bg-darkmode-theme-light md:p-8"
   aria-labelledby="{{ $headingID }}">
   {{ $image := .Params.image }}
   {{ with $image }}
-    {{ partial "image" (dict "Src" . "Alt" $.Title "Class" "mb-6 w-full rounded") }}
+    {{ partial "image" (dict "Src" . "Alt" $.Title "Class" "mb-6 aspect-[16/9] w-full rounded-lg object-cover") }}
   {{ end }}
   <h2 id="{{ $headingID }}" class="h4 mb-3">
     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
   </h2>
-  <ul class="dark:bg-darkmode-theme-light mb-4">
+  <ul
+    class="mb-4 flex flex-wrap gap-x-4 gap-y-2 text-sm text-light dark:text-darkmode-light">
     {{ with .Params.author }}
       <li class="dark:bg-darkmode-theme-light mr-4 inline-block">
         <span
@@ -34,8 +34,10 @@
       </li>
     {{ end }}
   </ul>
-  <p class="mb-6">{{ .Summary | plainify | truncate 240 }}</p>
-  <a class="btn btn-outline-primary btn-sm" href="{{ .RelPermalink }}"
+  <p class="mb-6">{{ .Summary | plainify | truncate 180 }}</p>
+  <a
+    class="btn btn-outline-primary btn-sm mt-auto self-start"
+    href="{{ .RelPermalink }}"
     >{{ i18n "read_more" }}</a
   >
 </article>

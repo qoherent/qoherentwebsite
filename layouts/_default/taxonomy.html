@@ -1,0 +1,17 @@
+{{ define "main" }}
+  {{ $title := .Title }}
+  {{ $description := printf "Explore Qoherent writing filed under %s." .Title }}
+  {{ if eq (.Title | lower) "tech-blog" }}
+    {{ $title = "Tech Blog" }}
+    {{ $description = "Technical guides, implementation notes, and field-tested radio engineering workflows." }}
+  {{ else if eq (.Title | lower) "articles" }}
+    {{ $description = "Analysis and perspectives on radio intelligence, AI, software-defined radio, and Open RAN." }}
+  {{ else if eq (.Title | lower) "news" }}
+    {{ $title = "Company News" }}
+    {{ $description = "Company updates, events, partnerships, and milestones from Qoherent." }}
+  {{ end }}
+  {{ partial "progress_indicator" }}
+  {{ partial "components/publication-header.html" (dict "Title" $title "Description" $description) }}
+  {{ $paginator := .Paginate .Data.Pages 12 }}
+  {{ partial "components/publication-list.html" (dict "Context" . "Pages" $paginator.Pages) }}
+{{ end }}

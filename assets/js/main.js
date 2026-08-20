@@ -3,15 +3,11 @@
 
   const navToggle = document.querySelector("#nav-toggle");
   const navMenu = document.querySelector("#nav-menu");
-  const openIcon = navToggle?.querySelector("[data-menu-open]");
-  const closeIcon = navToggle?.querySelector("[data-menu-close]");
   const toggleLabel = navToggle?.querySelector(".sr-only");
 
   const setNavigationOpen = (open) => {
-    navMenu?.classList.toggle("hidden", !open);
+    navMenu?.classList.toggle("is-open", open);
     navToggle?.setAttribute("aria-expanded", String(open));
-    openIcon?.classList.toggle("hidden", open);
-    closeIcon?.classList.toggle("hidden", !open);
     if (toggleLabel)
       toggleLabel.textContent = open ? "Close navigation" : "Open navigation";
   };
@@ -45,23 +41,4 @@
     setNavigationOpen(false);
     navToggle?.focus();
   });
-
-  const testimonialSlider = document.querySelector(".testimonial-slider");
-  if (testimonialSlider && typeof Swiper !== "undefined") {
-    new Swiper(testimonialSlider, {
-      spaceBetween: 24,
-      loop: false,
-      autoplay: { delay: 2500, disableOnInteraction: false },
-      pagination: {
-        el: ".testimonial-slider-pagination",
-        type: "bullets",
-        clickable: true,
-      },
-      breakpoints: {
-        768: { slidesPerView: 2 },
-        900: { slidesPerView: 3 },
-        1100: { slidesPerView: 5 },
-      },
-    });
-  }
 })();

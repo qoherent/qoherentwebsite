@@ -1,24 +1,6 @@
 {{ define "main" }}
-  {{ partial "page-header" (dict "Title" .Title) }}
   {{ partial "progress_indicator" }}
-
-
-  <section class="section">
-    <div class="container">
-      <div class="row gx-5 justify-content-center">
-        <!-- blog posts -->
-        <div class="lg:col-8">
-          <div class="row">
-            {{ $paginator:= .Paginate .RegularPages }}
-            {{ range $paginator.Pages }}
-              <div class="md:col-4 mb-14">
-                {{ partial "components/blog-card" . }}
-              </div>
-            {{ end }}
-          </div>
-          {{ partial "components/pagination.html" . }}
-        </div>
-      </div>
-    </div>
-  </section>
+  {{ partial "components/publication-header.html" (dict "Title" .Title "Description" .Params.description) }}
+  {{ $paginator := .Paginate .RegularPages 12 }}
+  {{ partial "components/publication-list.html" (dict "Context" . "Pages" $paginator.Pages) }}
 {{ end }}

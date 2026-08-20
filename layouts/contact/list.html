@@ -5,10 +5,11 @@
 
   <section class="section-sm">
     <div class="container">
-      <div class="row">
-        <div class="content text-center">{{ .Content }}</div>
-        <div class="mx-auto md:col-10 lg:col-6">
+      <div class="flex flex-col gap-y-10">
+        <div class="content col-12">{{ .Content }}</div>
+        <div class="w-full">
           <form
+            class="rounded-xl border border-border bg-theme-light p-6 dark:border-darkmode-border dark:bg-darkmode-theme-light md:p-8"
             action="{{ site.Params.contact_form_action }}"
             method="POST"
             data-contact-form>
@@ -50,16 +51,19 @@
                 rows="8"
                 required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-            <p class="mt-4 text-sm">
+            <button type="submit" class="btn btn-primary">Send inquiry</button>
+            <p class="mt-4 text-sm text-light dark:text-darkmode-light">
               We use your information to respond to this inquiry. See our
               <a href="{{ `privacy-policy/` | relLangURL }}">privacy policy</a>.
             </p>
             <p
-              class="mt-3"
+              class="form-status mt-3 text-sm"
               role="status"
               aria-live="polite"
-              data-form-status></p>
+              data-form-status>
+              <i class="fa fa-check form-status-check" aria-hidden="true"></i>
+              <span data-form-status-text></span>
+            </p>
           </form>
         </div>
       </div>
@@ -70,12 +74,20 @@
     (() => {
       const form = document.querySelector("[data-contact-form]");
       const status = form?.querySelector("[data-form-status]");
+      const statusText = status?.querySelector("[data-form-status-text]");
       const submit = form?.querySelector("button[type='submit']");
+
+      const showStatus = (message, success = false) => {
+        if (!status || !statusText) return;
+        statusText.textContent = message;
+        status.classList.toggle("is-success", success);
+        status.classList.add("is-visible");
+      };
 
       form?.addEventListener("submit", async (event) => {
         event.preventDefault();
         submit.disabled = true;
-        status.textContent = "Sending your message...";
+        showStatus("Sending your message...");
 
         try {
           const response = await fetch(form.action, {
@@ -90,11 +102,12 @@
             );
 
           form.reset();
-          status.textContent = "Thank you. Your message has been sent.";
+          showStatus("Thank you. Your message has been sent.", true);
         } catch (error) {
           console.error(error);
-          status.textContent =
-            "We could not send your message. Please try again or email us directly.";
+          showStatus(
+            "We could not send your message. Please try again or email us directly.",
+          );
         } finally {
           submit.disabled = false;
         }

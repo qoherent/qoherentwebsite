@@ -21,6 +21,8 @@
     </svg>
   </button>
   <div id="{{ $id }}" class="accordion-content {{ $bodyClass }}">
-    {{ .Inner | markdownify }}
+    <div class="accordion-content-inner">
+      {{ .Inner | markdownify }}
+    </div>
   </div>
 </div>

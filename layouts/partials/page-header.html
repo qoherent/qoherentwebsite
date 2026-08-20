@@ -1,10 +1,12 @@
-<section>
-  <div class="container text-center">
-    <div
-      class=" dark:from-darkmode-body dark:to-darkmode-theme-light rounded-2xl bg-gradient-to-b px-8 py-14">
-      {{/* To change colors of all page headers change the color in h1 class below, naming colors in elements.md */}}
-      <h1 class="text-white">{{ .Title | title }}</h1>
-      {{ partial "components/breadcrumb" (dict "Context" . "Class" "mt-6") }}
+<section class="page-header border-b border-border dark:border-darkmode-border">
+  <div class="container">
+    <div class="py-14 md:py-20">
+      <p
+        class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-primary dark:text-darkmode-primary">
+        Qoherent
+      </p>
+      <h1>{{ .Title }}</h1>
+      {{ partial "components/breadcrumb" (dict "Context" . "Class" "mt-5") }}
     </div>
   </div>
 </section>

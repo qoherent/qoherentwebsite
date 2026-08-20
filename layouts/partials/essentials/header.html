@@ -1,7 +1,7 @@
 <header
   class="header {{ if site.Params.navbar_fixed }}sticky top-0{{ end }} z-30">
   <nav class="navbar container" aria-label="Main navigation">
-    <div class="order-0">
+    <div class="order-0 shrink-0 lg:justify-self-start">
       <a
         class="navbar-brand block"
         href="{{ site.Home.RelPermalink }}"
@@ -13,30 +13,32 @@
     <button
       id="nav-toggle"
       type="button"
-      class="order-3 flex cursor-pointer items-center text-dark dark:text-white lg:order-1 lg:hidden"
+      class="order-3 flex size-10 cursor-pointer items-center justify-center rounded-lg border border-border text-dark dark:border-darkmode-border dark:text-white lg:hidden"
       aria-expanded="false"
       aria-controls="nav-menu">
       <span class="sr-only">Open navigation</span>
-      <svg
-        data-menu-open
-        class="block h-6 fill-current"
-        viewBox="0 0 20 20"
-        aria-hidden="true">
-        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-      </svg>
-      <svg
-        data-menu-close
-        class="hidden h-6 fill-current"
-        viewBox="0 0 20 20"
-        aria-hidden="true">
-        <path
-          d="m4.3 5.7 1.4-1.4 4.3 4.3 4.3-4.3 1.4 1.4-4.3 4.3 4.3 4.3-1.4 1.4-4.3-4.3-4.3 4.3-1.4-1.4L8.6 10 4.3 5.7z"></path>
-      </svg>
+      <span class="relative block size-6">
+        <svg
+          data-menu-open
+          class="absolute inset-0 h-6 fill-current"
+          viewBox="0 0 20 20"
+          aria-hidden="true">
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+        </svg>
+        <svg
+          data-menu-close
+          class="absolute inset-0 h-6 fill-current"
+          viewBox="0 0 20 20"
+          aria-hidden="true">
+          <path
+            d="m4.3 5.7 1.4-1.4 4.3 4.3 4.3-4.3 1.4 1.4-4.3 4.3 4.3 4.3-1.4 1.4-4.3-4.3-4.3 4.3-1.4-1.4L8.6 10 4.3 5.7z"></path>
+        </svg>
+      </span>
     </button>
 
     <ul
       id="nav-menu"
-      class="navbar-nav order-3 hidden w-full pb-6 lg:order-1 lg:flex lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8">
+      class="navbar-nav order-3 mt-4 w-full rounded-xl border border-border bg-theme-light p-2 dark:border-darkmode-border dark:bg-darkmode-theme-light lg:order-none lg:mt-0 lg:flex lg:w-auto lg:gap-1 lg:border-0 lg:bg-transparent lg:p-0 lg:dark:bg-transparent">
       {{ $currentPage := . }}
       {{ range site.Menus.main }}
         {{ $menuURL := .URL | absLangURL }}
@@ -48,7 +50,6 @@
             <button
               type="button"
               class="nav-link nav-dropdown-toggle inline-flex cursor-pointer items-center"
-              style="font-family: 'Open Sans', sans-serif; font-weight: 500"
               aria-expanded="false"
               aria-controls="{{ $dropdownID }}">
               {{ .Name }}
@@ -60,9 +61,7 @@
                   d="M9.293 12.95 10 13.657 15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path>
               </svg>
             </button>
-            <ul
-              id="{{ $dropdownID }}"
-              class="nav-dropdown-list lg:group-hover:visible lg:group-hover:opacity-100">
+            <ul id="{{ $dropdownID }}" class="nav-dropdown-list">
               {{ range .Children }}
                 {{ $childURL := .URL | absLangURL }}
                 {{ $childActive := eq $childURL $pageURL }}
@@ -71,7 +70,6 @@
                     class="nav-dropdown-link whitespace-nowrap {{ if $childActive }}
                       active
                     {{ end }}"
-                    style="font-family: 'Open Sans', sans-serif; font-weight: 500"
                     {{ if findRE `^http` .URL }}
                       target="_blank" rel="noopener"
                     {{ end }}
@@ -92,7 +90,6 @@
           <li class="nav-item">
             <a
               class="nav-link {{ if $active }}active{{ end }}"
-              style="font-family: 'Open Sans', sans-serif; font-weight: 400"
               {{ if findRE `^http` .URL }}
                 target="_blank" rel="noopener"
               {{ end }}
@@ -119,7 +116,8 @@
       {{ end }}
     </ul>
 
-    <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
+    <div
+      class="order-1 ml-auto flex items-center lg:order-none lg:ml-0 lg:justify-self-end">
       {{ partial "components/language-switcher" (dict "Context" . "Class" "mr-5 pl-2 py-1 dark:bg-darkmode-theme-light rounded") }}
       {{ partial "components/theme-switcher" (dict "Class" "mr-5") }}
       {{ if site.Params.navigation_button.enable }}
