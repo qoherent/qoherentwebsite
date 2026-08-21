@@ -8,25 +8,6 @@
 
 
 [[main]]
-name = "  "
-url = "intelligentradio/"
-weight = 1
-
-[[main]]
-name = "   "
-url = "intelligentradio/"
-weight = 2
-
-[[main]]
-name = "    "
-url = "intelligentradio/"
-weight = 2.5
-[[main]]
-name = "     "
-url = "intelligentradio/"
-weight = 2.6
-
-[[main]]
 name = "Intelligent Radio"
 url = "intelligentradio/"
 weight = 3
@@ -35,7 +16,7 @@ weight = 3
 
 [[main]]
 name = "Company"
-url = "compamy/"
+url = "company/"
 hasChildren = true
 weight = 4
 
@@ -67,7 +48,6 @@ url = "careers/"
 #####################
 [[main]]
 name = "Products"
-url = "radiointelligenceapps/"
 hasChildren = true
 weight = 5
 
@@ -157,7 +137,6 @@ url = "custom-datasets/"
 #####################
 [[main]]
 name = "Resources"
-url = "resources/"
 hasChildren = true
 weight = 7
 
@@ -221,10 +200,10 @@ hasChildren = true
 weight = 7
 
 ################################################
-# [[footer]]
-# name = "Privacy Policy"
-# url = "privacy-policy/"
-# weight = 3
+[[footer]]
+name = "Privacy Policy"
+url = "privacy-policy/"
+weight = 3
 
 # [[main]]
 # name = " "

@@ -4,7 +4,7 @@ meta_title: "SDR Support Services | RF Testbed Development | Remote & On-site"
 description: "Professional SDR support and custom RF testbed development. From routine maintenance to complex system design."
 ---
 
-# RF Infrastructure & SDR Services
+## RF Infrastructure & SDR Services
 
 Whether you need ongoing SDR support or a custom RF testbed for research and development, we provide the technical expertise to keep your RF systems running and evolving.
 
@@ -124,10 +124,8 @@ We don't just provide support services, we ensure your team understands the solu
 {{< /tab >}}
 {{< /tabs >}}
 
-<div style="padding-top: 1.5rem;">
-  {{< notice "tip" >}}
-  Need immediate SDR support? We can respond within 24 hours for urgent issues.
-  {{< /notice >}}
-</div>
+{{< notice "tip" >}}
+Need immediate SDR support? We can respond within 24 hours for urgent issues.
+{{< /notice >}}
 
 {{< button label="Discuss Your RF Infrastructure Needs →" link="/contact" style="solid" >}}

@@ -1,0 +1,130 @@
+:root {
+  --motion-duration-fast: 160ms;
+  --motion-duration-base: 200ms;
+  --motion-ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --motion-ease-move: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+html {
+  @apply text-base;
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-body dark:bg-darkmode-body font-primary font-normal leading-relaxed text-text antialiased dark:text-darkmode-text;
+}
+
+/* To change colors of all h1/h2 headings change the color in h1, h2 class below, delete text-white and add your color. naming scheme of colors in elements.md, you can also bold using text-bold */
+
+h1 {
+  @apply font-secondary leading-[1.08] tracking-[-0.035em] text-dark dark:text-darkmode-dark;
+}
+
+h2 {
+  @apply font-secondary leading-[1.12] tracking-[-0.025em] text-dark dark:text-darkmode-dark;
+}
+
+/* To change colors of all h3 and onwards text change the color in the class below, delete 'text-dark dark:text-darkmode-dark' and add your color. naming scheme of colors in elements.md, you can also bold using text-bold */
+
+h3,
+h4,
+h5,
+h6 {
+  @apply font-secondary leading-tight tracking-[-0.015em] text-dark dark:text-darkmode-dark;
+}
+
+h1,
+.h1 {
+  @apply text-h1-sm font-medium md:text-h1;
+}
+
+h2,
+.h2 {
+  @apply text-h2-sm font-medium md:text-h2;
+}
+
+h3,
+.h3 {
+  @apply text-h3-sm font-medium md:text-h3;
+}
+
+h4,
+.h4 {
+  @apply text-h4 font-medium;
+}
+
+h5,
+.h5 {
+  @apply text-h5 font-medium;
+}
+
+h6,
+.h6 {
+  @apply text-h6 font-medium;
+}
+
+b,
+strong {
+  @apply font-semibold;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+main {
+  isolation: isolate;
+}
+
+:not(pre) > code {
+  @apply dark:text-qoherentblack;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: #171717 !important;
+  padding: 3px 4px;
+  color: rgb(221, 135, 101) !important;
+  font-family:
+    SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace !important;
+  font-size: 80%;
+}
+
+.btn.copy-code-button:hover i.fa-solid.fa-copy::before {
+  color: #884da0 !important;
+  font-family: "Font Awesome 6 Free";
+}
+
+.btn.copy-code-button:hover i.fa-solid.fa-check::before {
+  color: #884da0 !important;
+  font-family: "Font Awesome 6 Free";
+}
+
+.copy-code-button {
+  overflow: hidden;
+}
+
+.copy-code-icon {
+  position: absolute;
+  transition:
+    opacity var(--motion-duration-fast) var(--motion-ease-out),
+    transform var(--motion-duration-fast) var(--motion-ease-out);
+}
+
+.copy-code-icon-success {
+  opacity: 0;
+  transform: scale(0.92);
+}
+
+.copy-code-button.is-copied .copy-code-icon-default {
+  opacity: 0;
+  transform: scale(0.92);
+}
+
+.copy-code-button.is-copied .copy-code-icon-success {
+  opacity: 1;
+  transform: none;
+}
+
+blockquote > p {
+  @apply my-0!;
+}

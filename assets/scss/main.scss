@@ -1,0 +1,23 @@
+@layer base {
+  @import "base";
+}
+
+@layer components {
+  @import "components";
+  @import "navigation";
+  @import "buttons";
+}
+
+@layer utilities {
+  @import "utilities";
+}
+
+@import "gallery-slider";
+@import "images";
+@import "toc";
+@import "tab";
+@import "accordion";
+@import "notice";
+
+@import "module-overrides";
+@import "custom";

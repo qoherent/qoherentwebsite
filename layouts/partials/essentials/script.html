@@ -1,0 +1,35 @@
+{{ range site.Params.plugins.js }}
+  {{ if findRE "^http" .link }}
+    <script
+      defer
+      src="{{ .link | relURL }}"
+      {{ .attributes | safeHTMLAttr }}></script>
+  {{ else }}
+    {{ with resources.Get .link }}
+      {{ $script := . }}
+      {{ if hugo.IsProduction }}
+        {{ $script = $script | minify | fingerprint | resources.PostProcess }}
+      {{ end }}
+      <script
+        defer
+        crossorigin="anonymous"
+        integrity="{{ $script.Data.Integrity }}"
+        src="{{ $script.RelPermalink }}"></script>
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ with resources.Get "js/main.js" }}
+  {{ $script := . }}
+  {{ if hugo.IsProduction }}
+    {{ $script = $script | minify | fingerprint | resources.PostProcess }}
+  {{ end }}
+  <script
+    defer
+    crossorigin="anonymous"
+    integrity="{{ $script.Data.Integrity }}"
+    src="{{ $script.RelPermalink }}"></script>
+{{ end }}
+
+{{ partialCached "pwa.html" . }}
+{{ partialCached "cookie-consent.html" . }}

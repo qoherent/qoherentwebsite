@@ -1,6 +1,5 @@
 ---
 title: "VentureLAB Hardware Catalyst Initiative"
-title: "VentureLAB Hardware Catalyst Initiative"
 date: "2021-07-19"
 draft: false
 cover:

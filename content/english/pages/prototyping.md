@@ -68,8 +68,7 @@ Each category includes multiple specialized sub-problems with dedicated models d
 
 
 
-<div style="padding-top: 1.5rem;">
-  {{< notice "Advantages of Our IP Portfolio" >}}
+{{< notice "Advantages of Our IP Portfolio" >}}
   
   Our IP portfolio provides proven models that accelerate your development timeline and reduce technical risk:
   - Start from a higher Technology Readiness Level (TRL) using validated model architectures.
@@ -77,8 +76,7 @@ Each category includes multiple specialized sub-problems with dedicated models d
   - Rapid adaptation of existing models to match customer-specific signal types, bandwidths, and deployment conditions.
   - Architectures optimised for deployment on embedded SDR platforms, edge compute devices, and cloud infrastructure.
   
-  {{< /notice >}}
-</div>
+{{< /notice >}}
 
 
 

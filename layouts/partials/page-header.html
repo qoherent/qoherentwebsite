@@ -1,0 +1,12 @@
+<section class="page-header border-b border-border dark:border-darkmode-border">
+  <div class="container">
+    <div class="py-14 md:py-20">
+      <p
+        class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-primary dark:text-darkmode-primary">
+        Qoherent
+      </p>
+      <h1>{{ .Title }}</h1>
+      {{ partial "components/breadcrumb" (dict "Context" . "Class" "mt-5") }}
+    </div>
+  </div>
+</section>

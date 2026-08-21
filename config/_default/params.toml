@@ -20,20 +20,13 @@ theme_default = "dark" # available options [light/dark/system]
 # Main Sections
 mainSections = ["blog"]
 # contact form action
-contact_form_action = "#" # contact form works with [https://airform.io/] or [https://formspree.io]
+contact_form_action = "https://formspree.io/f/xayrneza"
 # google tag manager, see https://developers.google.com/tag-manager/
 google_tag_manager = "" # example: G-XXXXXXXXXX
-google_adsense = ""     # example: ca-pub-xxxxxxxxxxxxxxxx
 # custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>"
 custom_script = ""
 # copyright 
 copyright = "© Qoherent 2024. Let's build intelligent radios together."
-
-# Preloader
-# preloader module: https://github.com/gethugothemes/hugo-modules/tree/master/components/preloader
-[preloader]
-enable = false
-preloader = "" # use jpg, png, svg or gif format.
 
 # Navigation button
 [navigation_button]
@@ -41,25 +34,13 @@ enable = true
 label = "Contact"
 link = "contact/"
 
-# search
-# search module: https://github.com/gethugothemes/hugo-modules/tree/master/search
-[search]
-enable = false#true
-primary_color = "#121212"
-include_sections = ["blog"]
-show_image = true
-show_description = true
-show_tags = false#true
-show_categories = false#true
-
-
 # seo meta data for OpenGraph / Twitter Card
 # seo module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/basic-seo
 [metadata]
 keywords = ["SDR", "Intelligent Radio"]
 description = "Qoherent - accelerating the pace of intelligent radios."
 author = "Qoherent.Inc"
-image = "images/waterfall.jpg"
+image = "images/waterfall2-drawn.jpg"
 # image = "images/og-image.png"
 
 
@@ -78,25 +59,3 @@ enable = true
 expire_days = 60
 content = "This site uses cookies. Please see privacy policy."
 button = "Got it"
-
-######################## sidebar widgets #########################
-[widgets]
-enable = false
-sidebar = ["categories", "tags"]
-
-
-# google map
-[google_map]
-enable = false
-map_api_key = "AIzaSyCaE9rOcXQ46U4vSK0YriviG6cp8LTvxPU"
-map_latitude = "43.6533969"
-map_longitude = "-79.3745095"
-map_marker = "images/marker.png"
-
-
-# Subscription
-[subscription]
-enable = false
-# mailchimp subsciption
-mailchimp_form_action = "https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;id=a0a2c6d074" # replace this url with yours
-mailchimp_form_name = "b_463ee871f45d2d93748e77cad_a0a2c6d074"

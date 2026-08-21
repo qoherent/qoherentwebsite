@@ -20,13 +20,11 @@ The following downloads are made available under GPLv3. Qoherent can make an alt
 - [IQ Engine](https://iqengine.org) 
 - RIA Dataset and Recording inspector (coming soon!)
 
-<!-- Just handles on submit and not on valid form submission will be changed later based on what contact page form does/what service it uses -->
 <section class="section-md">
   <div class="container">
     <div class="row">
       <div class="md:col-10 lg:col-6 mx-auto">
-        <!-- Change this to new qoherent form when made -->
-        <form action="https://formspree.io/f/xdoqkevp" method="post" onsubmit=submitForm(event)>
+        <form action="https://formspree.io/f/xdoqkevp" method="post" data-download-form>
           <div class="mb-6">
             <label for="email" class="form-label whitespace-nowrap">
               Enter your email to unlock download links! <span class="text-red-500">*</span>
@@ -36,9 +34,12 @@ The following downloads are made available under GPLv3. Qoherent can make an alt
               name="email"
               class="form-input"
               placeholder="your.email@example.com"
-              type="email" required />
+              type="email"
+              autocomplete="email"
+              required />
           </div>
           <button type="submit" class="btn btn-primary">Enter</button>
+          <p class="mt-3" role="status" aria-live="polite" data-download-status></p>
         </form>
       </div>
     </div>
@@ -70,53 +71,37 @@ The following downloads are made available under GPLv3. Qoherent can make an alt
 
 
 <script>
-  function submitForm(event) {
-  // Adjust links as needed - Made the most sense this way since links will be different for each
-  // document.getElementById("lock1").innerHTML = '<a href="">Link</a>';
+  (() => {
+    const form = document.querySelector("[data-download-form]");
+    const status = form?.querySelector("[data-download-status]");
+    const submit = form?.querySelector("button[type='submit']");
 
-  // document.getElementById("lock2").innerHTML = '<a href="">Link</a>';
+    form?.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      submit.disabled = true;
+      status.textContent = "Verifying your email...";
 
-  // document.getElementById("lock3").innerHTML = '<a href="">Link</a>';
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" },
+        });
 
-  // document.getElementById("lock4").innerHTML = '<a href="">Link</a>';
+        if (!response.ok) throw new Error(`Form submission failed with status ${response.status}`);
 
-  // document.getElementById("lock5").innerHTML = '<a href="">Link</a>';
-
-  // document.getElementById("lock6").innerHTML = '<a href="">Link</a>';
-
-  // document.getElementById("lock7").innerHTML = '<a href="">Link</a>';
-
-  // document.getElementById("lock8").innerHTML = '<a href="">Link</a>';
-
-  // document.getElementById("lock9").innerHTML = '<a href="">Link</a>';
-
-  document.getElementById("lock10").innerHTML = '<a href="https://storage.googleapis.com/qoherent_external_drive/general_dataset_library/synthetic/qoherent_modulation_awgn.h5">Link</a>';
-
-  document.getElementById("lock11").innerHTML = '<a href="https://storage.googleapis.com/qoherent_external_drive/general_dataset_library/synthetic/qoherent_modulation_unimpaired.h5">Link</a>';
-
-  //document.getElementById("lock12").innerHTML = '<a href="">Link</a>'; // GNU Radio
-
-  
-    event.preventDefault(); 
-
-    const formData = new FormData(event.target);
-    // Change this to new qoherent form when made
-    fetch('https://formspree.io/f/xdoqkevp', {
-      method: 'POST',
-      body: formData,
-      headers: {
-        'Accept': 'application/json',
-      },
-    })
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById('email-download').value = '';
-    })
-    .catch(error => {
-      console.error('Error submitting form:', error);
+        document.querySelector("#lock10").innerHTML = '<a href="https://storage.googleapis.com/qoherent_external_drive/general_dataset_library/synthetic/qoherent_modulation_awgn.h5">Download</a>';
+        document.querySelector("#lock11").innerHTML = '<a href="https://storage.googleapis.com/qoherent_external_drive/general_dataset_library/synthetic/qoherent_modulation_unimpaired.h5">Download</a>';
+        form.reset();
+        status.textContent = "The download links are now available.";
+      } catch (error) {
+        console.error(error);
+        status.textContent = "We could not verify your email. Please try again.";
+      } finally {
+        submit.disabled = false;
+      }
     });
-  }
-
+  })();
 </script>
 
 
