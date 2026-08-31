@@ -21,6 +21,6 @@ We also occasionally offer Co-op postings to qualified Canadian university or co
 
 ## Current Openings
 
-- [Sales & Applications Engineering Specialist](/post_salesae/)
+We don't have any open positions right now, but check back later for future openings.
 
 {{< image src="images/iq_short.png" caption="" alt="alter-text" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="image title"  webp="false" >}}
