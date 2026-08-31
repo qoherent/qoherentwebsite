@@ -1,0 +1,117 @@
+{{ define "main" }}
+  {{ partial "page-header" (dict "Title" .Params.title) }}
+  {{ partial "progress_indicator" }}
+
+
+  <section class="section-sm">
+    <div class="container">
+      <div class="flex flex-col gap-y-10">
+        <div class="content col-12">{{ .Content }}</div>
+        <div class="w-full">
+          <form
+            class="rounded-xl border border-border bg-theme-light p-6 dark:border-darkmode-border dark:bg-darkmode-theme-light md:p-8"
+            action="{{ site.Params.contact_form_action }}"
+            method="POST"
+            data-contact-form>
+            <div class="mb-6">
+              <label for="name" class="form-label"
+                >Full name
+                <span class="text-red-500" aria-hidden="true">*</span></label
+              >
+              <input
+                id="name"
+                name="name"
+                class="form-input"
+                type="text"
+                autocomplete="name"
+                required />
+            </div>
+            <div class="mb-6">
+              <label for="email" class="form-label"
+                >Email address
+                <span class="text-red-500" aria-hidden="true">*</span></label
+              >
+              <input
+                id="email"
+                name="email"
+                class="form-input"
+                type="email"
+                autocomplete="email"
+                required />
+            </div>
+            <div class="mb-6">
+              <label for="message" class="form-label"
+                >Message
+                <span class="text-red-500" aria-hidden="true">*</span></label
+              >
+              <textarea
+                id="message"
+                name="message"
+                class="form-input"
+                rows="8"
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send inquiry</button>
+            <p class="mt-4 text-sm text-light dark:text-darkmode-light">
+              We use your information to respond to this inquiry. See our
+              <a href="{{ `privacy-policy/` | relLangURL }}">privacy policy</a>.
+            </p>
+            <p
+              class="form-status mt-3 text-sm"
+              role="status"
+              aria-live="polite"
+              data-form-status>
+              <i class="fa fa-check form-status-check" aria-hidden="true"></i>
+              <span data-form-status-text></span>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    (() => {
+      const form = document.querySelector("[data-contact-form]");
+      const status = form?.querySelector("[data-form-status]");
+      const statusText = status?.querySelector("[data-form-status-text]");
+      const submit = form?.querySelector("button[type='submit']");
+
+      const showStatus = (message, success = false) => {
+        if (!status || !statusText) return;
+        statusText.textContent = message;
+        status.classList.toggle("is-success", success);
+        status.classList.add("is-visible");
+      };
+
+      form?.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        submit.disabled = true;
+        showStatus("Sending your message...");
+
+        try {
+          const response = await fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: { Accept: "application/json" },
+          });
+
+          if (!response.ok)
+            throw new Error(
+              `Form submission failed with status ${response.status}`,
+            );
+
+          form.reset();
+          showStatus("Thank you. Your message has been sent.", true);
+        } catch (error) {
+          console.error(error);
+          showStatus(
+            "We could not send your message. Please try again or email us directly.",
+          );
+        } finally {
+          submit.disabled = false;
+        }
+      });
+    })();
+  </script>
+{{ end }}

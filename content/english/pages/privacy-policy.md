@@ -1,33 +1,45 @@
 ---
-title: "Privacy"
-# meta title
-meta_title: ""
-# meta description
-description: "This is meta description"
-# save as draft
+title: "Privacy Policy"
+meta_title: "Privacy Policy"
+description: "How Qoherent collects, uses, and protects personal information submitted through this website."
 draft: false
 ---
 
-#### Responsibility of Contributors
+_Last updated: August 20, 2026_
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
+This policy describes how Qoherent Inc. ("Qoherent", "we", "us", or "our") handles personal information collected through this website. It is a general website policy and does not replace the terms of a separate customer, employment, or support agreement.
 
-pretium, aliquam sit. Praesent elementum magna amet, tincidunt eros, nibh in leo. Malesuada purus, lacus, at aliquam suspendisse tempus. Quis tempus amet, velit nascetur sollicitudin. At sollicitudin eget amet in. Eu velit nascetur sollicitudin erhdfvssfvrgss eget viverra nec elementum. Lacus, facilisis tristique lectus in.
+## Information We Collect
 
-#### Gathering of Personal Information
+When you contact us through this website, we may collect your name, email address, message, and any other information you choose to provide. We may also receive basic technical information, such as browser type and device information, through essential website services.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
+## How We Use Information
 
-#### Protection of Personal- Information
+We use submitted information to:
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus.
+- Respond to business inquiries and support requests.
+- Evaluate partnership, employment, and service opportunities.
+- Operate, secure, and improve the website.
+- Meet legal and regulatory obligations.
 
-Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat
+We do not sell personal information.
 
-#### Privacy Policy Changes
+## Service Providers and Retention
 
-1. Sll the Themefisher items are designed to be with the latest , We check all
-2. comments that threaten or harm the reputation of any person or organization
-3. personal information including, but limited to, email addresses, telephone numbers
-4. Any Update come in The technology Customer will get automatic Notification.
+Our contact forms use Formspree to process submissions. Formspree may process information according to its own privacy policy. We may also disclose information when required by law or when needed to protect our rights and systems.
+
+We retain personal information only for as long as it is reasonably needed for the purpose for which it was collected, or as required by law.
+
+## Cookies
+
+This website may use essential cookies or local storage to remember site preferences and support basic functionality. We do not use this website to sell personal information or build advertising profiles.
+
+## Your Choices
+
+You may ask to access, correct, or delete personal information that you submitted through this website, subject to applicable legal requirements. You may also ask questions about how we handle your information.
+
+## Contact
+
+For privacy questions or requests, contact Qoherent at **info at qoherent dot ai**.
+
+We may update this policy when our website or practices change. The date above shows the latest revision.

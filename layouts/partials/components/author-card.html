@@ -1,0 +1,28 @@
+<article
+  class="bg-theme-light dark:bg-darkmode-theme-light rounded p-8 text-center">
+  {{ with .Params.image }}
+    {{ partial "image" (dict "Src" . "Alt" $.Title "Class" "mx-auto mb-6 rounded" "size" "120x120") }}
+  {{ else with .Params.Email }}
+    <img
+      class="mx-auto mb-6 rounded"
+      alt="{{ $.Title }}"
+      height="120"
+      width="120"
+      src="https://www.gravatar.com/avatar/{{ md5 . }}?s=128&pg&d=identicon" />
+  {{ end }}
+  <h2 class="h4 mb-3"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+  <div class="mb-4">{{ .Summary }}</div>
+  <ul class="social-icons">
+    {{ range .Params.social }}
+      <li>
+        <a
+          href="{{ .link | safeURL }}"
+          target="_blank"
+          rel="noopener nofollow"
+          aria-label="{{ .title | default `Social profile` }}">
+          <i class="{{ .icon }}" aria-hidden="true"></i>
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+</article>

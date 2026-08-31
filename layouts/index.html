@@ -1,0 +1,165 @@
+{{ define "main" }}
+  {{ partial "progress_indicator" }}
+  <!-- Banner -->
+  {{ with .Params.banner }}
+    <section
+      class="home-hero relative min-h-[640px] overflow-hidden md:min-h-[680px]">
+      {{ partial "image" (dict "Src" .image "Alt" "" "Loading" "eager" "Class" "absolute inset-0 size-full z-[-2] min-h-full object-cover") }}
+      <div
+        class="container flex min-h-[640px] items-end justify-center py-16 text-center md:min-h-[680px] md:items-center md:py-24">
+        <div class="flex w-full flex-col items-center">
+          <h1
+            class="text-[2.75rem] font-bold leading-[1.05] text-white sm:text-[3.5rem] lg:text-[4rem]">
+            {{ .title | markdownify }}
+          </h1>
+          <p class="mt-6 text-lg leading-8 text-white/80 md:text-xl">
+            {{ .content | markdownify }}
+          </p>
+          {{ with .button }}
+            {{ if .enable }}
+              <a class="btn btn-primary mt-8" href="{{ .link | absURL }}">
+                {{ .label }}
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              </a>
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
+  <!-- /Banner -->
+
+  <!-- Features -->
+  {{ range $i, $e:= .Params.features }}
+    <section
+      class="feature-section border-b border-darkmode-border/70 py-16 md:py-24">
+      <div class="container">
+        <div class="row items-center justify-between gap-y-10">
+          <div
+            class="feature-media {{ if not (modBool $i 2) }}
+              md:order-2
+            {{ end }} md:col-5">
+            {{ partial "image" (dict "Src" .image "Alt" .title) }}
+          </div>
+          <div
+            class="{{ if not (modBool $i 2) }}
+              md:order-1
+            {{ end }} md:col-7 lg:col-6">
+            <h2 class="mb-5">
+              {{ .title | markdownify }}
+            </h2>
+            <p class="mb-8 text-lg leading-8">
+              {{ .content | markdownify }}
+            </p>
+            <ul class="feature-list">
+              {{ range .bulletpoints }}
+                <li
+                  class="flex items-start gap-3 border-t border-darkmode-border/70 py-3 first:border-t-0 first:pt-0">
+                  <i
+                    class="fa fa-check mt-[0.45rem] shrink-0 text-xs text-white"
+                    aria-hidden="true"></i>
+                  {{ . | markdownify }}
+                </li>
+              {{ end }}
+            </ul>
+            {{ with .button }}
+              {{ if .enable }}
+                <a
+                  class="btn btn-outline-primary mt-7"
+                  href="{{ .link | absURL }}">
+                  {{ .label }}
+                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+  <!-- /Features -->
+
+  <!-- Intersection -->
+  {{ with .Params.intersection }}
+    <section
+      class="border-b border-darkmode-border/70 py-16 md:py-24"
+      aria-labelledby="intersection-title">
+      <div class="container">
+        <h2 id="intersection-title" class="mb-10 md:mb-12">
+          {{ .title | markdownify }}
+        </h2>
+        <dl class="border-y border-darkmode-border md:grid md:grid-cols-3">
+          {{ range .disciplines }}
+            <div
+              class="border-t border-darkmode-border py-6 first:border-t-0 md:border-t-0 md:border-l md:px-8 md:py-8 md:first:border-l-0 md:first:pl-0 md:last:pr-0">
+              <dt class="mb-2 text-xl font-semibold text-white">
+                {{ .title }}
+              </dt>
+              <dd class="leading-7 text-darkmode-text">
+                {{ .description }}
+              </dd>
+            </div>
+          {{ end }}
+        </dl>
+      </div>
+    </section>
+  {{ end }}
+  <!-- /Intersection -->
+
+  <!-- Optional Body Content (renders shortcodes from _index.md) -->
+  {{ with .Content }}
+    <section
+      class="home-brief border-b border-darkmode-border/70 py-16 md:py-24">
+      <div class="container">
+        <div class="content">
+          {{ . | safeHTML }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
+  <!-- /Optional Body Content -->
+
+  <!-- Testimonials -->
+  {{ with site.GetPage "sections/testimonial" }}
+    {{ if .Params.enable }}
+      <section class="section-sm ecosystem-section">
+        <div class="container">
+          <div class="row">
+            <div class="mb-12 w-full text-center">
+              <h2 class="mb-4 text-balance">
+                {{ .Title | markdownify }}
+              </h2>
+              <p>
+                {{ .Params.description | markdownify }}
+              </p>
+            </div>
+            <div class="col-12">
+              <div
+                class="ecosystem-marquee"
+                tabindex="0"
+                aria-label="Innovation ecosystem logos. Focus to pause animation.">
+                <div class="ecosystem-marquee-viewport">
+                  <div class="ecosystem-marquee-track">
+                    {{ $testimonials := .Params.testimonials }}
+                    {{ range seq 2 }}
+                      <ul
+                        class="ecosystem-marquee-group"
+                        {{ if eq . 2 }}aria-hidden="true"{{ end }}>
+                        {{ range $testimonials }}
+                          <li class="ecosystem-logo">
+                            {{ partial "image" (dict "Src" .avatar "Alt" .name) }}
+                          </li>
+                        {{ end }}
+                      </ul>
+                    {{ end }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    {{ end }}
+  {{ end }}
+  <!-- /Testimonials -->
+{{ end }}

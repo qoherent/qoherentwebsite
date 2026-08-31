@@ -37,11 +37,14 @@ module.exports = {
       md: "768px",
       lg: "1024px",
       xl: "1280px",
-      "2xl": "1536px",
+      "2xl": "1440px",
     },
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1rem",
+      screens: {
+        "2xl": "1320px",
+      },
     },
     extend: {
       colors: {
@@ -91,6 +94,9 @@ module.exports = {
       fontFamily: {
         primary: [fontPrimary, fontPrimaryType],
         secondary: [fontSecondary, fontSecondaryType],
+      },
+      maxWidth: {
+        prose: "44rem",
       },
     },
   },

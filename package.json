@@ -1,36 +1,39 @@
 {
-  "name": "hugoplate",
-  "description": "hugo tailwindcss boilerplate",
+  "name": "qoherent-website",
+  "description": "Qoherent company website",
   "version": "1.10.2",
   "license": "MIT",
-  "author": "zeon.studio",
+  "author": "Qoherent Inc.",
   "scripts": {
     "dev": "hugo server",
     "build": "hugo --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic",
     "preview": "hugo server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --watch --forceSyncStatic -e production --minify",
-    "dev:example": "cd exampleSite; hugo server",
-    "build:example": "cd exampleSite; hugo --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic",
-    "preview:example": "cd exampleSite; hugo server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --watch --forceSyncStatic -e production --minify",
     "update-modules": "node ./scripts/clearModules.js && hugo mod clean --all && hugo mod get -u ./... && hugo mod tidy",
-    "remove-darkmode": "node ./scripts/removeDarkmode.js && yarn format",
-    "project-setup": "node ./scripts/projectSetup.js",
-    "theme-setup": "node ./scripts/themeSetup.js",
-    "format": "prettier -w ."
+    "format": "prettier -w .",
+    "check:build": "hugo --gc --environment production --baseURL / --destination .hugo-validation --printPathWarnings --printI18nWarnings",
+    "check:html": "html-validate '.hugo-validation/**/*.html'",
+    "check:serve": "serve .hugo-validation --listen 1314 --no-clipboard",
+    "check:links": "start-server-and-test check:serve http://localhost:1314 \"linkinator http://localhost:1314 --recurse --check-fragments --skip '^(https?:)?//(?!localhost:1314)'\"",
+    "check:markdown": "markdownlint-cli2 'content/**/*.md'",
+    "check:format": "prettier --check .",
+    "check": "npm run check:build && npm run check:html && npm run check:links && npm run check:markdown && npm audit --audit-level=moderate"
+  },
+  "engines": {
+    "node": ">=20.19.0"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "@tailwindcss/cli": "^4.3.3",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.10",
-    "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.32",
-    "postcss-cli": "^11.0.1",
+    "html-validate": "^11.8.0",
+    "linkinator": "^8.0.4",
+    "markdownlint-cli2": "^0.23.2",
     "prettier": "^3.1.1",
     "prettier-plugin-go-template": "0.0.15",
-    "prettier-plugin-tailwindcss": "^0.5.9",
-    "tailwind-bootstrap-grid": "^5.1.0",
-    "tailwindcss": "^3.4.1"
-  },
-  "dependencies": {
-    "npx": "^3.0.0"
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "serve": "^14.2.6",
+    "start-server-and-test": "^3.0.12",
+    "tailwind-bootstrap-grid": "^7.0.0",
+    "tailwindcss": "^4.3.3"
   }
 }

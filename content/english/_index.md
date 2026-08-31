@@ -50,13 +50,18 @@ features:
       label: "Engineering Services"
       link: "/rf-infrastructure-sdr-services/"
 
----
+# Intersection
+intersection:
+  title: We work at the intersection of three disciplines.
+  disciplines:
+    - title: Software-defined radio
+      description: Flexible RF hardware
+    - title: Machine learning
+      description: Algorithms that understand complex signals
+    - title: Software & MLOps
+      description: Rapid development, integration, and deployment
 
-{{< notice "We work at the intersection of three disciplines:" >}}
-- **Software-defined radio** – flexible RF hardware  
-- **Machine learning** – algorithms that understand complex signals  
-- **Software & MLOps** – enabling rapid development, integration, and deployment 
-{{< /notice >}}
+---
 
 ## Why Radio Intelligence?
 
@@ -84,12 +89,7 @@ Machine learning has proven effective at addressing these challenges, enabling f
 Whether you require a prototype to evaluate a concept, a dataset to support research, assistance with private network deployment, or guidance on radio intelligence, we provide practical engineering support tailored to your RF requirements.
 
 
-<div class="button-group" style="display: flex; gap: 1rem;">
-  <style>
-    .button-group a {
-      text-decoration: none;
-    }
-  </style>
+<div class="button-group">
   {{< button label="Get connected" link="/contact" style="solid" >}}
   {{< button label="Learn more about RIA Hub" link="/riahub" style="outline" >}}
 </div>

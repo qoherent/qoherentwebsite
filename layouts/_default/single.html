@@ -1,0 +1,17 @@
+{{ define "main" }}
+  {{ partial "page-header" (dict "Title" .Title) }}
+  {{ partial "progress_indicator" }}
+
+
+  <section class="section-sm">
+    <div class="container">
+      <div>
+        <div class="w-full">
+          <div class="content">
+            {{ .Content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}

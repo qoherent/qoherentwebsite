@@ -10,7 +10,7 @@ tags: ['pluto','sdr','ubuntu']
 categories: ['tech-blog']
 ---
 
-The [ADI ADALM Pluto](https://wiki.analog.com/university/tools/pluto) is a great device for prototyping SDR solutions. It is compatible with [GNU Radio(https://wiki.gnuradio.org/index.php/PlutoSDR_Source)], has a [python API](https://ez.analog.com/ez-blogs/b/engineerzone-spotlight/posts/using-python-to-control-the-pluto-radio-and-plot-data), and is a great utility that is readily commercially available. It is even the subject of a widely availible course on DSP, [pySDR](https://pysdr.org/content/pluto.html).
+The [ADI ADALM Pluto](https://wiki.analog.com/university/tools/pluto) is a great device for prototyping SDR solutions. It is compatible with [GNU Radio](https://wiki.gnuradio.org/index.php/PlutoSDR_Source), has a [python API](https://ez.analog.com/ez-blogs/b/engineerzone-spotlight/posts/using-python-to-control-the-pluto-radio-and-plot-data), and is a great utility that is readily commercially available. It is even the subject of a widely availible course on DSP, [pySDR](https://pysdr.org/content/pluto.html).
 
 At Qoherent, we use it for all sorts of applications with all kinds of workstations. One common use case is with our portable ubuntu server systems.
 

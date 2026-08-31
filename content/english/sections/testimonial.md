@@ -6,25 +6,25 @@ description: ""
 # Testimonials
 testimonials:
   - avatar: "/images/iqengine.png"
-    # name: "ESA"
+    name: "IQ Engine"
   - avatar: "/images/yspace.png"
-    # name: "YSpace @ York University"
+    name: "YSpace at York University"
   - avatar: "/images/feddev.png"
-    # name: "Feddev"
+    name: "Federal Economic Development Agency for Southern Ontario"
   # - avatar: "/images/csa.png"
     # name: "CSA"
   - avatar: "/images/esa.png"
-    # name: "ESA"
+    name: "European Space Agency"
   - avatar: "/images/creativedestructionlab.png"
-    # name: "Creative Destruction Lab"
+    name: "Creative Destruction Lab"
   - avatar: "/images/schulichstartups.png"
-    # name: "Schulich Startups"
+    name: "Schulich Startups"
   - avatar: "/images/venturelab.png"
-    # name: "VentureLab"
+    name: "ventureLAB"
   - avatar: "/images/startupfest.png"
-    # name: "Startupfest"
+    name: "Startupfest"
   - avatar: "/images/oci.png"
-    # name: "Oci"
+    name: "Ontario Centre of Innovation"
   # - avatar: "/images/ucalgary.png"
   #   # name: "ESA"
   # - avatar: "/images/ettus.png"
@@ -45,6 +45,6 @@ testimonials:
   #   content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui iusto illo molestias, assumenda expedita commodi inventore non itaque molestiae voluptatum dolore, facilis sapiente, repellat veniam."
 
 # don't create a separate page
-_build:
+build:
   render: "never"
 ---

@@ -1,0 +1,26 @@
+{{ with site.Params.cookies }}
+  {{ if .enable }}
+    <div id="cookie-box" class="cookie-box">
+      {{ .content | markdownify }}
+      <button
+        type="button"
+        id="cookie-button"
+        class="cookie-box-button btn btn-sm btn-outline-primary">
+        {{ .button }}
+      </button>
+    </div>
+    <script>
+      (() => {
+        const cookieBox = document.querySelector("#cookie-box");
+        const cookieButton = document.querySelector("#cookie-button");
+        if (!localStorage.getItem("cookie-consent")) {
+          requestAnimationFrame(() => cookieBox?.classList.add("is-visible"));
+        }
+        cookieButton?.addEventListener("click", () => {
+          localStorage.setItem("cookie-consent", "accepted");
+          cookieBox?.classList.remove("is-visible");
+        });
+      })();
+    </script>
+  {{ end }}
+{{ end }}

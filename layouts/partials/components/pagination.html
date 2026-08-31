@@ -1,0 +1,33 @@
+{{ $paginator := .Paginator }}
+{{ if gt $paginator.TotalPages 1 }}
+  <nav
+    class="mt-10 flex items-center justify-between border-t border-darkmode-border pt-6 text-sm"
+    aria-label="Pagination">
+    {{ if $paginator.HasPrev }}
+      <a
+        class="font-semibold text-white no-underline hover:text-darkmode-primary"
+        href="{{ $paginator.Prev.URL }}">
+        <span aria-hidden="true">&larr;</span> Previous
+      </a>
+    {{ else }}
+      <span class="text-darkmode-light" aria-disabled="true">
+        <span aria-hidden="true">&larr;</span> Previous
+      </span>
+    {{ end }}
+    <span class="text-darkmode-light">
+      Page {{ $paginator.PageNumber }} of
+      {{ $paginator.TotalPages }}
+    </span>
+    {{ if $paginator.HasNext }}
+      <a
+        class="font-semibold text-white no-underline hover:text-darkmode-primary"
+        href="{{ $paginator.Next.URL }}">
+        Next <span aria-hidden="true">&rarr;</span>
+      </a>
+    {{ else }}
+      <span class="text-darkmode-light" aria-disabled="true">
+        Next <span aria-hidden="true">&rarr;</span>
+      </span>
+    {{ end }}
+  </nav>
+{{ end }}
