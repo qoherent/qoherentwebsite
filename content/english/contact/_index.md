@@ -61,8 +61,8 @@ draft: false
 </div>
 
 <div style="width: 80%; margin: 0 auto; text-align: center; margin-bottom:40px margin-top:40px; border-radius:30px">
-            <iframe style="width: 100%; height: 425px; border: 2px solid #ccc; border-radius: 15px;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-79.3814%2C43.6597%2C-79.3744%2C43.6637&amp;layer=mapnik&amp;marker=43.6617%2C-79.3779"></iframe>
-            <p style="margin-top:10px"><a href="https://www.openstreetmap.org/?mlat=43.6617&amp;mlon=-79.3779#map=17/43.6617/-79.3779" target="_blank" rel="noopener">View larger map</a></p>
+            <iframe style="width: 100%; height: 425px; border: 2px solid #ccc; border-radius: 15px;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-79.3811%2C43.6605%2C-79.3721%2C43.6645&amp;layer=mapnik&amp;marker=43.6625%2C-79.3766"></iframe>
+            <p style="margin-top:10px"><a href="https://www.openstreetmap.org/?mlat=43.6625&amp;mlon=-79.3766#map=17/43.6625/-79.3766" target="_blank" rel="noopener">View larger map</a></p>
           </div>
 
 Please fill out this form for **business inquiries**. _For technical support, please contact your Qoherent support representative directly._
