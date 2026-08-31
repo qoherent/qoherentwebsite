@@ -1,0 +1,92 @@
+main {
+  min-height: 70dvh;
+}
+
+// section style
+.section {
+  @apply py-20 md:py-24 xl:py-28;
+  &-sm {
+    @apply py-14 md:py-16 xl:py-20;
+  }
+}
+
+// form style
+.form-input {
+  @apply w-full rounded-lg border border-border bg-body px-4 py-3.5 text-dark placeholder:text-light focus:border-primary focus:ring-0 dark:border-darkmode-border dark:bg-darkmode-body dark:text-darkmode-dark dark:placeholder:text-darkmode-light dark:focus:border-darkmode-primary;
+}
+
+.form-label {
+  @apply mb-2 block font-secondary text-sm font-medium text-dark dark:text-darkmode-dark;
+}
+
+// social icons
+.social-icons {
+  @apply flex flex-wrap gap-2;
+  li {
+    @apply inline-block;
+    a {
+      @apply flex size-10 items-center justify-center rounded-lg border border-border bg-transparent text-dark hover:border-primary hover:text-primary dark:border-darkmode-border dark:text-darkmode-dark dark:hover:border-darkmode-primary dark:hover:text-darkmode-primary;
+      transition:
+        color var(--motion-duration-fast) ease,
+        background-color var(--motion-duration-fast) ease,
+        border-color var(--motion-duration-fast) ease;
+      svg {
+        @apply h-5 w-5;
+      }
+    }
+  }
+}
+
+// swiper pagination
+.swiper-pagination-bullet {
+  @apply bg-theme-light! dark:bg-darkmode-theme-light! h-2.5! w-2.5! opacity-100! mx-1.5!;
+  transition:
+    background-color var(--motion-duration-fast) ease,
+    transform var(--motion-duration-fast) var(--motion-ease-out);
+
+  &-active {
+    @apply bg-primary! dark:bg-darkmode-primary!;
+    transform: scale(1.4);
+  }
+}
+
+// content style
+.content {
+  @apply prose max-w-none;
+  @apply prose-headings:mb-[.45em] prose-headings:mt-[1.35em] prose-headings:font-medium prose-headings:tracking-tight prose-headings:text-balance prose-headings:text-dark prose-headings:dark:text-darkmode-dark;
+  @apply prose-h1:text-h1-sm md:prose-h1:text-h1;
+  @apply prose-h2:text-h2-sm md:prose-h2:text-h2;
+  @apply prose-h3:text-h3-sm md:prose-h3:text-h3;
+  @apply prose-img:max-w-full prose-img:rounded-lg;
+  @apply prose-hr:border-border prose-hr:dark:border-darkmode-border;
+  @apply prose-p:text-base prose-p:leading-7 prose-p:text-text prose-p:dark:text-darkmode-text;
+  @apply prose-blockquote:rounded-lg prose-blockquote:border prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:bg-theme-light prose-blockquote:px-6 prose-blockquote:py-6 prose-blockquote:font-secondary prose-blockquote:text-xl prose-blockquote:not-italic prose-blockquote:text-dark prose-blockquote:dark:border-darkmode-primary prose-blockquote:dark:bg-darkmode-theme-light prose-blockquote:dark:text-darkmode-dark;
+  @apply prose-pre:rounded-lg prose-pre:bg-theme-light prose-pre:dark:bg-darkmode-theme-light;
+  @apply prose-code:dark:text-darkmode-light prose-code:dark:bg-qoherentblack prose-code:after:content-none prose-code:before:content-none;
+  @apply prose-strong:text-dark prose-strong:dark:text-darkmode-text;
+  @apply prose-a:font-medium prose-a:text-dark prose-a:decoration-primary/50 prose-a:underline-offset-4 hover:prose-a:text-primary prose-a:dark:text-darkmode-dark prose-a:dark:decoration-darkmode-primary/50 hover:prose-a:dark:text-darkmode-primary;
+  @apply prose-li:text-text prose-li:dark:text-darkmode-text;
+  @apply prose-table:relative prose-table:w-full prose-table:overflow-hidden;
+  @apply prose-thead:border-border prose-thead:dark:border-darkmode-border;
+  @apply prose-th:relative prose-th:z-10 prose-th:px-4 prose-th:py-[18px] prose-th:text-dark prose-th:dark:text-darkmode-text;
+  @apply prose-tr:border-border prose-tr:dark:border-darkmode-border;
+  @apply prose-td:relative prose-td:z-10 prose-td:px-3 prose-td:py-[18px] prose-td:dark:text-darkmode-text;
+  .btn {
+    @apply no-underline!;
+  }
+}
+
+.surface-panel {
+  @apply rounded-xl border border-border bg-theme-light dark:border-darkmode-border dark:bg-darkmode-theme-light;
+}
+
+.publication-body,
+.publication-footer {
+  max-width: 82ch;
+}
+
+.publication-body p,
+.publication-body li {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}

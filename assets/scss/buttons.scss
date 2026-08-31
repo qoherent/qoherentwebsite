@@ -1,0 +1,36 @@
+.btn {
+  @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border px-5 py-2.5 text-sm font-semibold no-underline;
+  transition:
+    color var(--motion-duration-fast) ease,
+    background-color var(--motion-duration-fast) ease,
+    border-color var(--motion-duration-fast) ease,
+    opacity var(--motion-duration-fast) ease,
+    transform var(--motion-duration-fast) var(--motion-ease-out);
+
+  &:active {
+    transform: scale(0.97);
+  }
+
+  &[disabled] {
+    @apply cursor-not-allowed opacity-50;
+  }
+}
+
+.btn-sm {
+  @apply min-h-10 px-4 py-2 text-sm;
+}
+
+.btn-primary {
+  @apply border-primary bg-primary text-white hover:border-qoherentblue hover:bg-qoherentblue dark:border-darkmode-primary dark:bg-darkmode-primary dark:text-dark dark:hover:border-white dark:hover:bg-white;
+}
+
+.btn-outline-primary {
+  @apply border-border bg-transparent text-dark hover:border-primary hover:text-primary dark:border-darkmode-border dark:text-darkmode-dark dark:hover:border-darkmode-primary dark:hover:text-darkmode-primary;
+}
+
+@media (pointer: coarse) {
+  .btn,
+  .btn-sm {
+    min-height: 3rem;
+  }
+}

@@ -1,0 +1,10 @@
+<section class="border-b border-darkmode-border">
+  <div class="container py-14 md:py-20">
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}
+      <p class="mt-5 text-lg leading-8 text-darkmode-text md:text-xl">
+        {{ . }}
+      </p>
+    {{ end }}
+  </div>
+</section>

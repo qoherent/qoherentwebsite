@@ -2,6 +2,12 @@
   "plugins": ["prettier-plugin-go-template"],
   "overrides": [
     {
+      "files": ["README.md"],
+      "options": {
+        "proseWrap": "always"
+      }
+    },
+    {
       "files": ["*.html"],
       "options": {
         "parser": "go-template",

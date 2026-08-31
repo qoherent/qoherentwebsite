@@ -1,0 +1,66 @@
+{{ define "main" }}
+  {{ partial "progress_indicator" }}
+  <article>
+    <header class="border-b border-darkmode-border">
+      <div class="container py-14 md:py-20">
+        <div
+          class="mb-6 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-darkmode-light">
+          {{ with .Params.categories }}
+            {{ range . }}
+              <a
+                class="font-medium text-darkmode-primary no-underline hover:text-white"
+                href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}/">
+                {{ . | humanize }}
+              </a>
+            {{ end }}
+          {{ end }}
+          <span aria-hidden="true">&middot;</span>
+          <time datetime="{{ .PublishDate.Format `2006-01-02` }}">
+            {{ time.Format ":date_long" .PublishDate }}
+          </time>
+          <span aria-hidden="true">&middot;</span>
+          <span>{{ .ReadingTime }} min read</span>
+        </div>
+        <h1>{{ .Title }}</h1>
+      </div>
+    </header>
+
+    <section class="section-sm">
+      <div class="container">
+        {{ $image := .Params.image }}
+        {{ $imageAlt := .Title }}
+        {{ with .Params.cover }}
+          {{ with .image }}{{ $image = . }}{{ end }}
+          {{ with .alt }}{{ $imageAlt = . }}{{ end }}
+        {{ end }}
+        {{ with $image }}
+          <div class="mb-12">
+            {{ partial "image" (dict "Src" . "Alt" $imageAlt "Class" "aspect-[2/1] w-full object-cover") }}
+          </div>
+        {{ end }}
+
+        <div class="publication-body content mb-12">
+          {{ .Content }}
+        </div>
+
+        {{ with .Params.tags }}
+          <footer
+            class="publication-footer border-t border-darkmode-border pt-6">
+            <p class="mb-3 text-sm font-semibold text-white">Topics</p>
+            <ul class="flex flex-wrap gap-x-4 gap-y-2 text-sm">
+              {{ range . }}
+                <li>
+                  <a
+                    class="text-darkmode-text underline decoration-darkmode-border underline-offset-4 hover:text-darkmode-primary"
+                    href="{{ `tags/` | relLangURL }}{{ . | urlize | lower }}/">
+                    {{ . | humanize }}
+                  </a>
+                </li>
+              {{ end }}
+            </ul>
+          </footer>
+        {{ end }}
+      </div>
+    </section>
+  </article>
+{{ end }}

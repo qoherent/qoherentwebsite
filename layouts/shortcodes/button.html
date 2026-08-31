@@ -1,0 +1,35 @@
+{{ $label := .Get 0 }}
+{{ $link := .Get 1 }}
+{{ $style := .Get 2 }}
+{{ $class := .Get 3 }}
+{{ $rel := .Get 4 }}
+
+{{ range $key, $value := .Params }}
+  {{ if eq $key "label" }}
+    {{ $label = $value }}
+  {{ else if eq $key "link" }}
+    {{ $link = $value }}
+  {{ else if eq $key "style" }}
+    {{ $style = $value }}
+  {{ else if eq $key "class" }}
+    {{ $class = $value }}
+  {{ else if eq $key "rel" }}
+    {{ $rel = $value }}
+  {{ end }}
+{{ end }}
+
+
+<a
+  href="{{ $link | absLangURL }}"
+  class="not-prose btn {{ if eq $style `outline` }}
+    btn-outline-primary
+  {{ else }}
+    btn-primary
+  {{ end }} {{ $class }}"
+  {{ if strings.HasPrefix $link `http` }}
+    target="_blank" rel="noopener {{ $rel }}"
+  {{ else }}
+    rel="{{ $rel }}"
+  {{ end }}
+  >{{ $label }}</a
+>

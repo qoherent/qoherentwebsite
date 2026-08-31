@@ -1,0 +1,113 @@
+// table of contents
+.table-of-content {
+  margin: 2rem 0;
+  overflow: hidden;
+  border-block: 1px solid #3a3531;
+  border-radius: 0;
+  background: transparent;
+}
+
+.table-of-content summary {
+  padding: 1rem 0;
+  cursor: pointer;
+  background: transparent !important;
+  color: #f7f3ef;
+  font-weight: 600;
+}
+
+.table-of-content nav {
+  padding: 0 0 1.25rem;
+}
+
+.table-of-content ol {
+  margin-block: 0.5rem;
+}
+
+.table-of-content a {
+  color: #b8b0a9;
+  text-decoration-color: #3a3531;
+  text-underline-offset: 0.2em;
+}
+
+.table-of-content a:hover {
+  color: #47c8ff;
+}
+
+// share icons
+.share-icons {
+  .share-link {
+    @apply h-9 w-9 rounded leading-9;
+    @apply bg-primary hover:bg-primary dark:bg-darkmode-primary dark:hover:bg-darkmode-primary;
+  }
+  .share-icon svg {
+    @apply dark:fill-dark;
+  }
+}
+
+// tab
+.tab {
+  @apply overflow-hidden rounded-xl border border-border dark:border-darkmode-border;
+  &-nav {
+    @apply border-border bg-theme-light dark:border-darkmode-border dark:bg-darkmode-theme-light pl-4;
+
+    &-item {
+      @apply text-dark! dark:text-darkmode-dark! px-8! text-lg!;
+      &.active {
+        @apply border-dark dark:border-darkmode-primary;
+      }
+    }
+  }
+  &-content {
+    &-panel {
+      @apply px-4! pt-0!;
+    }
+  }
+}
+
+// accordion
+.accordion {
+  @apply mb-6 overflow-hidden rounded-xl border border-border bg-theme-light dark:border-darkmode-border dark:bg-darkmode-theme-light;
+  &-header {
+    @apply text-dark dark:text-darkmode-dark;
+  }
+}
+
+.accordion-content {
+  height: 0;
+  overflow: hidden;
+  max-height: none !important;
+  padding: 0 !important;
+  transition: height var(--motion-duration-base) var(--motion-ease-move);
+}
+
+.accordion-content-inner {
+  padding: 0 1.25rem 1.25rem;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition:
+    opacity var(--motion-duration-fast) var(--motion-ease-out),
+    transform var(--motion-duration-fast) var(--motion-ease-out);
+}
+
+.accordion.active .accordion-content-inner {
+  opacity: 1;
+  transform: none;
+}
+
+// cookie consent
+.cookie-box {
+  @apply left-[unset]! right-4! h-auto! w-[min(20rem,calc(100%-2rem))]! rounded-xl! border! border-border! p-4! text-sm! dark:border-darkmode-border! md:right-6!;
+}
+
+.cookie-box-button {
+  @apply mt-3 min-h-9 px-3 py-1.5 text-xs;
+}
+
+:is(.dark .btn-outline-primary).cookie-box-button {
+  @apply text-black;
+}
+
+// slider
+.gallery-slider {
+  @apply ml-0!;
+}

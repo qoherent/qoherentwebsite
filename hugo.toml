@@ -10,8 +10,6 @@ title = "Qoherent - drive the creation of intelligent radios."
 theme = "hugoplate"
 # Default time zone for time stamps; use any valid tz database name: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
 timeZone = "America/New_York"
-# post pagination
-paginate = 2 # see https://gohugo.io/extras/pagination/
 # post excerpt
 summaryLength = 10 # see https://gohugo.io/content-management/excerpts/
 # google analytics
@@ -65,9 +63,19 @@ source = 'assets/.*\.(.*)$'
 target = '$1'
 
 
+############################ Security ############################
+[security.exec]
+allow = ['^(dart-)?sass$', '^go$', '^git$', '^node$', '^tailwindcss$']
+
+
+########################### Pagination ############################
+[pagination]
+pagerSize = 2
+
+
 ############################# Outputs ############################
 [outputs]
-home = ["HTML", "RSS", "WebAppManifest", "SearchIndex"]
+home = ["HTML", "RSS", "WebAppManifest"]
 
 ############################# Imaging ############################
 [imaging]
@@ -113,13 +121,6 @@ suffixes = ["webmanifest"]
 mediaType = "application/manifest+json"
 rel = "manifest"
 
-[outputFormats.SearchIndex]
-mediaType = "application/json"
-baseName = "searchindex"
-isPlainText = true
-notAlternative = true
-
-
 ############################# Plugins ##############################
 
 # CSS Plugins
@@ -140,9 +141,6 @@ link = "plugins/font-awesome/v6/icons.css"
 lazy = true
 
 # JS Plugins
-[[params.plugins.js]]
-link = "js/search.js"
-lazy = false
 [[params.plugins.js]]
 link = "plugins/swiper/swiper-bundle.js"
 lazy = false

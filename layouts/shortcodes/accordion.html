@@ -1,0 +1,28 @@
+{{ $title := .Get 0 }}
+{{ $class := .Get "class" }}
+{{ $headerClass := .Get "header-class" }}
+{{ $bodyClass := .Get "body-class" }}
+{{ with .Get "title" }}{{ $title = . }}{{ end }}
+{{ $id := printf "accordion-%s-%d" ($title | plainify | urlize) .Ordinal }}
+
+
+<div class="accordion {{ $class }}">
+  <button
+    type="button"
+    class="accordion-header {{ $headerClass }}"
+    data-accordion
+    aria-expanded="false"
+    aria-controls="{{ $id }}">
+    {{ $title | markdownify }}
+    <svg class="accordion-icon" viewBox="0 0 512 512" aria-hidden="true">
+      <path
+        fill="currentColor"
+        d="M505.755 123.592a21.34 21.34 0 0 0-30.165 0L256.005 343.176 36.421 123.592a21.34 21.34 0 0 0-30.165 30.165l234.667 234.667a21.33 21.33 0 0 0 30.166 0l234.667-234.667a21.34 21.34 0 0 0-.001-30.165Z"></path>
+    </svg>
+  </button>
+  <div id="{{ $id }}" class="accordion-content {{ $bodyClass }}">
+    <div class="accordion-content-inner">
+      {{ .Inner | markdownify }}
+    </div>
+  </div>
+</div>

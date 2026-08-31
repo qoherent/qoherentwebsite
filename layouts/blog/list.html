@@ -1,0 +1,6 @@
+{{ define "main" }}
+  {{ partial "progress_indicator" }}
+  {{ partial "components/publication-header.html" (dict "Title" .Title "Description" .Params.description) }}
+  {{ $paginator := .Paginate .RegularPages 12 }}
+  {{ partial "components/publication-list.html" (dict "Context" . "Pages" $paginator.Pages) }}
+{{ end }}

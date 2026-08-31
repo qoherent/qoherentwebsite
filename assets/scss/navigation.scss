@@ -1,0 +1,179 @@
+.header {
+  @apply bg-body/95 py-4 backdrop-blur-md dark:bg-darkmode-body/90;
+}
+
+// navbar items
+.navbar {
+  @apply relative flex min-h-10 flex-wrap items-center justify-between lg:grid lg:grid-cols-[1fr_auto_1fr];
+}
+
+.navbar-brand {
+  @apply text-xl font-semibold text-dark dark:text-darkmode-dark;
+  image {
+    @apply max-h-full max-w-full;
+  }
+}
+
+.navbar-nav {
+  @apply text-left lg:justify-self-center;
+}
+
+// .nav-item {
+//   @apply mx-3;
+// }
+
+.nav-link {
+  @apply block rounded-lg p-3 text-base font-medium text-dark hover:text-primary dark:text-darkmode-text dark:hover:text-darkmode-primary lg:px-3 lg:py-2 lg:text-sm;
+
+  &.active {
+    @apply text-primary dark:text-darkmode-primary;
+  }
+}
+
+#nav-toggle {
+  transition: transform var(--motion-duration-fast) var(--motion-ease-out);
+
+  &:active {
+    transform: scale(0.97);
+  }
+
+  svg {
+    transform-origin: center;
+    transition:
+      opacity var(--motion-duration-fast) var(--motion-ease-out),
+      transform var(--motion-duration-fast) var(--motion-ease-out);
+  }
+
+  [data-menu-close] {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+
+  &[aria-expanded="true"] [data-menu-open] {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+
+  &[aria-expanded="true"] [data-menu-close] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+#nav-menu {
+  transform-origin: top right;
+}
+
+@media (max-width: 1023px) {
+  #nav-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 20;
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+    transition:
+      opacity var(--motion-duration-fast) var(--motion-ease-out),
+      transform var(--motion-duration-fast) var(--motion-ease-out),
+      visibility var(--motion-duration-fast) var(--motion-ease-out);
+  }
+
+  #nav-menu.is-open {
+    visibility: visible;
+    pointer-events: auto;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.nav-dropdown {
+  @apply mr-0;
+  & > svg {
+    @apply pointer-events-none;
+  }
+  &.active {
+    .nav-dropdown-list {
+      display: block;
+      max-height: 24rem;
+      visibility: visible;
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+.nav-dropdown-list {
+  @apply z-10 hidden min-w-[210px] rounded-xl border border-border bg-body p-2 dark:border-darkmode-border dark:bg-darkmode-theme-light lg:invisible lg:absolute lg:top-full lg:left-0 lg:block lg:opacity-0;
+  transform-origin: top left;
+  transform: translateY(-6px) scale(0.98);
+}
+
+@media (max-width: 1023px) {
+  .nav-dropdown-list {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition:
+      max-height var(--motion-duration-base) var(--motion-ease-move),
+      opacity var(--motion-duration-fast) var(--motion-ease-out),
+      transform var(--motion-duration-fast) var(--motion-ease-out),
+      visibility var(--motion-duration-fast) var(--motion-ease-out);
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav-dropdown-list {
+    max-height: none;
+    overflow: visible;
+    transition:
+      opacity var(--motion-duration-fast) var(--motion-ease-out),
+      transform var(--motion-duration-fast) var(--motion-ease-out),
+      visibility var(--motion-duration-fast) var(--motion-ease-out);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .nav-dropdown:hover .nav-dropdown-list,
+  .nav-dropdown:focus-within .nav-dropdown-list {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.nav-dropdown-item {
+  @apply [&:not(:last-child)]:mb-2;
+}
+
+.nav-dropdown-link {
+  @apply block rounded-lg px-3 py-2 text-sm font-medium text-dark hover:bg-theme-light hover:text-primary dark:text-darkmode-text dark:hover:bg-darkmode-body dark:hover:text-darkmode-primary;
+}
+
+//theme-switcher
+.theme-switcher {
+  @apply inline-flex;
+
+  label {
+    @apply bg-border relative inline-block h-4 w-6 cursor-pointer rounded-2xl lg:w-10;
+  }
+
+  input {
+    @apply absolute opacity-0;
+  }
+
+  span {
+    @apply bg-dark absolute -top-1 left-0 flex h-6 w-6 items-center justify-center rounded-full dark:bg-white;
+    transition: transform var(--motion-duration-fast) var(--motion-ease-out);
+  }
+
+  @media (min-width: 1024px) {
+    input:checked + label span {
+      transform: translateX(1rem);
+    }
+  }
+}
