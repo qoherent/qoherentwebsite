@@ -16,3 +16,5 @@ jsconfig.json
 hugo_stats.json
 go.sum
 yarn.lock
+/hugo
+hugo_extended_*.tar.gz
