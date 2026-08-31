@@ -11,10 +11,6 @@ draft: false
     <p>120 Carlton St - Unit 414, Toronto, ON, Canada M5A 4K2</p>
   </div>
   <div class="contact-item">
-    <i class="fa-solid fa-truck icon" aria-hidden="true"></i>
-    <p>Qoherent @ YSpace, 169 Enterprise Blvd., Suite 300, Markham, ON, Canada L6G 0E7</p>
-  </div>
-  <div class="contact-item">
     <i class="fa-regular fa-envelope icon" aria-hidden="true"></i>
     <p>info at qoherent dot ai</p>
   </div>
