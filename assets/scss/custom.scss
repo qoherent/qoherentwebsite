@@ -250,12 +250,15 @@
 }
 
 .contact-grid {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
-  margin-bottom: 2rem;
+  width: 80%;
+  margin: 0 auto 2rem;
 }
 
 .contact-item {
+  flex: 1 1 260px;
   padding: 1.5rem;
   border: 1px solid #3a3531;
   border-radius: 0.75rem;
@@ -283,12 +286,6 @@
   height: 24rem;
   border: 1px solid #3a3531;
   border-radius: 0.75rem;
-}
-
-@media (min-width: 768px) {
-  .contact-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
