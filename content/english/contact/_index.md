@@ -61,7 +61,8 @@ draft: false
 </div>
 
 <div style="width: 80%; margin: 0 auto; text-align: center; margin-bottom:40px margin-top:40px; border-radius:30px">
-            <iframe style="width: 100%; height: 425px; border: 2px solid #ccc; border-radius: 15px;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=120%20Carlton%20St,%20Toronto+(Qoherent)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            <iframe style="width: 100%; height: 425px; border: 2px solid #ccc; border-radius: 15px;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-79.3814%2C43.6597%2C-79.3744%2C43.6637&amp;layer=mapnik&amp;marker=43.6617%2C-79.3779"></iframe>
+            <p style="margin-top:10px"><a href="https://www.openstreetmap.org/?mlat=43.6617&amp;mlon=-79.3779#map=17/43.6617/-79.3779" target="_blank" rel="noopener">View larger map</a></p>
           </div>
 
 Please fill out this form for **business inquiries**. _For technical support, please contact your Qoherent support representative directly._
