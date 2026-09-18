@@ -35,19 +35,23 @@ GRC-Agent works on the live flowgraph in memory instead:
 - Running a flowgraph also needs approval, because it may transmit on connected hardware. Stopping never does. Ask for a bounded run and the agent stops the graph itself when the time is up.
 - A separate read-only **Planner mode** researches and drafts a step-by-step plan without touching anything. Nothing changes until you hand it to the executor.
 
-## What it looks like in use
+## See it work
 
-Asked for a live ADS-B aircraft tracker from a PlutoSDR, it built the full receive and decode chain and a browser dashboard, then tracked real aircraft.
+**One prompt.** A complete simulated BPSK radio link with a live browser dashboard, from a single request.
 
-{{< image src="images/grc-agent/adsb-flowgraph.jpg" alt="The generated GNU Radio flowgraph: PlutoSDR Source into an ADS-B decoder" class="img-fluid" >}}
+{{< youtube id="ZFxWPiHiSIs" title="GRC-Agent builds a complete BPSK radio link from one prompt" >}}
 
-{{< image src="images/grc-agent/adsb-tracker.jpg" alt="Live aircraft tracked over Toronto from a PlutoSDR" class="img-fluid" >}}
+**Live off real hardware.** A full ADS-B receive and decode chain from a PlutoSDR, receive-only, tracking real aircraft overhead. The first build did not decode; told so, it re-examined its own CRC and pulse-decoding logic and corrected the chain.
 
-{{< image src="images/grc-agent/adsb-counters.jpg" alt="Dashboard counting CRC-valid ADS-B frames from live reception" class="img-fluid" >}}
+{{< youtube id="VW2oCMLzzL8" title="GRC-Agent builds a live ADS-B aircraft tracker from a PlutoSDR" >}}
 
-Asked for a simulated BPSK link with an adjustable noise channel, it built the flowgraph and a dashboard showing the transmitted and recovered message, live bit error rate and signal-to-noise ratio.
+**From a paper to a working flowgraph.** A published design turned into a running GNU Radio implementation.
 
-{{< image src="images/grc-agent/bpsk-dashboard.jpg" alt="Simulated BPSK radio link dashboard with an adjustable noise channel" class="img-fluid" >}}
+{{< youtube id="2YdmG4ljzIg" title="GRC-Agent turns a research paper into a working GNU Radio flowgraph" >}}
+
+**With the network unplugged.** Running on a local model, with nothing leaving the machine.
+
+{{< youtube id="0Jzu3HQCG4E" title="GRC-Agent running entirely on a local model with no network" >}}
 
 ## Who it is for
 
