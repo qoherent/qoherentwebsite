@@ -1,18 +1,18 @@
 ---
-title: "GRC Agent"
-meta_title: "GRC Agent | AI assistant inside GNU Radio Companion"
+title: "GRC-Agent"
+meta_title: "GRC-Agent | AI assistant inside GNU Radio Companion"
 description: "A free, open-source AI assistant that lives inside GNU Radio Companion. It reads your live flowgraph, answers questions from the real GNU Radio documentation, and edits the graph through validated tool calls."
 slug: "gnu-radio-agent"
 draft: false
 ---
 
-# GRC Agent
+# GRC-Agent
 
 A free, open-source AI assistant that lives inside **GNU Radio Companion**. It reads the flowgraph you have open, answers questions grounded in the real GNU Radio block catalog and wiki, and edits the graph directly through validated tool calls rather than by rewriting your `.grc` file.
 
 It runs entirely on your own machine with a local model, or with any OpenAI-compatible API.
 
-{{< image src="images/grc-agent/interface.webp" alt="GRC Agent running inside GNU Radio Companion" class="img-fluid" >}}
+{{< image src="images/grc-agent/interface.webp" alt="GRC-Agent running inside GNU Radio Companion" class="img-fluid" >}}
 
 <div class="button-group" style="display: flex; gap: 1rem; margin-bottom: 2rem;">
   <style>
@@ -26,7 +26,7 @@ It runs entirely on your own machine with a local model, or with any OpenAI-comp
 
 General-purpose coding assistants treat a flowgraph as a text file. A `.grc` is YAML, and most of it is canvas bookkeeping: block coordinates, rotations, port bus structures. Editing that as text produces graphs that look valid and are not.
 
-GRC Agent works on the live flowgraph in memory instead:
+GRC-Agent works on the live flowgraph in memory instead:
 
 - It looks up block names, parameters and units in a searchable GNU Radio catalog and docs wiki rather than recalling them, so it does not invent block IDs or pass Hertz to a block that expects radians per sample. Keyword search works out of the box; semantic search is an optional one-click install.
 - **Every edit needs your approval first.** You see the agent's reason and a summary of the proposed change, then Approve, Deny, or Always accept. That is the default. A Mode toggle switches to Auto when you want it to stop asking, and back again whenever you like.
@@ -58,14 +58,14 @@ Asked for a simulated BPSK link with an adjustable noise channel, it built the f
 
 ## Read more
 
-A longer write-up of how it works, why a flowgraph is not a text file, and what it looks like in practice: [GRC Agent: an AI assistant that lives inside GNU Radio Companion](/blog/2609-grc-agent/).
+A longer write-up of how it works, why a flowgraph is not a text file, and what it looks like in practice: [GRC-Agent: an AI assistant that lives inside GNU Radio Companion](/blog/build-with-grc-agent/).
 
 ## Questions
 
 {{< accordion "Can I use this at work?" >}}
-GRC Agent is released under AGPLv3, although alternative permissive and commercial licensing options are available upon request. Please [contact us](/contact) for further details.
+GRC-Agent is released under AGPLv3, although alternative permissive and commercial licensing options are available upon request. Please [contact us](/contact) for further details.
 
-Using GRC Agent to design flowgraphs places no obligation on you, and it does not make your flowgraphs open source. Your designs are your own work. AGPL obligations apply if you modify GRC Agent's own source and then distribute it or run your modified version as a network service.
+Using GRC-Agent to design flowgraphs places no obligation on you, and it does not make your flowgraphs open source. Your designs are your own work. AGPL obligations apply if you modify GRC-Agent's own source and then distribute it or run your modified version as a network service.
 {{< /accordion >}}
 
 {{< accordion "Does my data leave my machine?" >}}

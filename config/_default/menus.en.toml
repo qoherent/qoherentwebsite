@@ -86,7 +86,7 @@ url = "intelligent-5g-ran/"
 [[main]]
 parent = "Products"
 weight = 4
-name = "GRC Agent"
+name = "GRC-Agent"
 url = "gnu-radio-agent/"
 
 [[main]]

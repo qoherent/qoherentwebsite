@@ -1,15 +1,16 @@
 ---
-title: "GRC Agent: an AI assistant that lives inside GNU Radio Companion"
+title: "GRC-Agent: an AI assistant that lives inside GNU Radio Companion"
 date: "2026-09-18"
-draft: true
+slug: "build-with-grc-agent"
+draft: false
 cover:
-    alt: 'GRC Agent: an AI assistant inside GNU Radio Companion'
+    alt: 'GRC-Agent: an AI assistant inside GNU Radio Companion'
     caption: 'Reads your live flowgraph, edits it through validated tool calls, and asks before it changes anything.'
 tags: ['SDR','AI','LLM','agents','GNU Radio','open source']
 categories: ['tech-blog']
 ---
 
-[GRC Agent](/gnu-radio-agent/) is a free, open-source AI assistant built directly into GNU Radio Companion. There is no external web server, no detached browser tab, no subprocess bridge, and no copying code between windows.
+[GRC-Agent](/gnu-radio-agent/) is a free, open-source AI assistant built directly into GNU Radio Companion. There is no external web server, no detached browser tab, no subprocess bridge, and no copying code between windows.
 
 The whole thing is one native GTK3 process. GRC's canvas and the chat sidebar share a single event loop, and the agent edits the *same live flowgraph object* the canvas is drawing. Nothing is round-tripped through a file.
 
@@ -21,7 +22,7 @@ General-purpose coding assistants treat a flowgraph as a text file. That sounds 
 
 It is YAML, and most of it is canvas bookkeeping: block coordinates, rotations, port bus structures, GUI hints. A dial tone example, about the simplest flowgraph there is, runs to more than five hundred lines. A model editing that as text has a great deal to get right, and the failure modes are quiet ones. It invents block IDs that do not exist. It passes Hertz to a block that expects radians per sample. It leaves blocks overlapping and ports mismatched. The graph looks plausible and does not work.
 
-GRC Agent operates inside the GRC runtime instead.
+GRC-Agent operates inside the GRC runtime instead.
 
 ### It edits the graph, not the file
 
@@ -106,8 +107,8 @@ A native window opens with GRC's canvas on the left and the chat sidebar on the 
 
 ## Open source
 
-GRC Agent is released under AGPLv3, although alternative permissive and commercial licensing options are available on request. Using it to design flowgraphs places no obligation on you and does not make your designs open source.
+GRC-Agent is released under AGPLv3, although alternative permissive and commercial licensing options are available on request. Using it to design flowgraphs places no obligation on you and does not make your designs open source.
 
 Source, issues and documentation: [github.com/qoherent/GRC-Agent](https://github.com/qoherent/GRC-Agent)
 
-More about the project, including answers to the questions we get asked most, on the [GRC Agent product page](/gnu-radio-agent/).
+More about the project, including answers to the questions we get asked most, on the [GRC-Agent product page](/gnu-radio-agent/).
