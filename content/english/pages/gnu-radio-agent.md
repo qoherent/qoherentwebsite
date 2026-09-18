@@ -43,6 +43,8 @@ Asked for a live ADS-B aircraft tracker from a PlutoSDR, it built the full recei
 
 {{< image src="images/grc-agent/adsb-tracker.jpg" alt="Live aircraft tracked over Toronto from a PlutoSDR" class="img-fluid" >}}
 
+{{< image src="images/grc-agent/adsb-counters.jpg" alt="Dashboard counting CRC-valid ADS-B frames from live reception" class="img-fluid" >}}
+
 Asked for a simulated BPSK link with an adjustable noise channel, it built the flowgraph and a dashboard showing the transmitted and recovered message, live bit error rate and signal-to-noise ratio.
 
 {{< image src="images/grc-agent/bpsk-dashboard.jpg" alt="Simulated BPSK radio link dashboard with an adjustable noise channel" class="img-fluid" >}}
