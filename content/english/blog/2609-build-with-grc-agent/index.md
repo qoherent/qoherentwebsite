@@ -1,114 +1,125 @@
 ---
-title: "GRC-Agent: an AI assistant that lives inside GNU Radio Companion"
+title: "Build Autonomously with GRC Agent: Execute, and Diagnose GNU Radio Flowgraphs"
 date: "2026-09-18"
 slug: "build-with-grc-agent"
 draft: false
 cover:
-    alt: 'GRC-Agent: an AI assistant inside GNU Radio Companion'
-    caption: 'Reads your live flowgraph, edits it through validated tool calls, and asks before it changes anything.'
+    alt: 'Build Autonomously with GRC Agent'
+    caption: 'An embedded AI companion integrated directly into the GNU Radio Companion window.'
 tags: ['SDR','AI','LLM','agents','GNU Radio','open source']
 categories: ['tech-blog']
 ---
 
-[GRC-Agent](/gnu-radio-agent/) is a free, open-source AI assistant built directly into GNU Radio Companion. There is no external web server, no detached browser tab, no subprocess bridge, and no copying code between windows.
+Qoherent's GRC Agent is an embedded AI companion, completely integrated directly into the GNU Radio Companion (GRC) window. There's no external web server, no detached browser tabs, no subprocess bridging, and no copy-pasting code between tools.
 
-The whole thing is one native GTK3 process. GRC's canvas and the chat sidebar share a single event loop, and the agent edits the *same live flowgraph object* the canvas is drawing. Nothing is round-tripped through a file.
+It shares the live in-memory FlowGraph object with your active canvas via gbulb, applies 7-phase transactional edits with auto-layout, executes bounded hardware-safe runs, and grounds every decision in an offline Hybrid RRF (k=60) knowledge base.
 
 {{< toc >}}
 
-## Why not a general coding assistant
+## Why Use GRC Agent? (Beyond Generic Coding CLIs)
 
-General-purpose coding assistants treat a flowgraph as a text file. That sounds reasonable until you look at what a `.grc` file actually is.
+Generic coding assistants (like Cursor, Claude Code, Aider) treat GNU Radio flowgraphs like plain text files. When they are working with.grc files, they will hallucinate block IDs, pass Hertz to blocks requiring radians/sample, corrupt visual wire layouts, and execute blind shell commands that risk damaging connected RF hardware.
 
-It is YAML, and most of it is canvas bookkeeping: block coordinates, rotations, port bus structures, GUI hints. A dial tone example, about the simplest flowgraph there is, runs to more than five hundred lines. A model editing that as text has a great deal to get right, and the failure modes are quiet ones. It invents block IDs that do not exist. It passes Hertz to a block that expects radians per sample. It leaves blocks overlapping and ports mismatched. The graph looks plausible and does not work.
+GRC Agent operates from within the GRC runtime, removing the above problems thanks to:
 
-GRC-Agent operates inside the GRC runtime instead.
+### In-Memory Co-Presence
 
-### It edits the graph, not the file
+- The agent and canvas run in the same single process
+- Sharing the active FlowGraph in memory
+- Edits are redrawn instantly, with no reload prompts
 
-The agent and the canvas are the same process, sharing the active flowgraph in memory. Edits redraw instantly. There are no reload prompts, and GRC's own undo and redo keep working, so an edit the agent made and an edit you made by hand sit in the same history.
+### Interactive Canvas Highlighting & Panning
 
-Topology changes re-arrange the whole graph into a clean layered layout, each independent chain in its own row. The canvas does not degrade into a pile of blocks after a few multi-step edits.
+- Every block mentioned in chat becomes an interactive chip
+- Hovering highlights the block on canvas; clicking pans directly to it
+- Canvas zoom (Ctrl+scroll) automatically rescales chat typography
 
-### It asks before it changes anything
+### Grounded Anti-Hallucination RAG
 
-This is the default. Every edit shows you the agent's one-line reason and a structured summary of the proposed change, and you approve, deny, or choose to always accept. A Mode toggle switches to Auto when you would rather it stopped asking, and back whenever you like.
+- Fuses sqlite-vec embeddings with SQLite FTS5 BM25 lexical keyword ranking over official GNU Radio C++ SWIG headers and wiki guides
+- GRCAgent will know exact parameter semantics (e.g. carrier tracking max_freq is in radians per sample, NOT Hertz)
 
-Running a flowgraph always asks, because it may transmit on connected hardware. Stopping never does. Ask for a bounded run and the agent stops the graph itself when the time is up, so nothing leaks into the background.
+### RF Hardware Safety Gates & Bounded Auto-Stop
 
-There is also a separate read-only Planner mode that researches and drafts a step-by-step plan without touching anything. Nothing changes until you hand the plan to the executor.
+- Native execution via GRC's toolbar path that requires human approval before RF transmission
+- Bounded runs (stop_after_seconds) prevent runaway background processes and lingering emissions
 
-### It looks things up instead of remembering them
+### Automated Failure Bus Diagnostics
 
-Block IDs, port names, parameter keys and concepts come from a searchable GNU Radio catalog and documentation wiki, with web search as a fallback for anything not covered.
+- Interception of non-zero exit codes immediately, parses stdout/stderr run logs, isolates root causes, and proposes fixes in a single turn
 
-This matters more than it sounds. Several GNU Radio blocks take frequency parameters in radians per sample rather than Hertz, and the documentation says so in capitals precisely because it catches people so often. Pass Hertz and the flowgraph validates, compiles, runs, and produces nonsense with no error at all. A model answering from memory gets this wrong because the unit is not in the block name or the parameter name. It is in the docstring. Retrieval fixes it; a larger model does not.
+### Multimodal RF & Signal Vision (Ctrl+V)
 
-Keyword search over the catalog works out of the box with no extra downloads. A local semantic search backend is an optional one-click install, about 345 MB, which fuses vector similarity with keyword ranking for better retrieval.
+- Paste spectrum waterfalls, FFT plots, and constellation diagrams directly into chat for visual signal inspection
 
-### It cannot leave your graph half-edited
+### Total Coding Freedom in a Scoped Sandbox
 
-Every change is applied as a single batch and then handed to GNU Radio's own validator. If validation fails, the entire batch rolls back and the graph is left exactly as it was. The agent receives the validator's actual error text and tries again.
+- Designate a project directory that roots all shell execution (GrcShell)
+- File read/write (GrcFileSystem)
+- Custom Embedded Python Block (EPB) generation with NumPy vectorization.
 
-That is the sentence worth remembering. The agent cannot break your flowgraph, because GNU Radio itself is the thing deciding whether an edit is allowed to land.
+## Domain Tools
 
-### It reads its own failures
+GRC Agent provides a strictly-typed tool contract registered directly into Pydantic AI:
 
-When a run fails the agent gets the return code, reads the full console log itself, and proposes a fix. With the run tools above, the probe, run, and read-the-log verification loop happens in a single turn rather than across a conversation.
+| Tool | Category | What It Does |
+|---|---|---|
+| inspect_graph | Canvas | Reads active flowgraph topology directly from memory (blocks, parameters, enabled states, and connections) pruned of canvas coordinate noise. |
+| change_graph | Canvas (Gated) | Applies batch structural mutations in a single 7-phase transaction: auto-resolves port data types from neighbors, runs Sugiyama auto-layout, and rolls back cleanly on error. |
+| save_graph | Canvas | Saves untitled flowgraphs into the project folder and re-saves titled pages with atomic fsync writes, updating tabs and recent files without manual Ctrl+S interruptions. |
+| run_flowgraph | Execution (Gated) | Triggers GRC's native toolbar Execute/Stop action. Start action is gated by human approval to protect RF hardware; stop_after_seconds halts bounded runs cleanly. |
+| get_run_log | Execution | Captures stdout and stderr streams from the executing top_block process for automated crash diagnosis. |
+| query_knowledge | Intelligence | Queries the offline knowledge corpus using Hybrid RRF ($k=60$) fusion, returning verified block parameters and implementation docstrings. |
+| generate_python | Intelligence | In-memory preview of generated Python top_block scripts and Embedded Python Blocks (EPB) with zero disk I/O. |
+| save_block | Intelligence (Gated) | Saves custom Embedded Python Blocks (EPBs) directly to ~/.grc_gnuradio or the project directory for custom NumPy DSP algorithms. |
 
-## What it looks like in practice
+In addition to domain tools, the agent is equipped with project-scoped terminal execution (run_command), file tools (read_file, write_file), web search, and PromptInjectionDefender.
 
-Asked for a live ADS-B aircraft tracker from a PlutoSDR, receive-only and with no firmware changes, it built the full receive and decode chain plus a browser dashboard, and tracked real aircraft overhead.
+## 12 Hot-Swappable Providers with Zero Restart
 
-![Live aircraft tracked from a PlutoSDR](images/adsb-tracker.jpg)
+Switch providers mid-session with no restarts from the Settings dialog, while preserving chat history. AgentGRC offers:
 
-The first build did not decode. Told so, it re-examined its own CRC and pulse-decoding logic, corrected the chain, and started counting valid frames.
+- **100% Offline & Private Logs:** Local Ollama (qwen3.8:latest with 120k context).
+- **Cloud & Reasoning Endpoints:** Ollama Cloud (deepseek-v4-flash:0731), OpenRouter, Anthropic Claude Sonnet, OpenAI API, and Google Gemini.
+- **ChatGPT Plus/Pro Subscription:** One-click browser OAuth sign-in (openai_codex) with no API keys or per-token fees required.
+- **Self-Hosted Infrastructure:** Universal OpenAI-compatible base URL support (vLLM, llama.cpp server, LM Studio).
 
-Asked for a simulated BPSK link through a noisy channel, it built the flowgraph and a dashboard showing the transmitted and recovered message, a live bit error rate, and an adjustable noise slider.
+## Quick Start (Ubuntu 24.04 / 26.04)
 
-![Simulated BPSK link dashboard with adjustable noise](images/bpsk-dashboard.jpg)
+### 1. Prerequisites
 
-## Beyond the graph
-
-The agent also works with the rest of your project, inside a directory you designate.
-
-It reads project files, Python through to CMake and YAML, and writes source and config files with atomic saves and conflict detection. Flowgraphs are deliberately read-only to those tools: a `.grc` is only ever edited through the validated graph tools, never by writing the file.
-
-It runs approved shell commands in your project folder, build toolchains and SDR utilities among them, showing you the full literal command on an approval card first. Destructive commands are denied outright. Your provider API keys are stripped from the environment of anything it spawns. Every tool result that comes from a file or the web is scanned for prompt injection, and every detection is logged and disclosed rather than silently dropped.
-
-## Bring your own model
-
-A dozen providers are supported, switchable from Settings with the model and key applying immediately and no restart. Local or LAN Ollama, Ollama Cloud, OpenRouter, OpenAI, Anthropic, Google, Groq, Mistral, Cohere, xAI, any OpenAI-compatible endpoint such as llama.cpp or vLLM, and ChatGPT Plus or Pro through a browser sign-in with no API key at all.
-
-Run a local model and your flowgraph, your prompts and the replies stay on your machine. Worth being precise about the exception: the agent includes web search and page fetch tools and will reach the internet when it uses either.
-
-## Getting started
-
-You need GNU Radio 3.10 with Python bindings, Python 3.12 to 3.14, and [uv](https://docs.astral.sh/uv/). CI covers Ubuntu 24.04 and 26.04.
+Install GNU Radio and GTK bindings from your system package manager (never from PyPI):
 
 ```bash
 sudo apt install gnuradio python3-gi python3-gi-cairo
 
-git clone https://github.com/qoherent/GRC-Agent.git
-cd GRC-Agent
-uv venv --system-site-packages --python /usr/bin/python3
-uv sync --extra dev --locked --python .venv/bin/python
+sudo udevadm control --reload-rules  # SDR hardware permissions
+```
 
+### 2. Clone & Setup Virtual Environment
+
+Explicitly target /usr/bin/python3 to bridge GNU Radio's compiled C++ bindings:
+
+```bash
+git clone https://github.com/qoherent/grc-agent.git
+
+cd grc-agent
+
+uv venv --system-site-packages --python /usr/bin/python3
+
+uv sync --extra dev --locked --python .venv/bin/python
+```
+
+### 3. Launch GRC Agent
+
+```bash
 uv run grc-agent
 ```
 
-Use `/usr/bin/python3` explicitly. GNU Radio's bindings are compiled against your system interpreter, so a uv-managed, pyenv or conda Python will fail to import `gnuradio` even with the bridge.
+(On native Wayland sessions, launch with GDK_BACKEND=x11 uv run grc-agent to prevent dropped GTK menu grabs).
 
-Ubuntu 22.04 will not work, since it ships Python 3.10 and there is no way to bridge that to the 3.12 the agent requires without rebuilding GNU Radio.
+Configure your preferred model provider in Settings, open any .grc flowgraph, and start collaborating directly on your DSP canvas.
 
-If you are using a local Ollama model, raise the context window first. The default is too small for multi-turn tool calling: set `OLLAMA_CONTEXT_LENGTH=120000` and restart the daemon.
+License: AGPL-3.0 Open Source
 
-A native window opens with GRC's canvas on the left and the chat sidebar on the right. Open a `.grc` from GRC's File menu and the agent follows the active tab.
-
-## Open source
-
-GRC-Agent is released under AGPLv3, although alternative permissive and commercial licensing options are available on request. Using it to design flowgraphs places no obligation on you and does not make your designs open source.
-
-Source, issues and documentation: [github.com/qoherent/GRC-Agent](https://github.com/qoherent/GRC-Agent)
-
-More about the project, including answers to the questions we get asked most, on the [GRC-Agent product page](/gnu-radio-agent/).
+Repository: github.com/qoherent/grc-agent

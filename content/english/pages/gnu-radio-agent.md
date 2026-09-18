@@ -58,7 +58,7 @@ Asked for a simulated BPSK link with an adjustable noise channel, it built the f
 
 ## Read more
 
-A longer write-up of how it works, why a flowgraph is not a text file, and what it looks like in practice: [GRC-Agent: an AI assistant that lives inside GNU Radio Companion](/blog/build-with-grc-agent/).
+A longer write-up of how it works, why a flowgraph is not a text file, and what it looks like in practice: [Build Autonomously with GRC Agent](/blog/build-with-grc-agent/).
 
 ## Questions
 
