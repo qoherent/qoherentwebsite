@@ -56,6 +56,10 @@ Asked for a simulated BPSK link with an adjustable noise channel, it built the f
 - Educators who want guided examples and consistent labs
 - Anyone working somewhere their designs are not allowed to leave the building
 
+## Read more
+
+A longer write-up of how it works, why a flowgraph is not a text file, and what it looks like in practice: [GRC Agent: an AI assistant that lives inside GNU Radio Companion](/blog/2609-grc-agent/).
+
 ## Questions
 
 {{< accordion "Can I use this at work?" >}}

@@ -9,7 +9,7 @@ tags: ['SDR','AI','LLM','agents','GNU Radio','open source']
 categories: ['tech-blog']
 ---
 
-GRC Agent is a free, open-source AI assistant built directly into GNU Radio Companion. There is no external web server, no detached browser tab, no subprocess bridge, and no copying code between windows.
+[GRC Agent](/gnu-radio-agent/) is a free, open-source AI assistant built directly into GNU Radio Companion. There is no external web server, no detached browser tab, no subprocess bridge, and no copying code between windows.
 
 The whole thing is one native GTK3 process. GRC's canvas and the chat sidebar share a single event loop, and the agent edits the *same live flowgraph object* the canvas is drawing. Nothing is round-tripped through a file.
 
@@ -109,3 +109,5 @@ A native window opens with GRC's canvas on the left and the chat sidebar on the 
 GRC Agent is released under AGPLv3, although alternative permissive and commercial licensing options are available on request. Using it to design flowgraphs places no obligation on you and does not make your designs open source.
 
 Source, issues and documentation: [github.com/qoherent/GRC-Agent](https://github.com/qoherent/GRC-Agent)
+
+More about the project, including answers to the questions we get asked most, on the [GRC Agent product page](/gnu-radio-agent/).
