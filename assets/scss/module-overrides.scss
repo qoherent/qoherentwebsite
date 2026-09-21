@@ -103,10 +103,6 @@
   @apply mt-3 min-h-9 px-3 py-1.5 text-xs;
 }
 
-:is(.dark .btn-outline-primary).cookie-box-button {
-  @apply text-black;
-}
-
 // slider
 .gallery-slider {
   @apply ml-0!;
