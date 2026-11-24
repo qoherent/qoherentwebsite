@@ -19,7 +19,7 @@
     "check": "npm run check:build && npm run check:html && npm run check:links && npm run check:markdown && npm audit --audit-level=moderate"
   },
   "engines": {
-    "node": ">=20.19.0"
+    "node": ">=22.15.0"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.3",

@@ -9,6 +9,12 @@ permissions:
   pages: write
   id-token: write
 
+# One deploy at a time. Never cancel a running deploy: a half-finished
+# publish is worse than a queued one.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 env:
   HUGO_ENV: production
   HUGO_VERSION: "0.165.0"
@@ -19,9 +25,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: ${{ env.NODE_VERSION }}
 
@@ -37,7 +43,7 @@ jobs:
         run: |
           curl -LO "https://dl.google.com/go/go${{ env.GO_VERSION }}.linux-amd64.tar.gz"
           sudo tar -C /usr/local -xzf go${{ env.GO_VERSION }}.linux-amd64.tar.gz
-          echo "export PATH=$PATH:/usr/local/go/bin" >> $GITHUB_ENV
+          echo "/usr/local/go/bin" >> "$GITHUB_PATH"
           rm go${{ env.GO_VERSION }}.linux-amd64.tar.gz
           go version
 
@@ -51,7 +57,7 @@ jobs:
         run: npm run build
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
           path: ./public
 
@@ -64,4 +70,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4

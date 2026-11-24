@@ -6,7 +6,7 @@ Pages.
 
 ## Requirements
 
-- Node.js 20.19 or newer
+- Node.js 22.15 or newer (CI uses 24; see `.nvmrc`)
 - npm
 - Hugo Extended 0.161.1 or newer
 - Go 1.20 or newer for Hugo modules
