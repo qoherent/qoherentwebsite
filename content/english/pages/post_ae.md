@@ -1,16 +1,16 @@
 ---
-title: "Applications Engineering Specialist"
-meta_title: "Applications Engineering Specialist"
-description: "Applications Engineering Specialist"
+title: "Applications Engineering Technical Staff"
+meta_title: "Applications Engineering Technical Staff"
+description: "Applications Engineering Technical Staff"
 ---
 
 **Qoherent • Fixed Term Contract • Full-Time • Toronto**
 
 ## **Summary**
 
-Qoherent is seeking an enthusiastic, curious, and self-driven newly graduated engineering student to join our team as an *Applications Engineering Specialist*. In this role, you will contribute to the creation of advanced machine learning applications for software-defined radios, support technical engagements with key customers, design and produce datasets for RF machine learning training, and help drive commercial development efforts. This position offers the opportunity to work across software, embedded systems, signal processing, and machine learning within a growing deep-tech startup.
+Qoherent is seeking an enthusiastic, curious, and self-driven newly graduated engineering student to join our team as an *Applications Engineering Technical Staff*. In this role, you will contribute to the creation of advanced machine learning applications for software-defined radios, support technical engagements with key customers, design and produce datasets for RF machine learning training, and help drive commercial development efforts. This position offers the opportunity to work across software, embedded systems, signal processing, and machine learning within a growing deep-tech startup.
 
-This is a full-time hybrid position requiring 2-3 days on-site per week, combining remote flexibility with in-person collaboration in downtown Toronto. Benefits include dental, health and vision coverage, professional development opportunities, exposure to AI and SDR technologies, and the chance to work in a dynamic, early-stage startup culture.
+This is a full-time hybrid position requiring 3 days on-site per week, combining remote flexibility with in-person collaboration in downtown Toronto. Benefits include dental, health and vision coverage, professional development opportunities, exposure to AI and SDR technologies, and the chance to work in a dynamic, early-stage startup culture.
 
 This role will be a 6 month contract, which may be renewed, and with consideration for becoming a permanent position at the end of the contract.
 
@@ -32,6 +32,12 @@ This role will be a 6 month contract, which may be renewed, and with considerati
 * Create demo collateral, videos, case studies and technical marketing materials.  
 * Conduct research into target high markets and identify high-value applications for Qoherent technology.  
 * Support commercial engagements with technical insights and hands-on engineering work.
+
+### **External Project Work**
+
+* Contribute hands-on to Qoherent's external projects, working within our internal project team.  
+* Help adapt and integrate Qoherent technology to meet project requirements.  
+* Help meet project milestones and deliverables, including technical documentation and internal progress updates.
 
 ---
 
@@ -61,5 +67,5 @@ This role will be a 6 month contract, which may be renewed, and with considerati
 
 
 {{< notice "info" >}}
-*To apply*: Please email your cover letter and resume to HR@qoherent.ai with "AE Specialist" posting in the title
+*To apply*: Please email your cover letter and resume to HR@qoherent.ai with "AE Technical Staff" posting in the title
 {{< /notice >}}
