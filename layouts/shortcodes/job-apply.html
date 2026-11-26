@@ -1,0 +1,16 @@
+{{/* "Interested in this role?" box, e.g.
+  job-apply email="HR@qoherent.ai" subject="AE Technical Staff"
+*/}}
+{{ $email := .Get "email" | default "HR@qoherent.ai" }}
+{{ $subject := .Get "subject" | default .Page.Title }}
+{{ $mailto := printf "mailto:%s?subject=%s" $email (replace ($subject | urlquery) "+" "%20") }}
+
+
+<div class="job-apply surface-panel not-prose">
+  <h2 class="job-apply-title">Interested in this role?</h2>
+  <p class="job-apply-text">
+    Email your cover letter and resume to
+    <a href="{{ $mailto | safeURL }}">{{ $email }}</a>
+    with "{{ $subject }}" in the subject line.
+  </p>
+</div>
