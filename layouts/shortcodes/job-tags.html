@@ -1,0 +1,4 @@
+{{/* Pill labels for a job posting, e.g. job-tags "Toronto" "Full-Time" */}}
+<ul class="job-tags not-prose" aria-label="Position details">
+  {{ range .Params }}<li class="job-tag">{{ . }}</li>{{ end }}
+</ul>

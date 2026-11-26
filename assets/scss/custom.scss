@@ -318,3 +318,72 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+// Job postings: set content_class: "job-posting" in front matter
+.content.job-posting {
+  hr {
+    @apply my-8;
+  }
+
+  h2 {
+    @apply mb-3 mt-6 text-[1.75rem];
+  }
+
+  h3 {
+    @apply mb-1 mt-5 text-base font-semibold text-[#47c8ff];
+  }
+
+  p,
+  li {
+    @apply text-[0.9375rem] leading-6;
+  }
+
+  ul {
+    @apply my-2;
+  }
+
+  li {
+    @apply my-1;
+  }
+
+  .job-apply-title {
+    @apply mb-1 mt-0 pt-0 text-h5;
+  }
+}
+
+.job-tags {
+  @apply my-6 flex list-none flex-wrap gap-2 p-0;
+
+  &:first-child {
+    @apply mt-0;
+  }
+}
+
+// Less space between the page title, its underline and the job labels
+body:has(.content.job-posting) .page-header .container > div {
+  @apply pb-8;
+}
+
+.section-sm:has(.content.job-posting) {
+  @apply pt-8;
+}
+
+.job-tag {
+  @apply m-0 rounded-full border border-border bg-theme-light px-3 py-1 text-sm font-medium text-dark dark:border-darkmode-border dark:bg-darkmode-theme-light dark:text-darkmode-dark;
+}
+
+.job-apply {
+  @apply mt-10 border-l-4 border-l-[#47c8ff] p-6;
+}
+
+.job-apply-title {
+  @apply mb-1 text-h5 font-medium text-dark dark:text-darkmode-dark;
+}
+
+.job-apply-text {
+  @apply m-0 text-text dark:text-darkmode-text;
+
+  a {
+    @apply font-medium text-[#47c8ff] underline underline-offset-4;
+  }
+}
