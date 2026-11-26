@@ -318,3 +318,70 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+// Job posting layout (layouts/_default/job.html)
+.job-posting {
+  @apply mx-auto max-w-3xl;
+
+  .content h2 {
+    @apply border-t border-border pt-10 dark:border-darkmode-border;
+  }
+
+  .content h2:first-child {
+    @apply mt-0 border-t-0 pt-0;
+  }
+
+  .content h3 {
+    @apply text-h5 font-semibold;
+  }
+}
+
+.job-meta {
+  @apply mb-12 flex flex-col items-start gap-6 border-b border-border pb-10 dark:border-darkmode-border sm:flex-row sm:items-center sm:justify-between;
+}
+
+.job-tags {
+  @apply m-0 flex list-none flex-wrap gap-2 p-0;
+}
+
+.job-tag {
+  @apply m-0 rounded-full border border-border bg-theme-light px-3 py-1 text-sm font-medium text-dark dark:border-darkmode-border dark:bg-darkmode-theme-light dark:text-darkmode-dark;
+}
+
+.job-apply {
+  @apply mt-16 flex flex-col items-start gap-6 p-8 sm:flex-row sm:items-center sm:justify-between;
+}
+
+.job-apply-title {
+  @apply mb-2 text-h4 font-medium text-dark dark:text-darkmode-dark;
+}
+
+.job-apply-text {
+  @apply m-0 text-text dark:text-darkmode-text;
+
+  a {
+    @apply font-medium text-dark underline underline-offset-4 dark:text-darkmode-dark;
+  }
+}
+
+.job-opening {
+  @apply my-6 flex flex-col items-start gap-5 rounded-xl border border-border bg-theme-light p-6 dark:border-darkmode-border dark:bg-darkmode-theme-light md:flex-row md:items-center md:justify-between;
+}
+
+.job-opening-info {
+  @apply flex flex-col gap-3;
+}
+
+.job-opening-title {
+  @apply text-h5 font-medium text-dark no-underline hover:text-qoherentblue dark:text-darkmode-dark;
+}
+
+.job-opening-actions {
+  @apply flex flex-wrap gap-3;
+}
+
+.job-meta .btn,
+.job-opening .btn,
+.job-apply .btn {
+  @apply shrink-0 whitespace-nowrap;
+}
